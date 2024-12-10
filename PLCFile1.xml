@@ -1,0 +1,4140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="Danfoss" productName="PLUS+1 GUIDE" productVersion="2023.1.4.5170" creationDateTime="2023-08-15T23:19:30"/>
+  <contentHeader name="" modificationDateTime="2024-11-30T22:49:59">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1"/>
+      </fbd>
+      <ld>
+        <scaling x="1" y="1"/>
+      </ld>
+      <sfc>
+        <scaling x="1" y="1"/>
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="FileFormat" handleUnknown="discard">
+        <FileFormat>001D</FileFormat>
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="BlackoutTxt" pouType="function">
+        <interface>
+          <returnType>
+            <string/>
+          </returnType>
+          <inputVars>
+            <variable name="BlkOutSet">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="BlkOutText">
+              <type>
+                <string/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <code xmlns="http://www.w3.org/1999/xhtml">IF BlkOutSet THEN
+  BlkOutText := 'On';
+ELSE
+  BlkOutText := 'Off';
+END_IF;</code>
+          </ST>
+        </body>
+        <addData>
+          <data name="InterfaceText" handleUnknown="discard">
+            <code>FUNCTION BlackoutTxt : STRING
+VAR_INPUT
+  BlkOutSet : BOOL;
+END_VAR
+VAR_OUTPUT
+  BlkOutText : STRING;
+END_VAR
+
+</code>
+          </data>
+          <data name="notYetVerified" handleUnknown="discard">False</data>
+        </addData>
+      </pou>
+      <pou name="FaultBITtext" pouType="function">
+        <interface>
+          <returnType>
+            <DINT/>
+          </returnType>
+          <inputVars>
+            <variable name="Fault_Status_Bool">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="BIT_Status_Bool">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Fault_Status_String">
+              <type>
+                <string/>
+              </type>
+            </variable>
+            <variable name="BIT_Status_String">
+              <type>
+                <string/>
+              </type>
+            </variable>
+          </outputVars>
+        </interface>
+        <body>
+          <ST>
+            <code xmlns="http://www.w3.org/1999/xhtml">IF Fault_Status_Bool THEN
+  Fault_Status_String := 'Problem Detected';
+ELSE
+  Fault_Status_String := 'None';
+END_IF;
+IF BIT_Status_Bool THEN
+  BIT_Status_String := 'Problem Detected';
+ELSE
+  BIT_Status_String := 'None';
+END_IF;</code>
+          </ST>
+        </body>
+        <addData>
+          <data name="InterfaceText" handleUnknown="discard">
+            <code>FUNCTION FaultBITtext : DINT
+VAR_INPUT
+  Fault_Status_Bool : BOOL;
+  BIT_Status_Bool : BOOL;
+END_VAR
+VAR_OUTPUT
+  Fault_Status_String : STRING;
+  BIT_Status_String : STRING;
+END_VAR
+
+</code>
+          </data>
+          <data name="notYetVerified" handleUnknown="discard">False</data>
+        </addData>
+      </pou>
+      <pou name="Organize_Ints" pouType="function">
+        <interface>
+          <returnType>
+            <DINT/>
+          </returnType>
+          <inputVars>
+            <variable name="FFD1_0">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_0_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_1">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_1_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_2">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_2_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_3">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_3_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_4">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_4_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_5">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_5_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_6">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_6_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_7">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_7_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_8">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_8_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_9">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_9_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_10">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_10_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD1_11">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD1_11_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_0">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_0_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_1">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_1_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_2">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_2_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_3">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_3_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_4">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_4_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_5">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_5_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_6">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_6_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_7">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_7_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_8">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_8_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_9">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_9_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_10">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_10_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_11">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_11_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_12">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_12_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_13">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_13_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_14">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_14_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_15">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_15_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_16">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_16_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_17">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_17_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_18">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_18_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_19">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_19_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_20">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_20_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_21">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_21_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_22">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_22_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD2_23">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="FFD2_23_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="FFD3_0">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_1">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_2">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_3">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_4">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_5">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_6">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_7">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_8">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_9">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_10">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_11">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_12">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_13">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_14">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_15">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_16">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_17">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_18">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_19">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_20">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_21">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_22">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_23">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_24">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_25">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_26">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_27">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_28">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_29">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="FFD3_30">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="16#FF"/>
+              </initialValue>
+            </variable>
+            <variable name="BIT_Status_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="init_NV_log">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Org_ints">
+              <type>
+                <array>
+                  <dimension lower="0" upper="160"/>
+                  <baseType>
+                    <USINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="Number_of_ints">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="0"/>
+              </initialValue>
+            </variable>
+            <variable name="Update_memory">
+              <type>
+                <BOOL/>
+              </type>
+              <initialValue>
+                <simpleValue value="FALSE"/>
+              </initialValue>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="i">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="0"/>
+              </initialValue>
+            </variable>
+            <variable name="j">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="0"/>
+              </initialValue>
+            </variable>
+            <variable name="k">
+              <type>
+                <USINT/>
+              </type>
+              <initialValue>
+                <simpleValue value="0"/>
+              </initialValue>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <code xmlns="http://www.w3.org/1999/xhtml">IF init_NV_log THEN
+  Update_memory := TRUE;
+  Number_of_ints := 0;
+END_IF;
+
+IF FFD1_0_update THEN
+  Org_ints[i] := FFD1_0;
+  i := i + 1;
+END_IF;
+IF FFD1_1_update THEN
+  Org_ints[i] := FFD1_1;
+  i := i + 1;
+END_IF;
+IF FFD1_2_update THEN
+  Org_ints[i] := FFD1_2;
+  i := i + 1;
+END_IF;
+IF FFD1_3_update THEN
+  Org_ints[i] := FFD1_3;
+  i := i + 1;
+END_IF;
+IF FFD1_4_update THEN
+  Org_ints[i] := FFD1_4;
+  i := i + 1;
+END_IF;
+IF FFD1_5_update THEN
+  Org_ints[i] := FFD1_5;
+  i := i + 1;
+END_IF;
+IF FFD1_6_update THEN
+  Org_ints[i] := FFD1_6;
+  i := i + 1;
+END_IF;
+IF FFD1_7_update THEN
+  Org_ints[i] := FFD1_7;
+  i := i + 1;
+END_IF;
+IF FFD1_8_update THEN
+  Org_ints[i] := FFD1_8;
+  i := i + 1;
+END_IF;
+IF FFD1_9_update THEN
+  Org_ints[i] := FFD1_9;
+  i := i + 1;
+END_IF;
+IF FFD1_10_update THEN
+  Org_ints[i] := FFD1_10;
+  i := i + 1;
+END_IF;
+IF FFD1_11_update THEN
+  Org_ints[i] := FFD1_11;
+  i := i + 1;
+END_IF;
+
+IF FFD2_0_update THEN
+  Org_ints[i] := FFD2_0;
+  i := i + 1;
+END_IF;
+IF FFD2_1_update THEN
+  Org_ints[i] := FFD2_1;
+  i := i + 1;
+END_IF;
+IF FFD2_2_update THEN
+  Org_ints[i] := FFD2_2;
+  i := i + 1;
+END_IF;
+IF FFD2_3_update THEN
+  Org_ints[i] := FFD2_3;
+  i := i + 1;
+END_IF;
+IF FFD2_4_update THEN
+  Org_ints[i] := FFD2_4;
+  i := i + 1;
+END_IF;
+IF FFD2_5_update THEN
+  Org_ints[i] := FFD2_5;
+  i := i + 1;
+END_IF;
+IF FFD2_6_update THEN
+  Org_ints[i] := FFD2_6;
+  i := i + 1;
+END_IF;
+IF FFD2_7_update THEN
+  Org_ints[i] := FFD2_7;
+  i := i + 1;
+END_IF;
+IF FFD2_8_update THEN
+  Org_ints[i] := FFD2_8;
+  i := i + 1;
+END_IF;
+IF FFD2_9_update THEN
+  Org_ints[i] := FFD2_9;
+  i := i + 1;
+END_IF;
+IF FFD2_10_update THEN
+  Org_ints[i] := FFD2_10;
+  i := i + 1;
+END_IF;
+IF FFD2_11_update THEN
+  Org_ints[i] := FFD2_11;
+  i := i + 1;
+END_IF;
+IF FFD2_12_update THEN
+  Org_ints[i] := FFD2_12;
+  i := i + 1;
+END_IF;
+IF FFD2_13_update THEN
+  Org_ints[i] := FFD2_13;
+  i := i + 1;
+END_IF;
+IF FFD2_14_update THEN
+  Org_ints[i] := FFD2_14;
+  i := i + 1;
+END_IF;
+IF FFD2_15_update THEN
+  Org_ints[i] := FFD2_15;
+  i := i + 1;
+END_IF;
+IF FFD2_16_update THEN
+  Org_ints[i] := FFD2_16;
+  i := i + 1;
+END_IF;
+IF FFD2_17_update THEN
+  Org_ints[i] := FFD2_17;
+  i := i + 1;
+END_IF;
+IF FFD2_18_update THEN
+  Org_ints[i] := FFD2_18;
+  i := i + 1;
+END_IF;
+IF FFD2_19_update THEN
+  Org_ints[i] := FFD2_19;
+  i := i + 1;
+END_IF;
+IF FFD2_20_update THEN
+  Org_ints[i] := FFD2_20;
+  i := i + 1;
+END_IF;
+IF FFD2_21_update THEN
+  Org_ints[i] := FFD2_21;
+  i := i + 1;
+END_IF;
+IF FFD2_22_update THEN
+  Org_ints[i] := FFD2_22;
+  i := i + 1;
+END_IF;
+IF FFD2_23_update THEN
+  Org_ints[i] := FFD2_23;
+  i := i + 1;
+END_IF;
+
+IF BIT_Status_update THEN
+  Org_ints[i] := FFD3_0;
+  i := i + 1;
+  Org_ints[i] := FFD3_1;
+  i := i + 1;
+  Org_ints[i] := FFD3_2;
+  i := i + 1;
+  Org_ints[i] := FFD3_3;
+  i := i + 1;
+  Org_ints[i] := FFD3_4;
+  i := i + 1;
+  Org_ints[i] := FFD3_5;
+  i := i + 1;
+  Org_ints[i] := FFD3_6;
+  i := i + 1;
+  Org_ints[i] := FFD3_7;
+  i := i + 1;
+  Org_ints[i] := FFD3_8;
+  i := i + 1;
+  Org_ints[i] := FFD3_9;
+  i := i + 1;
+  Org_ints[i] := FFD3_10;
+  i := i + 1;
+  Org_ints[i] := FFD3_11;
+  i := i + 1;
+  Org_ints[i] := FFD3_12;
+  i := i + 1;
+  Org_ints[i] := FFD3_13;
+  i := i + 1;
+  Org_ints[i] := FFD3_14;
+  i := i + 1;
+  Org_ints[i] := FFD3_15;
+  i := i + 1;
+  Org_ints[i] := FFD3_16;
+  i := i + 1;
+  Org_ints[i] := FFD3_17;
+  i := i + 1;
+  Org_ints[i] := FFD3_18;
+  i := i + 1;
+  Org_ints[i] := FFD3_19;
+  i := i + 1;
+  Org_ints[i] := FFD3_20;
+  i := i + 1;
+  Org_ints[i] := FFD3_21;
+  i := i + 1;
+  Org_ints[i] := FFD3_22;
+  i := i + 1;
+  Org_ints[i] := FFD3_23;
+  i := i + 1;
+  Org_ints[i] := FFD3_24;
+  i := i + 1;
+  Org_ints[i] := FFD3_25;
+  i := i + 1;
+  Org_ints[i] := FFD3_26;
+  i := i + 1;
+  Org_ints[i] := FFD3_27;
+  i := i + 1;
+  Org_ints[i] := FFD3_28;
+  i := i + 1;
+  Org_ints[i] := FFD3_29;
+  i := i + 1;
+  Org_ints[i] := FFD3_30;
+  i := i + 1;
+END_IF;
+
+IF i &gt; 0 THEN
+  Update_memory := TRUE;
+END_IF;
+// Actual number of ints populated
+Number_of_ints := i;
+
+//Fill the rest of the array with 0xFF
+k := 160 - i;
+FOR j := 0 TO k DO
+  Org_ints[i] := 16#FF;
+  i := i + 1;
+END_FOR;</code>
+          </ST>
+        </body>
+        <addData>
+          <data name="InterfaceText" handleUnknown="discard">
+            <code>FUNCTION Organize_Ints : DINT
+VAR_INPUT
+  FFD1_0 : USINT;
+  FFD1_0_update : BOOL;
+  FFD1_1 : USINT;
+  FFD1_1_update : BOOL;
+  FFD1_2 : USINT;
+  FFD1_2_update : BOOL;
+  FFD1_3 : USINT;
+  FFD1_3_update : BOOL;
+  FFD1_4 : USINT;
+  FFD1_4_update : BOOL;
+  FFD1_5 : USINT;
+  FFD1_5_update : BOOL;
+  FFD1_6 : USINT;
+  FFD1_6_update : BOOL;
+  FFD1_7 : USINT;
+  FFD1_7_update : BOOL;
+  FFD1_8 : USINT;
+  FFD1_8_update : BOOL;
+  FFD1_9 : USINT;
+  FFD1_9_update : BOOL;
+  FFD1_10 : USINT;
+  FFD1_10_update : BOOL;
+  FFD1_11 : USINT;
+  FFD1_11_update : BOOL;
+  FFD2_0 : USINT;
+  FFD2_0_update : BOOL;
+  FFD2_1 : USINT;
+  FFD2_1_update : BOOL;
+  FFD2_2 : USINT;
+  FFD2_2_update : BOOL;
+  FFD2_3 : USINT;
+  FFD2_3_update : BOOL;
+  FFD2_4 : USINT;
+  FFD2_4_update : BOOL;
+  FFD2_5 : USINT;
+  FFD2_5_update : BOOL;
+  FFD2_6 : USINT;
+  FFD2_6_update : BOOL;
+  FFD2_7 : USINT;
+  FFD2_7_update : BOOL;
+  FFD2_8 : USINT;
+  FFD2_8_update : BOOL;
+  FFD2_9 : USINT;
+  FFD2_9_update : BOOL;
+  FFD2_10 : USINT;
+  FFD2_10_update : BOOL;
+  FFD2_11 : USINT;
+  FFD2_11_update : BOOL;
+  FFD2_12 : USINT;
+  FFD2_12_update : BOOL;
+  FFD2_13 : USINT;
+  FFD2_13_update : BOOL;
+  FFD2_14 : USINT;
+  FFD2_14_update : BOOL;
+  FFD2_15 : USINT;
+  FFD2_15_update : BOOL;
+  FFD2_16 : USINT;
+  FFD2_16_update : BOOL;
+  FFD2_17 : USINT;
+  FFD2_17_update : BOOL;
+  FFD2_18 : USINT;
+  FFD2_18_update : BOOL;
+  FFD2_19 : USINT;
+  FFD2_19_update : BOOL;
+  FFD2_20 : USINT;
+  FFD2_20_update : BOOL;
+  FFD2_21 : USINT;
+  FFD2_21_update : BOOL;
+  FFD2_22 : USINT;
+  FFD2_22_update : BOOL;
+  FFD2_23 : USINT;
+  FFD2_23_update : BOOL;
+  FFD3_0 : USINT := 16#FF;
+  FFD3_1 : USINT := 16#FF;
+  FFD3_2 : USINT := 16#FF;
+  FFD3_3 : USINT := 16#FF;
+  FFD3_4 : USINT := 16#FF;
+  FFD3_5 : USINT := 16#FF;
+  FFD3_6 : USINT := 16#FF;
+  FFD3_7 : USINT := 16#FF;
+  FFD3_8 : USINT := 16#FF;
+  FFD3_9 : USINT := 16#FF;
+  FFD3_10 : USINT := 16#FF;
+  FFD3_11 : USINT := 16#FF;
+  FFD3_12 : USINT := 16#FF;
+  FFD3_13 : USINT := 16#FF;
+  FFD3_14 : USINT := 16#FF;
+  FFD3_15 : USINT := 16#FF;
+  FFD3_16 : USINT := 16#FF;
+  FFD3_17 : USINT := 16#FF;
+  FFD3_18 : USINT := 16#FF;
+  FFD3_19 : USINT := 16#FF;
+  FFD3_20 : USINT := 16#FF;
+  FFD3_21 : USINT := 16#FF;
+  FFD3_22 : USINT := 16#FF;
+  FFD3_23 : USINT := 16#FF;
+  FFD3_24 : USINT := 16#FF;
+  FFD3_25 : USINT := 16#FF;
+  FFD3_26 : USINT := 16#FF;
+  FFD3_27 : USINT := 16#FF;
+  FFD3_28 : USINT := 16#FF;
+  FFD3_29 : USINT := 16#FF;
+  FFD3_30 : USINT := 16#FF;
+  BIT_Status_update : BOOL;
+  init_NV_log : BOOL;
+END_VAR
+VAR_OUTPUT
+  Org_ints : ARRAY[0..160] OF USINT;
+  Number_of_ints : USINT := 0;
+  Update_memory : BOOL := FALSE;
+END_VAR
+VAR
+  i : USINT := 0;
+  j : USINT := 0;
+  k : USINT := 0;
+END_VAR
+
+</code>
+          </data>
+          <data name="notYetVerified" handleUnknown="discard">False</data>
+        </addData>
+      </pou>
+      <pou name="Mem_Sort" pouType="function">
+        <interface>
+          <returnType>
+            <INT/>
+          </returnType>
+          <inputVars>
+            <variable name="noMemStore">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="firstRunDone">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_0">
+              <type>
+                <USINT/>
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Update_memory : BOOL;
+ UDINT is a 32bit unsigned int
+     USINT is an 8bit unsigned int</xhtml>
+              </documentation>
+            </variable>
+            <variable name="Log_Val_1">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_2">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_3">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_4">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_5">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_6">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_7">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_8">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_9">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_10">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_11">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_12">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_13">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_14">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_15">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_16">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_17">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_18">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_19">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_20">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_21">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_22">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_23">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_24">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_25">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_26">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_27">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_28">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_29">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_30">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_31">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_32">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_33">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_34">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_35">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_36">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_37">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_38">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_39">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_40">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_41">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_42">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_43">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_44">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_45">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_46">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_47">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_48">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_49">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_50">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_51">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_52">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_53">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_54">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_55">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_56">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_57">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_58">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_59">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_60">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_61">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_62">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_63">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_64">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_65">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_66">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_67">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_68">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_69">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_70">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_71">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_72">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_73">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_74">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_75">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_76">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_77">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_78">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_79">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_80">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_81">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_82">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_83">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_84">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_85">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_86">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_87">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_88">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_89">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_90">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_91">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_92">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_93">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_94">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_95">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_96">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_97">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_98">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_99">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="List_head">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="List_length">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Number_of_ints">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Org_ints">
+              <type>
+                <array>
+                  <dimension lower="0" upper="160"/>
+                  <baseType>
+                    <USINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="Cur_log">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <USINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="Res_List">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="firstRunDoneOut">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_head">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_count">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_array">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <USINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_1">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_2">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_3">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_4">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_5">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_6">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_7">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_8">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_9">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_10">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_11">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_12">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_13">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_14">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_15">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_16">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_17">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_18">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_19">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_20">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_21">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_22">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_23">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_24">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_25">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_26">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_27">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_28">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_29">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_30">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_31">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_32">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_33">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_34">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_35">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_36">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_37">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_38">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_39">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_40">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_41">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_42">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_43">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_44">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_45">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_46">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_47">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_48">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_49">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_50">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_51">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_52">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_53">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_54">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_55">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_56">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_57">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_58">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_59">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_60">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_61">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_62">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_63">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_64">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_65">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_66">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_67">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_68">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_69">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_70">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_71">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_72">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_73">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_74">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_75">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_76">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_77">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_78">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_79">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_80">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_81">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_82">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_83">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_84">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_85">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_86">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_87">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_88">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_89">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_90">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_91">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_92">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_93">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_94">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_95">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_96">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_97">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_98">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_99">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotOut_100">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_Val_1_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_2_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_3_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_4_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_5_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_6_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_7_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_8_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_9_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_10_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_11_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_12_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_13_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_14_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_15_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_16_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_17_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_18_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_19_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_20_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_21_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_22_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_23_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_24_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_25_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_Val_init_update">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Update_log">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Update_length">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="i">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="j">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="WrapAround">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="ToEndOfArray">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemBlockStart">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="MemSlotStart">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Temp_array">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <USINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <code xmlns="http://www.w3.org/1999/xhtml">IF noMemStore THEN
+  FOR i := 0 TO Number_of_ints DO
+    Log_array[i] := Org_ints[i];   
+  END_FOR;
+  FOR i := Number_of_ints TO 99 DO    
+    Log_array[i] := Cur_log[i-Number_of_ints];  
+  END_FOR;
+  Update_log := TRUE;
+  RETURN;
+END_IF;
+
+// Reset Head, List, and Array
+IF Res_List THEN
+  Log_head := 0;
+  Log_count := 0;
+  For i := 0 TO 99 DO
+    Log_array [i] := 0;
+  END_FOR;
+  Update_log := TRUE;
+  Update_length := TRUE;
+  RETURN;
+END_IF;
+
+// Cap the number of new entries to 100 since the log only holds 100
+IF Number_of_ints &gt; 100 THEN
+  Number_of_ints := 100;
+ELSIF Number_of_ints &gt; 0 THEN
+  Number_of_ints := Number_of_ints - 1;
+END_IF;
+
+Log_count := List_head + Number_of_ints;
+// Puts the head one place above the last value. 
+// So 100 real values will put the head at 0.
+IF Log_count &gt; 99 THEN
+  WrapAround := Log_count - 99;
+  ToEndOfArray := Number_of_ints - WrapAround;
+  Log_head := WrapAround;
+  Log_count := 100;
+ELSE
+  Wraparound := 0;
+  ToEndOfArray := Number_of_ints;
+  Log_head := Log_count;
+  IF Number_of_ints &gt; 0 THEN
+    Log_head := Log_head + 1;
+  END_IF;
+END_IF;
+
+IF Log_count &gt; List_length THEN
+  Update_length := TRUE;
+ELSE
+  Update_length := FALSE;
+END_IF;
+
+(* Fill the current log with stored values.
+  Don't need it above the noMemStore section
+  since it doesn't use the stored values
+*)
+IF (firstRunDone = FALSE) THEN
+  Log_array[0] := Log_Val_0;
+  Log_array[1] := Log_Val_1;
+  Log_array[2] := Log_Val_2;
+  Log_array[3] := Log_Val_3;
+  Log_array[4] := Log_Val_4;
+  Log_array[5] := Log_Val_5;
+  Log_array[6] := Log_Val_6;
+  Log_array[7] := Log_Val_7;
+  Log_array[8] := Log_Val_8;
+  Log_array[9] := Log_Val_9;
+  Log_array[10] := Log_Val_10;
+  Log_array[11] := Log_Val_11;
+  Log_array[12] := Log_Val_12;
+  Log_array[13] := Log_Val_13;
+  Log_array[14] := Log_Val_14;
+  Log_array[15] := Log_Val_15;
+  Log_array[16] := Log_Val_16;
+  Log_array[17] := Log_Val_17;
+  Log_array[18] := Log_Val_18;
+  Log_array[19] := Log_Val_19;
+  Log_array[20] := Log_Val_20;
+  Log_array[21] := Log_Val_21;
+  Log_array[22] := Log_Val_22;
+  Log_array[23] := Log_Val_23;
+  Log_array[24] := Log_Val_24;
+  Log_array[25] := Log_Val_25;
+  Log_array[26] := Log_Val_26;
+  Log_array[27] := Log_Val_27;
+  Log_array[28] := Log_Val_28;
+  Log_array[29] := Log_Val_29;
+  Log_array[30] := Log_Val_30;
+  Log_array[31] := Log_Val_31;
+  Log_array[32] := Log_Val_32;
+  Log_array[33] := Log_Val_33;
+  Log_array[34] := Log_Val_34;
+  Log_array[35] := Log_Val_35;
+  Log_array[36] := Log_Val_36;
+  Log_array[37] := Log_Val_37;
+  Log_array[38] := Log_Val_38;
+  Log_array[39] := Log_Val_39;
+  Log_array[40] := Log_Val_40;
+  Log_array[41] := Log_Val_41;
+  Log_array[42] := Log_Val_42;
+  Log_array[43] := Log_Val_43;
+  Log_array[44] := Log_Val_44;
+  Log_array[45] := Log_Val_45;
+  Log_array[46] := Log_Val_46;
+  Log_array[47] := Log_Val_47;
+  Log_array[48] := Log_Val_48;
+  Log_array[49] := Log_Val_49;
+  Log_array[50] := Log_Val_50;
+  Log_array[51] := Log_Val_51;
+  Log_array[52] := Log_Val_52;
+  Log_array[53] := Log_Val_53;
+  Log_array[54] := Log_Val_54;
+  Log_array[55] := Log_Val_55;
+  Log_array[56] := Log_Val_56;
+  Log_array[57] := Log_Val_57;
+  Log_array[58] := Log_Val_58;
+  Log_array[59] := Log_Val_59;
+  Log_array[60] := Log_Val_60;
+  Log_array[61] := Log_Val_61;
+  Log_array[62] := Log_Val_62;
+  Log_array[63] := Log_Val_63;
+  Log_array[64] := Log_Val_64;
+  Log_array[65] := Log_Val_65;
+  Log_array[66] := Log_Val_66;
+  Log_array[67] := Log_Val_67;
+  Log_array[68] := Log_Val_68;
+  Log_array[69] := Log_Val_69;
+  Log_array[70] := Log_Val_70;
+  Log_array[71] := Log_Val_71;
+  Log_array[72] := Log_Val_72;
+  Log_array[73] := Log_Val_73;
+  Log_array[74] := Log_Val_74;
+  Log_array[75] := Log_Val_75;
+  Log_array[76] := Log_Val_76;
+  Log_array[77] := Log_Val_77;
+  Log_array[78] := Log_Val_78;
+  Log_array[79] := Log_Val_79;
+  Log_array[80] := Log_Val_80;
+  Log_array[81] := Log_Val_81;
+  Log_array[82] := Log_Val_82;
+  Log_array[83] := Log_Val_83;
+  Log_array[84] := Log_Val_84;
+  Log_array[85] := Log_Val_85;
+  Log_array[86] := Log_Val_86;
+  Log_array[87] := Log_Val_87;
+  Log_array[88] := Log_Val_88;
+  Log_array[89] := Log_Val_89;
+  Log_array[90] := Log_Val_90;
+  Log_array[91] := Log_Val_91;
+  Log_array[92] := Log_Val_92;
+  Log_array[93] := Log_Val_93;
+  Log_array[94] := Log_Val_94;
+  Log_array[95] := Log_Val_95;
+  Log_array[96] := Log_Val_96;
+  Log_array[97] := Log_Val_97;
+  Log_array[98] := Log_Val_98;
+  Log_array[99] := Log_Val_99;
+  
+  firstRunDoneOut := TRUE;
+  Log_Val_init_update := TRUE;
+ELSE  
+// Load the output and temp arrays with current values from log
+  FOR i :=0 TO 99 DO
+    Log_array[i] := Cur_log[i];
+    Temp_array[i] := Cur_log[i];
+  END_FOR;
+  firstRunDoneOut := TRUE;
+  
+  //Previous location of the Wraparound, Log head, etc. logic
+  
+    // Masking and bit shifting. hex uses prefix '16#'
+    (* //Temp_array[0] := Log_Val_1 AND 255;
+    Temp_array[0] := UDINT_TO_USINT(Log_Val_1 AND 16#FF);
+    //Temp_array[1] := SHR(Log_Val_1 AND 65280),8);
+    Temp_array[1] := UDINT_TO_USINT(SHR((Log_Val_1 AND 16#FF00),8));
+    //Temp_array[2] := SHR(Log_Val_1 AND 16711680),16);
+    Temp_array[2] := UDINT_TO_USINT(SHR((Log_Val_1 AND 16#FF0000),16));
+    Temp_array[3] := UDINT_TO_USINT(SHR(Log_Val_1,24));
+    *)
+  
+  // When the log array goes over 100 and needs to overwrite
+  // from the beginning of the array
+  IF (WrapAround &gt; 0) THEN
+    // Values are stored in reverse order from input.
+    FOR i := 1 TO WrapAround DO
+      j := i-1;
+      Temp_array[j] := Org_ints[WrapAround - i];
+    END_FOR;
+    FOR i := 0 TO ToEndOfArray DO
+      j := i-1;
+      Temp_array[List_head+i] := Org_ints[WrapAround + ToEndOfArray - i];
+    END_FOR;
+  ELSE
+    FOR i := 0 TO Number_of_ints DO
+      Temp_array[List_head+i] := Org_ints[Number_of_ints - i];
+    END_FOR;
+  END_IF;
+  
+  // Going through each of the log values to find the changes
+  IF (Log_Val_0 &lt;&gt; Temp_array[0] AND Temp_array[0] &lt;&gt; 0) THEN
+    MemSlotOut_1 := Temp_array[0];
+    Log_array[0] := Temp_array[0];
+    Log_Val_1_update := TRUE;
+  ELSE
+    Log_array[0] := Cur_log[0];
+  END_IF;
+  IF (Log_Val_1 &lt;&gt; Temp_array[1] AND Temp_array[1] &lt;&gt; 0) THEN
+    MemSlotOut_2 := Temp_array[1];
+    Log_array[1] := Temp_array[1];
+    Log_Val_1_update := TRUE;
+  ELSE
+    Log_array[1] := Cur_log[1];
+  END_IF;  
+  IF (Log_Val_2 &lt;&gt; Temp_array[2] AND Temp_array[2] &lt;&gt; 0) THEN
+    MemSlotOut_3 := Temp_array[2];
+    Log_array[2] := Temp_array[2];
+    Log_Val_1_update := TRUE;
+  ELSE
+    Log_array[2] := Cur_log[2];
+  END_IF;  
+  IF (Log_Val_3 &lt;&gt; Temp_array[3] AND Temp_array[3] &lt;&gt; 0) THEN
+    MemSlotOut_4 := Temp_array[3];
+    Log_array[3] := Temp_array[3];
+    Log_Val_1_update := TRUE;
+  ELSE
+    Log_array[3] := Cur_log[3];
+  END_IF;
+  
+  IF (Log_Val_4 &lt;&gt; Temp_array[4] AND Temp_array[4] &lt;&gt; 0) THEN
+    MemSlotOut_5 := Temp_array[4];
+    Log_array[4] := Temp_array[4];
+    Log_Val_2_update := TRUE;
+  ELSE
+    Log_array[4] := Cur_log[4];
+  END_IF;
+  IF (Log_Val_5 &lt;&gt; Temp_array[5] AND Temp_array[5] &lt;&gt; 0) THEN
+    MemSlotOut_6 := Temp_array[5];
+    Log_array[5] := Temp_array[5];
+    Log_Val_2_update := TRUE;
+  ELSE
+    Log_array[5] := Cur_log[5];
+  END_IF;
+  IF (Log_Val_6 &lt;&gt; Temp_array[6] AND Temp_array[6] &lt;&gt; 0) THEN
+    MemSlotOut_7 := Temp_array[6];
+    Log_array[6] := Temp_array[6];
+    Log_Val_2_update := TRUE;
+  ELSE
+    Log_array[6] := Cur_log[6];
+  END_IF;  
+  IF (Log_Val_7 &lt;&gt; Temp_array[7] AND Temp_array[7] &lt;&gt; 0) THEN
+    MemSlotOut_8 := Temp_array[7];
+    Log_array[7] := Temp_array[7];
+    Log_Val_2_update := TRUE;
+  ELSE
+    Log_array[7] := Cur_log[7];
+  END_IF;
+  
+  IF (Log_Val_8 &lt;&gt; Temp_array[8] AND Temp_array[8] &lt;&gt; 0) THEN
+    MemSlotOut_9 := Temp_array[8];
+    Log_array[8] := Temp_array[8];
+    Log_Val_3_update := TRUE;
+  ELSE
+    Log_array[8] := Cur_log[8];
+  END_IF;  
+  IF (Log_Val_9 &lt;&gt; Temp_array[9] AND Temp_array[9] &lt;&gt; 0) THEN
+    MemSlotOut_10 := Temp_array[9];
+    Log_array[9] := Temp_array[9];
+    Log_Val_3_update := TRUE;
+  ELSE
+    Log_array[9] := Cur_log[9];
+  END_IF;
+  IF (Log_Val_10 &lt;&gt; Temp_array[10] AND Temp_array[10] &lt;&gt; 0) THEN
+    MemSlotOut_11 := Temp_array[10];
+    Log_array[10] := Temp_array[10];
+    Log_Val_3_update := TRUE;
+  ELSE
+    Log_array[10] := Cur_log[10];
+  END_IF;
+    IF (Log_Val_11 &lt;&gt; Temp_array[11] AND Temp_array[11] &lt;&gt; 0) THEN
+    MemSlotOut_12 := Temp_array[11];
+    Log_array[11] := Temp_array[11];
+    Log_Val_3_update := TRUE;
+  ELSE
+    Log_array[11] := Cur_log[11];
+  END_IF;  
+  
+  IF (Log_Val_12 &lt;&gt; Temp_array[12] AND Temp_array[12] &lt;&gt; 0) THEN
+    MemSlotOut_13 := Temp_array[12];
+    Log_array[12] := Temp_array[12];
+    Log_Val_4_update := TRUE;
+  ELSE
+    Log_array[12] := Cur_log[12];
+  END_IF;  
+  IF (Log_Val_13 &lt;&gt; Temp_array[13] AND Temp_array[13] &lt;&gt; 0) THEN
+    MemSlotOut_14 := Temp_array[13];
+    Log_array[13] := Temp_array[13];
+    Log_Val_4_update := TRUE;
+  ELSE
+    Log_array[13] := Cur_log[13];
+  END_IF;  
+  IF (Log_Val_14 &lt;&gt; Temp_array[14] AND Temp_array[14] &lt;&gt; 0) THEN
+    MemSlotOut_15 := Temp_array[14];
+    Log_array[14] := Temp_array[14];
+    Log_Val_4_update := TRUE;
+  ELSE
+    Log_array[14] := Cur_log[14];
+  END_IF;
+  IF (Log_Val_15 &lt;&gt; Temp_array[15] AND Temp_array[15] &lt;&gt; 0) THEN
+    MemSlotOut_16 := Temp_array[15];
+    Log_array[15] := Temp_array[15];
+    Log_Val_4_update := TRUE;
+  ELSE
+    Log_array[15] := Cur_log[15];
+  END_IF;
+  
+  IF (Log_Val_16 &lt;&gt; Temp_array[16] AND Temp_array[16] &lt;&gt; 0) THEN
+    MemSlotOut_17 := Temp_array[16];
+    Log_array[16] := Temp_array[16];
+    Log_Val_5_update := TRUE;
+  ELSE
+    Log_array[16] := Cur_log[16];
+  END_IF;  
+  IF (Log_Val_17 &lt;&gt; Temp_array[17] AND Temp_array[17] &lt;&gt; 0) THEN
+    MemSlotOut_18 := Temp_array[17];
+    Log_array[17] := Temp_array[17];
+    Log_Val_5_update := TRUE;
+  ELSE
+    Log_array[17] := Cur_log[17];
+  END_IF;  
+  IF (Log_Val_18 &lt;&gt; Temp_array[18] AND Temp_array[18] &lt;&gt; 0) THEN
+    MemSlotOut_19 := Temp_array[18];
+    Log_array[18] := Temp_array[18];
+    Log_Val_5_update := TRUE;
+  ELSE
+    Log_array[18] := Cur_log[18];
+  END_IF;  
+  IF (Log_Val_19 &lt;&gt; Temp_array[19] AND Temp_array[19] &lt;&gt; 0) THEN
+    MemSlotOut_20 := Temp_array[19];
+    Log_array[19] := Temp_array[19];
+    Log_Val_5_update := TRUE;
+  ELSE
+    Log_array[19] := Cur_log[19];
+  END_IF; 
+  
+  IF (Log_Val_20 &lt;&gt; Temp_array[20] AND Temp_array[20] &lt;&gt; 0) THEN
+    MemSlotOut_21 := Temp_array[20];
+    Log_array[20] := Temp_array[20];
+    Log_Val_6_update := TRUE;
+  ELSE
+    Log_array[20] := Cur_log[20];
+  END_IF;
+  IF (Log_Val_21 &lt;&gt; Temp_array[21] AND Temp_array[21] &lt;&gt; 0) THEN
+    MemSlotOut_22 := Temp_array[21];
+    Log_array[21] := Temp_array[21];
+    Log_Val_6_update := TRUE;
+  ELSE
+    Log_array[21] := Cur_log[21];
+  END_IF;  
+  IF (Log_Val_22 &lt;&gt; Temp_array[22] AND Temp_array[22] &lt;&gt; 0) THEN
+    MemSlotOut_23 := Temp_array[22];
+    Log_array[22] := Temp_array[22];
+    Log_Val_6_update := TRUE;
+  ELSE
+    Log_array[22] := Cur_log[22];
+  END_IF;  
+  IF (Log_Val_23 &lt;&gt; Temp_array[23] AND Temp_array[23] &lt;&gt; 0) THEN
+    MemSlotOut_24 := Temp_array[23];
+    Log_array[23] := Temp_array[23];
+    Log_Val_6_update := TRUE;
+  ELSE
+    Log_array[23] := Cur_log[23];
+  END_IF;  
+  
+  IF (Log_Val_24 &lt;&gt; Temp_array[24] AND Temp_array[24] &lt;&gt; 0) THEN
+    MemSlotOut_25 := Temp_array[24];
+    Log_array[24] := Temp_array[24];
+    Log_Val_7_update := TRUE;
+  ELSE
+    Log_array[24] := Cur_log[24];
+  END_IF;
+  IF (Log_Val_25 &lt;&gt; Temp_array[25] AND Temp_array[25] &lt;&gt; 0) THEN
+    MemSlotOut_26 := Temp_array[25];
+    Log_array[25] := Temp_array[25];
+    Log_Val_7_update := TRUE;
+  ELSE
+    Log_array[25] := Cur_log[25];
+  END_IF;
+  IF (Log_Val_26 &lt;&gt; Temp_array[26] AND Temp_array[26] &lt;&gt; 0) THEN
+    MemSlotOut_27 := Temp_array[26];
+    Log_array[26] := Temp_array[26];
+    Log_Val_7_update := TRUE;
+  ELSE
+    Log_array[26] := Cur_log[26];
+  END_IF;  
+  IF (Log_Val_27 &lt;&gt; Temp_array[27] AND Temp_array[27] &lt;&gt; 0) THEN
+    MemSlotOut_28 := Temp_array[27];
+    Log_array[27] := Temp_array[27];
+    Log_Val_7_update := TRUE;
+  ELSE
+    Log_array[27] := Cur_log[27];
+  END_IF;  
+  
+  IF (Log_Val_28 &lt;&gt; Temp_array[28] AND Temp_array[28] &lt;&gt; 0) THEN
+    MemSlotOut_29 := Temp_array[28];
+    Log_array[28] := Temp_array[28];
+    Log_Val_8_update := TRUE;
+  ELSE
+    Log_array[28] := Cur_log[28];
+  END_IF;  
+  IF (Log_Val_29 &lt;&gt; Temp_array[29] AND Temp_array[29] &lt;&gt; 0) THEN
+    MemSlotOut_30 := Temp_array[29];
+    Log_array[29] := Temp_array[29];
+    Log_Val_8_update := TRUE;
+  ELSE
+    Log_array[29] := Cur_log[29];
+  END_IF;
+  IF (Log_Val_30 &lt;&gt; Temp_array[30] AND Temp_array[30] &lt;&gt; 0) THEN
+    MemSlotOut_31 := Temp_array[30];
+    Log_array[30] := Temp_array[30];
+    Log_Val_8_update := TRUE;
+  ELSE
+    Log_array[30] := Cur_log[30];
+  END_IF;
+  IF (Log_Val_31 &lt;&gt; Temp_array[31] AND Temp_array[31] &lt;&gt; 0) THEN
+    MemSlotOut_32 := Temp_array[31];
+    Log_array[31] := Temp_array[31];
+    Log_Val_8_update := TRUE;
+  ELSE
+    Log_array[31] := Cur_log[31];
+  END_IF;  
+  
+  IF (Log_Val_32 &lt;&gt; Temp_array[32] AND Temp_array[32] &lt;&gt; 0) THEN
+    MemSlotOut_33 := Temp_array[32];
+    Log_array[32] := Temp_array[32];
+    Log_Val_9_update := TRUE;
+  ELSE
+    Log_array[32] := Cur_log[32];
+  END_IF;  
+  IF (Log_Val_33 &lt;&gt; Temp_array[33] AND Temp_array[33] &lt;&gt; 0) THEN
+    MemSlotOut_34 := Temp_array[33];
+    Log_array[33] := Temp_array[33];
+    Log_Val_9_update := TRUE;
+  ELSE
+    Log_array[33] := Cur_log[33];
+  END_IF;  
+  IF (Log_Val_34 &lt;&gt; Temp_array[34] AND Temp_array[34] &lt;&gt; 0) THEN
+    MemSlotOut_35 := Temp_array[34];
+    Log_array[34] := Temp_array[34];
+    Log_Val_9_update := TRUE;
+  ELSE
+    Log_array[34] := Cur_log[34];
+  END_IF;
+  IF (Log_Val_35 &lt;&gt; Temp_array[35] AND Temp_array[35] &lt;&gt; 0) THEN
+    MemSlotOut_36 := Temp_array[35];
+    Log_array[35] := Temp_array[35];
+    Log_Val_9_update := TRUE;
+  ELSE
+    Log_array[35] := Cur_log[35];
+  END_IF;
+  
+  IF (Log_Val_36 &lt;&gt; Temp_array[36] AND Temp_array[36] &lt;&gt; 0) THEN
+    MemSlotOut_37 := Temp_array[36];
+    Log_array[36] := Temp_array[36];
+    Log_Val_10_update := TRUE;
+  ELSE
+    Log_array[36] := Cur_log[36];
+  END_IF;  
+  IF (Log_Val_37 &lt;&gt; Temp_array[37] AND Temp_array[37] &lt;&gt; 0) THEN
+    MemSlotOut_38 := Temp_array[37];
+    Log_array[37] := Temp_array[37];
+    Log_Val_10_update := TRUE;
+  ELSE
+    Log_array[37] := Cur_log[37];
+  END_IF;  
+  IF (Log_Val_38 &lt;&gt; Temp_array[38] AND Temp_array[38] &lt;&gt; 0) THEN
+    MemSlotOut_39 := Temp_array[38];
+    Log_array[38] := Temp_array[38];
+    Log_Val_10_update := TRUE;
+  ELSE
+    Log_array[38] := Cur_log[38];
+  END_IF;  
+  IF (Log_Val_39 &lt;&gt; Temp_array[39] AND Temp_array[39] &lt;&gt; 0) THEN
+    MemSlotOut_40 := Temp_array[39];
+    Log_array[39] := Temp_array[39];
+    Log_Val_10_update := TRUE;
+  ELSE
+    Log_array[39] := Cur_log[39];
+  END_IF;
+  
+ IF (Log_Val_40 &lt;&gt; Temp_array[40] AND Temp_array[40] &lt;&gt; 0) THEN
+    MemSlotOut_41 := Temp_array[40];
+    Log_array[40] := Temp_array[40];
+    Log_Val_11_update := TRUE;
+  ELSE
+    Log_array[40] := Cur_log[40];
+  END_IF;
+  IF (Log_Val_41 &lt;&gt; Temp_array[41] AND Temp_array[41] &lt;&gt; 0) THEN
+    MemSlotOut_42 := Temp_array[41];
+    Log_array[41] := Temp_array[41];
+    Log_Val_11_update := TRUE;
+  ELSE
+    Log_array[41] := Cur_log[41];
+  END_IF;  
+  IF (Log_Val_42 &lt;&gt; Temp_array[42] AND Temp_array[42] &lt;&gt; 0) THEN
+    MemSlotOut_43 := Temp_array[42];
+    Log_array[42] := Temp_array[42];
+    Log_Val_11_update := TRUE;
+  ELSE
+    Log_array[42] := Cur_log[42];
+  END_IF;  
+  IF (Log_Val_43 &lt;&gt; Temp_array[43] AND Temp_array[43] &lt;&gt; 0) THEN
+    MemSlotOut_44 := Temp_array[43];
+    Log_array[43] := Temp_array[43];
+    Log_Val_11_update := TRUE;
+  ELSE
+    Log_array[43] := Cur_log[43];
+  END_IF;
+  
+  IF (Log_Val_44 &lt;&gt; Temp_array[44] AND Temp_array[44] &lt;&gt; 0) THEN
+    MemSlotOut_45 := Temp_array[44];
+    Log_array[44] := Temp_array[44];
+    Log_Val_12_update := TRUE;
+  ELSE
+    Log_array[44] := Cur_log[44];
+  END_IF;
+  IF (Log_Val_45 &lt;&gt; Temp_array[45] AND Temp_array[45] &lt;&gt; 0) THEN
+    MemSlotOut_46 := Temp_array[45];
+    Log_array[45] := Temp_array[45];
+    Log_Val_12_update := TRUE;
+  ELSE
+    Log_array[45] := Cur_log[45];
+  END_IF;
+  IF (Log_Val_46 &lt;&gt; Temp_array[46] AND Temp_array[46] &lt;&gt; 0) THEN
+    MemSlotOut_47 := Temp_array[46];
+    Log_array[46] := Temp_array[46];
+    Log_Val_12_update := TRUE;
+  ELSE
+    Log_array[46] := Cur_log[46];
+  END_IF;  
+  IF (Log_Val_47 &lt;&gt; Temp_array[47] AND Temp_array[47] &lt;&gt; 0) THEN
+    MemSlotOut_48 := Temp_array[47];
+    Log_array[47] := Temp_array[47];
+    Log_Val_12_update := TRUE;
+  ELSE
+    Log_array[47] := Cur_log[47];
+  END_IF;
+  
+  IF (Log_Val_48 &lt;&gt; Temp_array[48] AND Temp_array[48] &lt;&gt; 0) THEN
+    MemSlotOut_49 := Temp_array[48];
+    Log_array[48] := Temp_array[48];
+    Log_Val_13_update := TRUE;
+  ELSE
+    Log_array[48] := Cur_log[48];
+  END_IF;  
+  IF (Log_Val_49 &lt;&gt; Temp_array[49] AND Temp_array[49] &lt;&gt; 0) THEN
+    MemSlotOut_50 := Temp_array[49];
+    Log_array[49] := Temp_array[49];
+    Log_Val_13_update := TRUE;
+  ELSE
+    Log_array[49] := Cur_log[49];
+  END_IF;
+  IF (Log_Val_50 &lt;&gt; Temp_array[50] AND Temp_array[50] &lt;&gt; 0) THEN
+    MemSlotOut_51 := Temp_array[50];
+    Log_array[50] := Temp_array[50];
+    Log_Val_13_update := TRUE;
+  ELSE
+    Log_array[50] := Cur_log[50];
+  END_IF;
+  IF (Log_Val_51 &lt;&gt; Temp_array[51] AND Temp_array[51] &lt;&gt; 0) THEN
+    MemSlotOut_52 := Temp_array[51];
+    Log_array[51] := Temp_array[51];
+    Log_Val_13_update := TRUE;
+  ELSE
+    Log_array[51] := Cur_log[51];
+  END_IF;  
+  
+  IF (Log_Val_52 &lt;&gt; Temp_array[52] AND Temp_array[52] &lt;&gt; 0) THEN
+    MemSlotOut_53 := Temp_array[52];
+    Log_array[52] := Temp_array[52];
+    Log_Val_14_update := TRUE;
+  ELSE
+    Log_array[52] := Cur_log[52];
+  END_IF;  
+  IF (Log_Val_53 &lt;&gt; Temp_array[53] AND Temp_array[53] &lt;&gt; 0) THEN
+    MemSlotOut_54 := Temp_array[53];
+    Log_array[53] := Temp_array[53];
+    Log_Val_14_update := TRUE;
+  ELSE
+    Log_array[53] := Cur_log[53];
+  END_IF;  
+  IF (Log_Val_54 &lt;&gt; Temp_array[54] AND Temp_array[54] &lt;&gt; 0) THEN
+    MemSlotOut_55 := Temp_array[54];
+    Log_array[54] := Temp_array[54];
+    Log_Val_14_update := TRUE;
+  ELSE
+    Log_array[54] := Cur_log[54];
+  END_IF;
+  IF (Log_Val_55 &lt;&gt; Temp_array[55] AND Temp_array[55] &lt;&gt; 0) THEN
+    MemSlotOut_56 := Temp_array[55];
+    Log_array[55] := Temp_array[55];
+    Log_Val_14_update := TRUE;
+  ELSE
+    Log_array[55] := Cur_log[55];
+  END_IF;
+  
+  IF (Log_Val_56 &lt;&gt; Temp_array[56] AND Temp_array[56] &lt;&gt; 0) THEN
+    MemSlotOut_57 := Temp_array[56];
+    Log_array[56] := Temp_array[56];
+    Log_Val_15_update := TRUE;
+  ELSE
+    Log_array[56] := Cur_log[56];
+  END_IF;  
+  IF (Log_Val_57 &lt;&gt; Temp_array[57] AND Temp_array[57] &lt;&gt; 0) THEN
+    MemSlotOut_58 := Temp_array[57];
+    Log_array[57] := Temp_array[57];
+    Log_Val_15_update := TRUE;
+  ELSE
+    Log_array[57] := Cur_log[57];
+  END_IF;  
+  IF (Log_Val_58 &lt;&gt; Temp_array[58] AND Temp_array[58] &lt;&gt; 0) THEN
+    MemSlotOut_59 := Temp_array[58];
+    Log_array[58] := Temp_array[58];
+    Log_Val_15_update := TRUE;
+  ELSE
+    Log_array[58] := Cur_log[58];
+  END_IF;  
+  IF (Log_Val_59 &lt;&gt; Temp_array[59] AND Temp_array[59] &lt;&gt; 0) THEN
+    MemSlotOut_60 := Temp_array[59];
+    Log_array[59] := Temp_array[59];
+    Log_Val_15_update := TRUE;
+  ELSE
+    Log_array[59] := Cur_log[59];
+  END_IF;
+  
+  IF (Log_Val_60 &lt;&gt; Temp_array[60] AND Temp_array[60] &lt;&gt; 0) THEN
+    MemSlotOut_61 := Temp_array[60];
+    Log_array[60] := Temp_array[60];
+    Log_Val_16_update := TRUE;
+  ELSE
+    Log_array[60] := Cur_log[60];
+  END_IF;
+  IF (Log_Val_61 &lt;&gt; Temp_array[61] AND Temp_array[61] &lt;&gt; 0) THEN
+    MemSlotOut_62 := Temp_array[61];
+    Log_array[61] := Temp_array[61];
+    Log_Val_16_update := TRUE;
+  ELSE
+    Log_array[61] := Cur_log[61];
+  END_IF;  
+  IF (Log_Val_62 &lt;&gt; Temp_array[62] AND Temp_array[62] &lt;&gt; 0) THEN
+    MemSlotOut_63 := Temp_array[62];
+    Log_array[62] := Temp_array[62];
+    Log_Val_16_update := TRUE;
+  ELSE
+    Log_array[62] := Cur_log[62];
+  END_IF;  
+  IF (Log_Val_63 &lt;&gt; Temp_array[63] AND Temp_array[63] &lt;&gt; 0) THEN
+    MemSlotOut_64 := Temp_array[63];
+    Log_array[63] := Temp_array[63];
+    Log_Val_16_update := TRUE;
+  ELSE
+    Log_array[63] := Cur_log[63];
+  END_IF;  
+  
+  IF (Log_Val_64 &lt;&gt; Temp_array[64] AND Temp_array[64] &lt;&gt; 0) THEN
+    MemSlotOut_65 := Temp_array[64];
+    Log_array[64] := Temp_array[64];
+    Log_Val_17_update := TRUE;
+  ELSE
+    Log_array[64] := Cur_log[64];
+  END_IF;
+  IF (Log_Val_65 &lt;&gt; Temp_array[65] AND Temp_array[65] &lt;&gt; 0) THEN
+    MemSlotOut_66 := Temp_array[65];
+    Log_array[65] := Temp_array[65];
+    Log_Val_17_update := TRUE;
+  ELSE
+    Log_array[65] := Cur_log[65];
+  END_IF;
+  IF (Log_Val_66 &lt;&gt; Temp_array[66] AND Temp_array[66] &lt;&gt; 0) THEN
+    MemSlotOut_67 := Temp_array[66];
+    Log_array[66] := Temp_array[66];
+    Log_Val_17_update := TRUE;
+  ELSE
+    Log_array[66] := Cur_log[66];
+  END_IF;  
+  IF (Log_Val_67 &lt;&gt; Temp_array[67] AND Temp_array[67] &lt;&gt; 0) THEN
+    MemSlotOut_68 := Temp_array[67];
+    Log_array[67] := Temp_array[67];
+    Log_Val_17_update := TRUE;
+  ELSE
+    Log_array[67] := Cur_log[67];
+  END_IF;  
+  
+  IF (Log_Val_68 &lt;&gt; Temp_array[68] AND Temp_array[68] &lt;&gt; 0) THEN
+    MemSlotOut_69 := Temp_array[68];
+    Log_array[68] := Temp_array[68];
+    Log_Val_18_update := TRUE;
+  ELSE
+    Log_array[68] := Cur_log[68];
+  END_IF;  
+  IF (Log_Val_69 &lt;&gt; Temp_array[69] AND Temp_array[69] &lt;&gt; 0) THEN
+    MemSlotOut_70 := Temp_array[69];
+    Log_array[69] := Temp_array[69];
+    Log_Val_18_update := TRUE;
+  ELSE
+    Log_array[69] := Cur_log[69];
+  END_IF;    
+  IF (Log_Val_70 &lt;&gt; Temp_array[70] AND Temp_array[70] &lt;&gt; 0) THEN
+    MemSlotOut_71 := Temp_array[70];
+    Log_array[70] := Temp_array[70];
+    Log_Val_18_update := TRUE;
+  ELSE
+    Log_array[70] := Cur_log[70];
+  END_IF;
+  IF (Log_Val_71 &lt;&gt; Temp_array[71] AND Temp_array[71] &lt;&gt; 0) THEN
+    MemSlotOut_72 := Temp_array[71];
+    Log_array[71] := Temp_array[71];
+    Log_Val_18_update := TRUE;
+  ELSE
+    Log_array[71] := Cur_log[71];
+  END_IF;  
+  
+  IF (Log_Val_72 &lt;&gt; Temp_array[72] AND Temp_array[72] &lt;&gt; 0) THEN
+    MemSlotOut_73 := Temp_array[72];
+    Log_array[72] := Temp_array[72];
+    Log_Val_19_update := TRUE;
+  ELSE
+    Log_array[72] := Cur_log[72];
+  END_IF;  
+  IF (Log_Val_73 &lt;&gt; Temp_array[73] AND Temp_array[73] &lt;&gt; 0) THEN
+    MemSlotOut_74 := Temp_array[73];
+    Log_array[73] := Temp_array[73];
+    Log_Val_19_update := TRUE;
+  ELSE
+    Log_array[73] := Cur_log[73];
+  END_IF;  
+  IF (Log_Val_74 &lt;&gt; Temp_array[74] AND Temp_array[74] &lt;&gt; 0) THEN
+    MemSlotOut_75 := Temp_array[74];
+    Log_array[74] := Temp_array[74];
+    Log_Val_19_update := TRUE;
+  ELSE
+    Log_array[74] := Cur_log[74];
+  END_IF;
+  IF (Log_Val_75 &lt;&gt; Temp_array[75] AND Temp_array[75] &lt;&gt; 0) THEN
+    MemSlotOut_76 := Temp_array[75];
+    Log_array[75] := Temp_array[75];
+    Log_Val_19_update := TRUE;
+  ELSE
+    Log_array[75] := Cur_log[75];
+  END_IF;
+  
+  IF (Log_Val_76 &lt;&gt; Temp_array[76] AND Temp_array[76] &lt;&gt; 0) THEN
+    MemSlotOut_77 := Temp_array[76];
+    Log_array[76] := Temp_array[76];
+    Log_Val_20_update := TRUE;
+  ELSE
+    Log_array[76] := Cur_log[76];
+  END_IF;  
+  IF (Log_Val_77 &lt;&gt; Temp_array[77] AND Temp_array[77] &lt;&gt; 0) THEN
+    MemSlotOut_78 := Temp_array[77];
+    Log_array[77] := Temp_array[77];
+    Log_Val_20_update := TRUE;
+  ELSE
+    Log_array[77] := Cur_log[77];
+  END_IF;  
+  IF (Log_Val_78 &lt;&gt; Temp_array[78] AND Temp_array[78] &lt;&gt; 0) THEN
+    MemSlotOut_79 := Temp_array[78];
+    Log_array[78] := Temp_array[78];
+    Log_Val_20_update := TRUE;
+  ELSE
+    Log_array[78] := Cur_log[78];
+  END_IF;  
+  IF (Log_Val_79 &lt;&gt; Temp_array[79] AND Temp_array[79] &lt;&gt; 0) THEN
+    MemSlotOut_80 := Temp_array[79];
+    Log_array[79] := Temp_array[79];
+    Log_Val_20_update := TRUE;
+  ELSE
+    Log_array[79] := Cur_log[79];
+  END_IF;
+  
+  IF (Log_Val_80 &lt;&gt; Temp_array[80] AND Temp_array[80] &lt;&gt; 0) THEN
+    MemSlotOut_81 := Temp_array[80];
+    Log_array[80] := Temp_array[80];
+    Log_Val_21_update := TRUE;
+  ELSE
+    Log_array[80] := Cur_log[80];
+  END_IF;
+  IF (Log_Val_81 &lt;&gt; Temp_array[81] AND Temp_array[81] &lt;&gt; 0) THEN
+    MemSlotOut_82 := Temp_array[81];
+    Log_array[81] := Temp_array[81];
+    Log_Val_21_update := TRUE;
+  ELSE
+    Log_array[81] := Cur_log[81];
+  END_IF;  
+  IF (Log_Val_82 &lt;&gt; Temp_array[82] AND Temp_array[82] &lt;&gt; 0) THEN
+    MemSlotOut_83 := Temp_array[82];
+    Log_array[82] := Temp_array[82];
+    Log_Val_21_update := TRUE;
+  ELSE
+    Log_array[82] := Cur_log[82];
+  END_IF;  
+  IF (Log_Val_83 &lt;&gt; Temp_array[83] AND Temp_array[83] &lt;&gt; 0) THEN
+    MemSlotOut_84 := Temp_array[83];
+    Log_array[83] := Temp_array[83];
+    Log_Val_21_update := TRUE;
+  ELSE
+    Log_array[83] := Cur_log[83];
+  END_IF;  
+  
+  IF (Log_Val_84 &lt;&gt; Temp_array[84] AND Temp_array[84] &lt;&gt; 0) THEN
+    MemSlotOut_85 := Temp_array[84];
+    Log_array[84] := Temp_array[84];
+    Log_Val_22_update := TRUE;
+  ELSE
+    Log_array[84] := Cur_log[84];
+  END_IF;
+  IF (Log_Val_85 &lt;&gt; Temp_array[85] AND Temp_array[85] &lt;&gt; 0) THEN
+    MemSlotOut_86 := Temp_array[85];
+    Log_array[85] := Temp_array[85];
+    Log_Val_22_update := TRUE;
+  ELSE
+    Log_array[85] := Cur_log[85];
+  END_IF;
+  IF (Log_Val_86 &lt;&gt; Temp_array[86] AND Temp_array[86] &lt;&gt; 0) THEN
+    MemSlotOut_87 := Temp_array[86];
+    Log_array[86] := Temp_array[86];
+    Log_Val_22_update := TRUE;
+  ELSE
+    Log_array[86] := Cur_log[86];
+  END_IF;  
+  IF (Log_Val_87 &lt;&gt; Temp_array[87] AND Temp_array[87] &lt;&gt; 0) THEN
+    MemSlotOut_88 := Temp_array[87];
+    Log_array[87] := Temp_array[87];
+    Log_Val_22_update := TRUE;
+  ELSE
+    Log_array[87] := Cur_log[87];
+  END_IF;  
+  
+  IF (Log_Val_88 &lt;&gt; Temp_array[88] AND Temp_array[88] &lt;&gt; 0) THEN
+    MemSlotOut_89 := Temp_array[88];
+    Log_array[88] := Temp_array[88];
+    Log_Val_23_update := TRUE;
+  ELSE
+    Log_array[88] := Cur_log[88];
+  END_IF;  
+  IF (Log_Val_89 &lt;&gt; Temp_array[89] AND Temp_array[89] &lt;&gt; 0) THEN
+    MemSlotOut_90 := Temp_array[89];
+    Log_array[89] := Temp_array[89];
+    Log_Val_23_update := TRUE;
+  ELSE
+    Log_array[89] := Cur_log[89];
+  END_IF;  
+  IF (Log_Val_90 &lt;&gt; Temp_array[90] AND Temp_array[90] &lt;&gt; 0) THEN
+    MemSlotOut_91 := Temp_array[90];
+    Log_array[90] := Temp_array[90];
+    Log_Val_23_update := TRUE;
+  ELSE
+    Log_array[90] := Cur_log[90];
+  END_IF;
+  IF (Log_Val_91 &lt;&gt; Temp_array[91] AND Temp_array[91] &lt;&gt; 0) THEN
+    MemSlotOut_92 := Temp_array[91];
+    Log_array[91] := Temp_array[91];
+    Log_Val_23_update := TRUE;
+  ELSE
+    Log_array[91] := Cur_log[91];
+  END_IF;  
+  
+  IF (Log_Val_92 &lt;&gt; Temp_array[92] AND Temp_array[92] &lt;&gt; 0) THEN
+    MemSlotOut_93 := Temp_array[92];
+    Log_array[92] := Temp_array[92];
+    Log_Val_24_update := TRUE;
+  ELSE
+    Log_array[92] := Cur_log[92];
+  END_IF;  
+  IF (Log_Val_93 &lt;&gt; Temp_array[93] AND Temp_array[93] &lt;&gt; 0) THEN
+    MemSlotOut_94 := Temp_array[93];
+    Log_array[93] := Temp_array[93];
+    Log_Val_24_update := TRUE;
+  ELSE
+    Log_array[93] := Cur_log[93];
+  END_IF;  
+  IF (Log_Val_94 &lt;&gt; Temp_array[94] AND Temp_array[94] &lt;&gt; 0) THEN
+    MemSlotOut_95 := Temp_array[94];
+    Log_array[94] := Temp_array[94];
+    Log_Val_24_update := TRUE;
+  ELSE
+    Log_array[94] := Cur_log[94];
+  END_IF;
+  IF (Log_Val_95 &lt;&gt; Temp_array[95] AND Temp_array[95] &lt;&gt; 0) THEN
+    MemSlotOut_96 := Temp_array[95];
+    Log_array[95] := Temp_array[95];
+    Log_Val_24_update := TRUE;
+  ELSE
+    Log_array[95] := Cur_log[95];
+  END_IF;
+  
+  IF (Log_Val_96 &lt;&gt; Temp_array[96] AND Temp_array[96] &lt;&gt; 0) THEN
+    MemSlotOut_97 := Temp_array[96];
+    Log_array[96] := Temp_array[96];
+    Log_Val_25_update := TRUE;
+  ELSE
+    Log_array[96] := Cur_log[96];
+  END_IF;  
+  IF (Log_Val_97 &lt;&gt; Temp_array[97] AND Temp_array[97] &lt;&gt; 0) THEN
+    MemSlotOut_98 := Temp_array[97];
+    Log_array[97] := Temp_array[97];
+    Log_Val_25_update := TRUE;
+  ELSE
+    Log_array[97] := Cur_log[97];
+  END_IF;  
+  IF (Log_Val_98 &lt;&gt; Temp_array[98] AND Temp_array[98] &lt;&gt; 0) THEN
+    MemSlotOut_99 := Temp_array[98];
+    Log_array[98] := Temp_array[98];
+    Log_Val_25_update := TRUE;
+  ELSE
+    Log_array[98] := Cur_log[98];
+  END_IF;  
+  IF (Log_Val_99 &lt;&gt; Temp_array[99] AND Temp_array[99] &lt;&gt; 0) THEN
+    MemSlotOut_100 := Temp_array[99];
+    Log_array[99] := Temp_array[99];
+    Log_Val_25_update := TRUE;
+  ELSE
+    Log_array[99] := Cur_log[99];
+  END_IF;   
+END_IF;
+  
+  // If any memory slots are updated, set Update_log var
+  IF (Log_Val_1_update OR Log_Val_2_update OR Log_Val_3_update OR Log_Val_4_update OR Log_Val_5_update OR
+  Log_Val_6_update OR Log_Val_7_update OR Log_Val_8_update OR Log_Val_9_update OR Log_Val_10_update OR
+  Log_Val_11_update OR Log_Val_12_update OR Log_Val_13_update OR Log_Val_14_update OR Log_Val_15_update OR
+  Log_Val_16_update OR Log_Val_17_update OR Log_Val_18_update OR Log_Val_19_update OR Log_Val_20_update OR
+  Log_Val_21_update OR Log_Val_22_update OR Log_Val_23_update OR Log_Val_24_update OR Log_Val_25_update OR
+  Log_Val_init_update) THEN
+    Update_log := TRUE;
+  ELSE
+    Update_log := FALSE;
+  END_IF;</code>
+          </ST>
+        </body>
+        <addData>
+          <data name="InterfaceText" handleUnknown="discard">
+            <code>FUNCTION Mem_Sort : INT
+VAR_INPUT
+  noMemStore : BOOL;
+  firstRunDone : BOOL;
+  (* Update_memory : BOOL;
+ UDINT is a 32bit unsigned int
+     USINT is an 8bit unsigned int *)
+  Log_Val_0 : USINT;
+  Log_Val_1 : USINT;
+  Log_Val_2 : USINT;
+  Log_Val_3 : USINT;
+  Log_Val_4 : USINT;
+  Log_Val_5 : USINT;
+  Log_Val_6 : USINT;
+  Log_Val_7 : USINT;
+  Log_Val_8 : USINT;
+  Log_Val_9 : USINT;
+  Log_Val_10 : USINT;
+  Log_Val_11 : USINT;
+  Log_Val_12 : USINT;
+  Log_Val_13 : USINT;
+  Log_Val_14 : USINT;
+  Log_Val_15 : USINT;
+  Log_Val_16 : USINT;
+  Log_Val_17 : USINT;
+  Log_Val_18 : USINT;
+  Log_Val_19 : USINT;
+  Log_Val_20 : USINT;
+  Log_Val_21 : USINT;
+  Log_Val_22 : USINT;
+  Log_Val_23 : USINT;
+  Log_Val_24 : USINT;
+  Log_Val_25 : USINT;
+  Log_Val_26 : USINT;
+  Log_Val_27 : USINT;
+  Log_Val_28 : USINT;
+  Log_Val_29 : USINT;
+  Log_Val_30 : USINT;
+  Log_Val_31 : USINT;
+  Log_Val_32 : USINT;
+  Log_Val_33 : USINT;
+  Log_Val_34 : USINT;
+  Log_Val_35 : USINT;
+  Log_Val_36 : USINT;
+  Log_Val_37 : USINT;
+  Log_Val_38 : USINT;
+  Log_Val_39 : USINT;
+  Log_Val_40 : USINT;
+  Log_Val_41 : USINT;
+  Log_Val_42 : USINT;
+  Log_Val_43 : USINT;
+  Log_Val_44 : USINT;
+  Log_Val_45 : USINT;
+  Log_Val_46 : USINT;
+  Log_Val_47 : USINT;
+  Log_Val_48 : USINT;
+  Log_Val_49 : USINT;
+  Log_Val_50 : USINT;
+  Log_Val_51 : USINT;
+  Log_Val_52 : USINT;
+  Log_Val_53 : USINT;
+  Log_Val_54 : USINT;
+  Log_Val_55 : USINT;
+  Log_Val_56 : USINT;
+  Log_Val_57 : USINT;
+  Log_Val_58 : USINT;
+  Log_Val_59 : USINT;
+  Log_Val_60 : USINT;
+  Log_Val_61 : USINT;
+  Log_Val_62 : USINT;
+  Log_Val_63 : USINT;
+  Log_Val_64 : USINT;
+  Log_Val_65 : USINT;
+  Log_Val_66 : USINT;
+  Log_Val_67 : USINT;
+  Log_Val_68 : USINT;
+  Log_Val_69 : USINT;
+  Log_Val_70 : USINT;
+  Log_Val_71 : USINT;
+  Log_Val_72 : USINT;
+  Log_Val_73 : USINT;
+  Log_Val_74 : USINT;
+  Log_Val_75 : USINT;
+  Log_Val_76 : USINT;
+  Log_Val_77 : USINT;
+  Log_Val_78 : USINT;
+  Log_Val_79 : USINT;
+  Log_Val_80 : USINT;
+  Log_Val_81 : USINT;
+  Log_Val_82 : USINT;
+  Log_Val_83 : USINT;
+  Log_Val_84 : USINT;
+  Log_Val_85 : USINT;
+  Log_Val_86 : USINT;
+  Log_Val_87 : USINT;
+  Log_Val_88 : USINT;
+  Log_Val_89 : USINT;
+  Log_Val_90 : USINT;
+  Log_Val_91 : USINT;
+  Log_Val_92 : USINT;
+  Log_Val_93 : USINT;
+  Log_Val_94 : USINT;
+  Log_Val_95 : USINT;
+  Log_Val_96 : USINT;
+  Log_Val_97 : USINT;
+  Log_Val_98 : USINT;
+  Log_Val_99 : USINT;
+  List_head : USINT;
+  List_length : USINT;
+  Number_of_ints : USINT;
+  Org_ints : ARRAY[0..160] OF USINT;
+  Cur_log : ARRAY[0..99] OF USINT;
+  Res_List : BOOL;
+END_VAR
+VAR_OUTPUT
+  firstRunDoneOut : BOOL;
+  Log_head : USINT;
+  Log_count : USINT;
+  Log_array : ARRAY[0..99] OF USINT;
+  MemSlotOut_1 : USINT;
+  MemSlotOut_2 : USINT;
+  MemSlotOut_3 : USINT;
+  MemSlotOut_4 : USINT;
+  MemSlotOut_5 : USINT;
+  MemSlotOut_6 : USINT;
+  MemSlotOut_7 : USINT;
+  MemSlotOut_8 : USINT;
+  MemSlotOut_9 : USINT;
+  MemSlotOut_10 : USINT;
+  MemSlotOut_11 : USINT;
+  MemSlotOut_12 : USINT;
+  MemSlotOut_13 : USINT;
+  MemSlotOut_14 : USINT;
+  MemSlotOut_15 : USINT;
+  MemSlotOut_16 : USINT;
+  MemSlotOut_17 : USINT;
+  MemSlotOut_18 : USINT;
+  MemSlotOut_19 : USINT;
+  MemSlotOut_20 : USINT;
+  MemSlotOut_21 : USINT;
+  MemSlotOut_22 : USINT;
+  MemSlotOut_23 : USINT;
+  MemSlotOut_24 : USINT;
+  MemSlotOut_25 : USINT;
+  MemSlotOut_26 : USINT;
+  MemSlotOut_27 : USINT;
+  MemSlotOut_28 : USINT;
+  MemSlotOut_29 : USINT;
+  MemSlotOut_30 : USINT;
+  MemSlotOut_31 : USINT;
+  MemSlotOut_32 : USINT;
+  MemSlotOut_33 : USINT;
+  MemSlotOut_34 : USINT;
+  MemSlotOut_35 : USINT;
+  MemSlotOut_36 : USINT;
+  MemSlotOut_37 : USINT;
+  MemSlotOut_38 : USINT;
+  MemSlotOut_39 : USINT;
+  MemSlotOut_40 : USINT;
+  MemSlotOut_41 : USINT;
+  MemSlotOut_42 : USINT;
+  MemSlotOut_43 : USINT;
+  MemSlotOut_44 : USINT;
+  MemSlotOut_45 : USINT;
+  MemSlotOut_46 : USINT;
+  MemSlotOut_47 : USINT;
+  MemSlotOut_48 : USINT;
+  MemSlotOut_49 : USINT;
+  MemSlotOut_50 : USINT;
+  MemSlotOut_51 : USINT;
+  MemSlotOut_52 : USINT;
+  MemSlotOut_53 : USINT;
+  MemSlotOut_54 : USINT;
+  MemSlotOut_55 : USINT;
+  MemSlotOut_56 : USINT;
+  MemSlotOut_57 : USINT;
+  MemSlotOut_58 : USINT;
+  MemSlotOut_59 : USINT;
+  MemSlotOut_60 : USINT;
+  MemSlotOut_61 : USINT;
+  MemSlotOut_62 : USINT;
+  MemSlotOut_63 : USINT;
+  MemSlotOut_64 : USINT;
+  MemSlotOut_65 : USINT;
+  MemSlotOut_66 : USINT;
+  MemSlotOut_67 : USINT;
+  MemSlotOut_68 : USINT;
+  MemSlotOut_69 : USINT;
+  MemSlotOut_70 : USINT;
+  MemSlotOut_71 : USINT;
+  MemSlotOut_72 : USINT;
+  MemSlotOut_73 : USINT;
+  MemSlotOut_74 : USINT;
+  MemSlotOut_75 : USINT;
+  MemSlotOut_76 : USINT;
+  MemSlotOut_77 : USINT;
+  MemSlotOut_78 : USINT;
+  MemSlotOut_79 : USINT;
+  MemSlotOut_80 : USINT;
+  MemSlotOut_81 : USINT;
+  MemSlotOut_82 : USINT;
+  MemSlotOut_83 : USINT;
+  MemSlotOut_84 : USINT;
+  MemSlotOut_85 : USINT;
+  MemSlotOut_86 : USINT;
+  MemSlotOut_87 : USINT;
+  MemSlotOut_88 : USINT;
+  MemSlotOut_89 : USINT;
+  MemSlotOut_90 : USINT;
+  MemSlotOut_91 : USINT;
+  MemSlotOut_92 : USINT;
+  MemSlotOut_93 : USINT;
+  MemSlotOut_94 : USINT;
+  MemSlotOut_95 : USINT;
+  MemSlotOut_96 : USINT;
+  MemSlotOut_97 : USINT;
+  MemSlotOut_98 : USINT;
+  MemSlotOut_99 : USINT;
+  MemSlotOut_100 : USINT;
+  Log_Val_1_update : BOOL;
+  Log_Val_2_update : BOOL;
+  Log_Val_3_update : BOOL;
+  Log_Val_4_update : BOOL;
+  Log_Val_5_update : BOOL;
+  Log_Val_6_update : BOOL;
+  Log_Val_7_update : BOOL;
+  Log_Val_8_update : BOOL;
+  Log_Val_9_update : BOOL;
+  Log_Val_10_update : BOOL;
+  Log_Val_11_update : BOOL;
+  Log_Val_12_update : BOOL;
+  Log_Val_13_update : BOOL;
+  Log_Val_14_update : BOOL;
+  Log_Val_15_update : BOOL;
+  Log_Val_16_update : BOOL;
+  Log_Val_17_update : BOOL;
+  Log_Val_18_update : BOOL;
+  Log_Val_19_update : BOOL;
+  Log_Val_20_update : BOOL;
+  Log_Val_21_update : BOOL;
+  Log_Val_22_update : BOOL;
+  Log_Val_23_update : BOOL;
+  Log_Val_24_update : BOOL;
+  Log_Val_25_update : BOOL;
+  Log_Val_init_update : BOOL;
+  Update_log : BOOL;
+  Update_length : BOOL;
+END_VAR
+VAR
+  i : USINT;
+  j : USINT;
+  WrapAround : USINT;
+  ToEndOfArray : USINT;
+  MemBlockStart : USINT;
+  MemSlotStart : USINT;
+  Temp_array : ARRAY[0..99] OF USINT;
+END_VAR
+
+</code>
+          </data>
+          <data name="notYetVerified" handleUnknown="discard">False</data>
+        </addData>
+      </pou>
+      <pou name="Log_String" pouType="function">
+        <interface>
+          <returnType>
+            <INT/>
+          </returnType>
+          <inputVars>
+            <variable name="Log_head">
+              <type>
+                <USINT/>
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Log_update : BOOL;</xhtml>
+              </documentation>
+            </variable>
+            <variable name="Scroll_head">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="Log_array">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <USINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="Log_test">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="Log_noMemStore">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="List_length">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="Log_outString">
+              <type>
+                <string/>
+              </type>
+            </variable>
+            <variable name="adjusted_log">
+              <type>
+                <array>
+                  <dimension lower="0" upper="99"/>
+                  <baseType>
+                    <USINT/>
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="Made_it_here">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="i">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="j">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="split_val">
+              <type>
+                <USINT/>
+              </type>
+            </variable>
+            <variable name="temp_string">
+              <type>
+                <string/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <code xmlns="http://www.w3.org/1999/xhtml">//IF Log_update THEN
+// The head is one place in front of the last actual value.
+IF Log_head = 0 THEN
+  IF List_length = 100 THEN
+    Log_head := 99;
+  END_IF;
+ELSE
+  Log_head := Log_head - 1;
+END_IF; 
+
+
+IF Log_test THEN
+  FOR i := 0 TO 99 DO
+    adjusted_log[i] := i;    
+  END_FOR;
+ELSIF Log_noMemStore THEN
+  FOR i := 0 TO 99 DO
+    adjusted_log[i] := Log_array[i];  
+  END_FOR;
+ELSE  
+  // Load the array in the correct order to convert into an integer
+  FOR i := 0 TO Log_head DO
+    adjusted_log[i] := Log_array[Log_head - i];
+  END_FOR;
+  split_val := 99 - Log_head;
+  FOR i := 1 TO split_val DO
+    adjusted_log[Log_head + i] := Log_array[100 - i];
+  END_FOR;
+  Made_it_here := TRUE;
+END_IF;
+
+// Only want 10 values depending on where the Scroll value is
+Scroll_head := Scroll_head * 2;
+FOR i := Scroll_head TO (Scroll_head + 9) DO
+  // Puts log number before the entry
+  j := i + 1;
+  temp_string := USINT_TO_STRING(j);
+  temp_string := CONCAT(temp_string,': ');
+  
+  CASE adjusted_log[i] OF
+  1:
+    temp_string := CONCAT(temp_string,'Fault - Critical Cell Overvoltage$N');
+  2:
+    temp_string := CONCAT(temp_string,'Fault - Cell Undervoltage$N');
+  3:
+    temp_string := CONCAT(temp_string,'Fault - Critical Cell Undervoltage$N');
+  4:
+    temp_string := CONCAT(temp_string,'Fault - Cell Temperature High$N');
+  5:
+    temp_string := CONCAT(temp_string,'Fault - Critical Cell Temp. High$N');
+  6:
+    temp_string := CONCAT(temp_string,'Fault - Critical Board Temp. High$N');
+  7:
+    temp_string := CONCAT(temp_string,'Fault - Microcontroller Temp. High$N');
+  8:
+    temp_string := CONCAT(temp_string,'Fault - Hardware Overload$N');
+  9:
+    temp_string := CONCAT(temp_string,'Fault - Fast Software Overload$N');
+  10:
+    temp_string := CONCAT(temp_string,'Fault - Software Overload$N');
+  11:
+    temp_string := CONCAT(temp_string,'Fault - Battery Voltage Low$N');
+  12:
+    temp_string := CONCAT(temp_string,'Battery Mode - Enabled$N');
+  13:
+    temp_string := CONCAT(temp_string,'Battery Mode - Storage$N');
+  14:
+    temp_string := CONCAT(temp_string,'Battery Mode - Disabled$N');
+  15:
+    temp_string := CONCAT(temp_string,'Battery Mode - Maintenance$N');
+  16:
+    temp_string := CONCAT(temp_string,'Battery Mode - Unknown/Invalid$N');
+  17:
+    temp_string := CONCAT(temp_string,'FET Array - Low Power OFF$N');
+  18:
+    temp_string := CONCAT(temp_string,'FET Array - No Charge$N');
+  19:
+    temp_string := CONCAT(temp_string,'FET Array - No Charge No Discharge$N');
+  20:
+    temp_string := CONCAT(temp_string,'FET Array - All On$N');
+  21:
+    temp_string := CONCAT(temp_string,'FET Array - Maintenance$N');
+  22:
+    temp_string := CONCAT(temp_string,'FET Array - Unknown/Invalid$N');
+  23:
+    temp_string := CONCAT(temp_string,'SOC Mode - Unknown$N');
+  24:
+    temp_string := CONCAT(temp_string,'SOC Mode - Init$N');
+  25:
+    temp_string := CONCAT(temp_string,'SOC Mode - No Current$N');
+  26:
+    temp_string := CONCAT(temp_string,'SOC Mode - CC$N');
+  27:
+    temp_string := CONCAT(temp_string,'ECU - Fault Status Detected$N');
+  28:
+    temp_string := CONCAT(temp_string,'ECU - BIT Status Problem Detected$N');
+  29:
+    temp_string := CONCAT(temp_string,'ECU - Battery Disabled$N');
+  30:
+    temp_string := CONCAT(temp_string,'ECU - Battery Enabled$N');
+  31:
+    temp_string := CONCAT(temp_string,'ECU - Software Overload Detected$N');
+  32:
+    temp_string := CONCAT(temp_string,'ECU - Overload Latch - Unlatched$N');
+  33:
+    temp_string := CONCAT(temp_string,'ECU - Overload Latch - Latched$N');
+  34:
+    temp_string := CONCAT(temp_string,'ECU - Charge Overload$N');
+  35:
+    temp_string := CONCAT(temp_string,'ECU - Overload Latch - Clear Latch Attempted$N');
+  36:
+    temp_string := CONCAT(temp_string,'ECU - Heater Control - Off$N');
+  37:
+    temp_string := CONCAT(temp_string,'ECU - Heater Control - On$N');
+  38:
+    temp_string := CONCAT(temp_string,'ECU - Charge FET - Off$N');
+  39:
+    temp_string := CONCAT(temp_string,'ECU - Charge FET - On$N');
+  40:
+    temp_string := CONCAT(temp_string,'ECU - Discharge FET - Off$N');
+  41:
+    temp_string := CONCAT(temp_string,'ECU - Discharge FET - On$N');
+  42:
+    temp_string := CONCAT(temp_string,'ECU - Charging Temp Reached$N');
+  43:
+    temp_string := CONCAT(temp_string,'ECU - Too Cold for Charging$N');
+  44:
+    temp_string := CONCAT(temp_string,'ECU - Battle Override Received$N');
+  45:
+    temp_string := CONCAT(temp_string,'ECU - Overcharge Protect Latch - Not Latched$N');
+  46:
+    temp_string := CONCAT(temp_string,'ECU - Overcharge Protect Latch - Latched$N');
+  47:
+    temp_string := CONCAT(temp_string,'ECU - Ideal Diode - Bypass$N');
+  48:
+    temp_string := CONCAT(temp_string,'ECU - Ideal Diode - On$N');
+  49:
+    temp_string := CONCAT(temp_string,'ECU - FET Power - Off$N');
+  50:
+    temp_string := CONCAT(temp_string,'ECU - FET Power - On$N');
+  51:
+    temp_string := CONCAT(temp_string,'ECU - Reserve Protect - Disabled$N');
+  52:
+    temp_string := CONCAT(temp_string,'ECU - Reserve Protect - Enabled$N');
+  53:
+    temp_string := CONCAT(temp_string,'ECU - Reserve Protect Warn Value Reached$N');
+  54:
+    temp_string := CONCAT(temp_string,'ECU - Reserve Protect Limit Reached$N');
+  55:
+    temp_string := CONCAT(temp_string,'ECU - Arctic Heating - Disabled$N');
+  56:
+    temp_string := CONCAT(temp_string,'ECU - Arctic Heating - Enabled$N');
+  57:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - In Storage Mode$N');
+  58:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - FETs Opening$N');
+  59:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - In Disabled Mode$N');
+  60:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - Arctic Heating$N');
+  61:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - Maintenance Heating$N');
+  62:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - Charge Enabled$N');
+  63:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - Charge Blocked$N');
+  64:
+    temp_string := CONCAT(temp_string,'ECU - Heat Reasons - Unknown$N');
+  65:
+    temp_string := CONCAT(temp_string,'ECU - Storage Delay - Disabled$N');
+  66:
+    temp_string := CONCAT(temp_string,'ECU - Storage Delay - Enabled$N');
+  67:
+    temp_string := CONCAT(temp_string,'Battery Calibrated (PBIT) - Pass$N');
+  68:
+    temp_string := CONCAT(temp_string,'Battery Calibrated (PBIT) - Fail$N');
+  69:
+    temp_string := CONCAT(temp_string,'Battery Calibrated (PBIT) - Can Not$N');
+  70:
+    temp_string := CONCAT(temp_string,'Voltage Reference (PBIT) - Pass$N');
+  71:
+    temp_string := CONCAT(temp_string,'Voltage Reference (PBIT) - Fail$N');
+  72:
+    temp_string := CONCAT(temp_string,'Voltage Reference (PBIT) - Can Not$N');
+  73:
+    temp_string := CONCAT(temp_string,'Int EEPROM (PBIT) - Pass$N');
+  74:
+    temp_string := CONCAT(temp_string,'Int EEPROM (PBIT) - Fail$N');
+  75:
+    temp_string := CONCAT(temp_string,'Int EEPROM (PBIT) - Can Not$N');
+  76:
+    temp_string := CONCAT(temp_string,'Results Ready (PBIT) - Pass$N');
+  77:
+    temp_string := CONCAT(temp_string,'Results Ready (PBIT) - Fail$N');
+  78:
+    temp_string := CONCAT(temp_string,'Results Ready (PBIT) - Can Not$N');
+  79:
+    temp_string := CONCAT(temp_string,'Battery Calibrated (IBIT) - Pass$N');
+  80:
+    temp_string := CONCAT(temp_string,'Battery Calibrated (IBIT) - Fail$N');
+  81:
+    temp_string := CONCAT(temp_string,'Battery Calibrated (IBIT) - Can Not$N');
+  82:
+    temp_string := CONCAT(temp_string,'Voltage Reference (IBIT) - Pass$N');
+  83:
+    temp_string := CONCAT(temp_string,'Voltage Reference (IBIT) - Fail$N');
+  84:
+    temp_string := CONCAT(temp_string,'Voltage Reference (IBIT) - Can Not$N');
+  85:
+    temp_string := CONCAT(temp_string,'Int EEPROM (IBIT) - Pass$N');
+  86:
+    temp_string := CONCAT(temp_string,'Int EEPROM (IBIT) - Fail$N');
+  87:
+    temp_string := CONCAT(temp_string,'Int EEPROM (IBIT) - Can Not$N');
+  88:
+    temp_string := CONCAT(temp_string,'Results Ready (IBIT) - Pass$N');
+  89:
+    temp_string := CONCAT(temp_string,'Results Ready (IBIT) - Fail$N');
+  90:
+    temp_string := CONCAT(temp_string,'Results Ready (IBIT) - Can Not$N');
+  91:
+    temp_string := CONCAT(temp_string,'Voltage Reference (CBIT) - Pass$N');
+  92:
+    temp_string := CONCAT(temp_string,'Voltage Reference (CBIT) - Fail$N');
+  93:
+    temp_string := CONCAT(temp_string,'Voltage Reference (CBIT) - Can Not$N');
+  94:
+    temp_string := CONCAT(temp_string,'ROP (CBIT) - Pass$N');
+  95:
+    temp_string := CONCAT(temp_string,'ROP (CBIT) - Fail$N');
+  96:
+    temp_string := CONCAT(temp_string,'ROP (CBIT) - Can Not$N');
+  97:
+    temp_string := CONCAT(temp_string,'Delta State of Charge (CBIT) - Pass$N');
+  98:
+    temp_string := CONCAT(temp_string,'Delta State of Charge (CBIT) - Fail$N');
+  99:
+    temp_string := CONCAT(temp_string,'Delta State of Charge (CBIT) - Can Not$N');
+  100:
+    temp_string := CONCAT(temp_string,'Delta Temperature (CBIT) - Pass$N');
+  101:
+    temp_string := CONCAT(temp_string,'Delta Temperature (CBIT) - Fail$N');
+  102:
+    temp_string := CONCAT(temp_string,'Delta Temperature (CBIT) - Can Not$N');
+  103:
+    temp_string := CONCAT(temp_string,'Heater - Pass$N');
+  104:
+    temp_string := CONCAT(temp_string,'Heater - Fail$N');
+  105:
+    temp_string := CONCAT(temp_string,'Heater - Can Not$N');
+  106:
+    temp_string := CONCAT(temp_string,'FET Short - Pass$N');
+  107:
+    temp_string := CONCAT(temp_string,'FET Short - Fail$N');
+  108:
+    temp_string := CONCAT(temp_string,'FET Short - Can Not$N');
+  109:
+    temp_string := CONCAT(temp_string,'AFE Voltage Reference (CBIT) - Pass$N');
+  110:
+    temp_string := CONCAT(temp_string,'AFE Voltage Reference (CBIT) - Fail$N');
+  111:
+    temp_string := CONCAT(temp_string,'AFE Voltage Reference (CBIT) - Can Not$N');
+  112:
+    temp_string := CONCAT(temp_string,'AFE Communication Loss (CBIT) - Pass$N');
+  113:
+    temp_string := CONCAT(temp_string,'AFE Communication Loss (CBIT) - Fail$N');
+  114:
+    temp_string := CONCAT(temp_string,'AFE Communication Loss (CBIT) - Can Not$N');
+  115:
+    temp_string := CONCAT(temp_string,'Power Supply (CBIT) - Pass$N');
+  116:
+    temp_string := CONCAT(temp_string,'Power Supply (CBIT) - Fail$N');
+  117:
+    temp_string := CONCAT(temp_string,'Power Supply (CBIT) - Can Not$N');
+  118:
+    temp_string := CONCAT(temp_string,'FET Stuck Open (CBIT) - Pass$N');
+  119:
+    temp_string := CONCAT(temp_string,'FET Stuck Open (CBIT) - Fail$N');
+  120:
+    temp_string := CONCAT(temp_string,'FET Stuck Open (CBIT) - Can Not$N');
+  121:
+    temp_string := CONCAT(temp_string,'Temperature Wire Shorted High (CBIT) - Pass$N');
+  122:
+    temp_string := CONCAT(temp_string,'Temperature Wire Shorted High (CBIT) - Fail$N');
+  123:
+    temp_string := CONCAT(temp_string,'Temperature Wire Shorted High (CBIT) - Can Not$N');
+  124:
+    temp_string := CONCAT(temp_string,'Temperature Wire Shorted Low (CBIT) - Pass$N');
+  125:
+    temp_string := CONCAT(temp_string,'Temperature Wire Shorted Low (CBIT) - Fail$N');
+  126:
+    temp_string := CONCAT(temp_string,'Temperature Wire Shorted Low (CBIT) - Can Not$N');
+  127:
+    temp_string := CONCAT(temp_string,'Results Ready (CBIT) - Pass$N');
+  128:
+    temp_string := CONCAT(temp_string,'Results Ready (CBIT) - Fail$N');
+  129:
+    temp_string := CONCAT(temp_string,'Results Ready (CBIT) - Can Not$N');
+  130:
+    temp_string := CONCAT(temp_string,'AFE Voltage Self-Test (SBIT) - Pass$N');
+  131:
+    temp_string := CONCAT(temp_string,'AFE Voltage Self-Test (SBIT) - Fail$N');
+  132:
+    temp_string := CONCAT(temp_string,'AFE Voltage Self-Test (SBIT) - Can Not$N');
+  133:
+    temp_string := CONCAT(temp_string,'AFE Temperature Self-Test (SBIT) - Pass$N');
+  134:
+    temp_string := CONCAT(temp_string,'AFE Temperature Self-Test (SBIT) - Fail$N');
+  135:
+    temp_string := CONCAT(temp_string,'AFE Temperature Self-Test (SBIT) - Can Not$N');
+  136:
+    temp_string := CONCAT(temp_string,'AFE Broken Wire (SBIT) - Pass$N');
+  137:
+    temp_string := CONCAT(temp_string,'AFE Broken Wire (SBIT) - Fail$N');
+  138:
+    temp_string := CONCAT(temp_string,'AFE Broken Wire (SBIT) - Can Not$N');
+  139:
+    temp_string := CONCAT(temp_string,'AFE Thermal Shutdown (SBIT) - Pass$N');
+  140:
+    temp_string := CONCAT(temp_string,'AFE Thermal Shutdown (SBIT) - Fail$N');
+  141:
+    temp_string := CONCAT(temp_string,'AFE Thermal Shutdown (SBIT) - Can Not$N');
+  142:
+    temp_string := CONCAT(temp_string,'AFE Muxfail (SBIT) - Pass$N');
+  143:
+    temp_string := CONCAT(temp_string,'AFE Muxfail (SBIT) - Fail$N');
+  144:
+    temp_string := CONCAT(temp_string,'AFE Muxfail (SBIT) - Can Not$N');
+  145:
+    temp_string := CONCAT(temp_string,'RAM (SBIT) - Pass$N');
+  146:
+    temp_string := CONCAT(temp_string,'RAM (SBIT) - Fail$N');
+  147:
+    temp_string := CONCAT(temp_string,'RAM (SBIT) - Can Not$N');
+  148:
+    temp_string := CONCAT(temp_string,'Flash (SBIT) - Pass$N');
+  149:
+    temp_string := CONCAT(temp_string,'Flash (SBIT) - Fail$N');
+  150:
+    temp_string := CONCAT(temp_string,'Flash (SBIT) - Can Not$N');
+  151:
+    temp_string := CONCAT(temp_string,'ROP (SBIT) - Pass$N');
+  152:
+    temp_string := CONCAT(temp_string,'ROP (SBIT) - Fail$N');
+  153:
+    temp_string := CONCAT(temp_string,'ROP (SBIT) - Can Not$N');
+  154:
+    temp_string := CONCAT(temp_string,'Results Ready (SBIT) - Pass$N');
+  155:
+    temp_string := CONCAT(temp_string,'Results Ready (SBIT) - Fail$N');
+  156:
+    temp_string := CONCAT(temp_string,'Results Ready (SBIT) - Can Not$N');
+  157:
+    temp_string := CONCAT(temp_string,'Under Voltage Lockout (CBIT) - Pass$N');
+  158:
+    temp_string := CONCAT(temp_string,'Under Voltage Lockout (CBIT) - Fail$N');
+  159:
+    temp_string := CONCAT(temp_string,'Under Voltage Lockout (CBIT) - Can Not$N');
+  160:
+    temp_string := CONCAT(temp_string,'Fault - Cell Overvoltage$N');
+  ELSE
+    temp_string := CONCAT(temp_string,'{empty}$N');
+  END_CASE;
+  Log_outString := CONCAT(Log_outString,temp_string);
+END_FOR;
+//END_IF;</code>
+          </ST>
+        </body>
+        <addData>
+          <data name="InterfaceText" handleUnknown="discard">
+            <code>FUNCTION Log_String : INT
+VAR_INPUT
+  (* Log_update : BOOL; *)
+  Log_head : USINT;
+  Scroll_head : USINT;
+  Log_array : ARRAY[0..99] OF USINT;
+  Log_test : BOOL;
+  Log_noMemStore : BOOL;
+  List_length : USINT;
+END_VAR
+VAR_OUTPUT
+  Log_outString : STRING;
+  adjusted_log : ARRAY[0..99] OF USINT;
+  Made_it_here : BOOL;
+END_VAR
+VAR
+  i : USINT;
+  j : USINT;
+  split_val : USINT;
+  temp_string : STRING;
+END_VAR
+
+</code>
+          </data>
+          <data name="notYetVerified" handleUnknown="discard">False</data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations/>
+  </instances>
+</project>

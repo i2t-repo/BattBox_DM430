@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bsd><Input><Net Name="Batt_SN" DataType="U16"/><Net Name="Batt_Addr" DataType="U8"/><Net Name="Log_outString" DataType="STRING"/><Bus Name="Btn_Util"/><Bus Name="CAN_Input"/></Input><Output/></Bsd>

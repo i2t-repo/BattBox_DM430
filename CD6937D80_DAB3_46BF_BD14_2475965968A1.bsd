@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bsd><Input><Net Name="Ver_Minor" DataType="U8"/><Net Name="Ver_Major" DataType="U8"/></Input><Output/></Bsd>

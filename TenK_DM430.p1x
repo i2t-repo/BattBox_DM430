@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Project ID="{2086388F-D9DE-4716-939B-203508C077E2}" FileName="TenK_DM430.p1x" DefaultStringLength="5000">
+  <FileFormat>007D</FileFormat>
+  <GUIVersion>2023.1.4.5170</GUIVersion>
+  <ProgrammableHW PartNumber="11197974, 11197976" Description="DM430E-1-1-X-X ver:70298396v170 (SYS:70298408v170)" Comment="DM430E_1_1_X_X" HwdName="70298396" HwdVersion="1.70.0">
+    <SystemFile FileName="70298408v170.sys" Parameters="W1:DISABLE">
+      <APIDocument FileName="70298408.pdf"/>
+      <Skin FileName="DM430E_X_X_0_X_skin.svg" Selected="true"/>
+      <Skin FileName="DM430E_X_X_1_X_skin.svg"/>
+    </SystemFile>
+    <Application Name="TENK_DM430" Parameters="ModuleConnectionLog:Disabled">
+      <PID Description="TenK_DM430"/>
+      <ToolKey Parameters="LOGKEY:theP3nI5m1ghti3R" Configuration=""/>
+      <MainModule ModuleName="MAINTASK" FileName="DM430E_1_1_1_X_T.scs"/>
+      <ScreenRepository FileName="SCREENREPO.SRD"/>
+      <PLCopenXML FileName="PLCFile1.xml"/>
+      <DebugSettings FileName="DebugSettings.xml"/>
+      <Parameters FileName="ProjectParameters.json"/>
+    </Application>
+    <Output>
+      <Hexfile FileName="TenK_DM430.lhx"/>
+      <OutputTargetPartNumber></OutputTargetPartNumber>
+      <OutputTargetSerialNumber></OutputTargetSerialNumber>
+    </Output>
+    <TargetPartNumber></TargetPartNumber>
+  </ProgrammableHW>
+</Project>

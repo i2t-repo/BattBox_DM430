@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bsd><Input><Bus Name="Btn_Util"><Net Name="Batt_Level_Num" DataType="S16"/><Net Name="Batt_Level_Color" DataType="COLOR"/></Bus><Bus Name="CAN_Input"><Net Name="SoC_Ave_S16" DataType="S16"/><Net Name="Hlth_W_U8" DataType="U8"/><Net Name="Hlth_D_U8" DataType="U8"/></Bus></Input><Output/></Bsd>

@@ -1,0 +1,237 @@
+{
+    "FileFormat": "002A",
+    "Parameters": [
+        {
+            "GUID": "{23A45C05-540A-5e95-7C4B-10ADD175939C}",
+            "DataType": "U16",
+            "ParamName": "Batt_SN",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "1"
+        },
+        {
+            "GUID": "{23A45C1F-5479-2251-EB07-7FB57E5EC968}",
+            "DataType": "U16",
+            "ParamName": "Batt_SN",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "0"
+        },
+        {
+            "GUID": "{25850AA3-EEB1-4e00-23B6-DEC438E97107}",
+            "DataType": "U8",
+            "ParamName": "LogListHead",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "0"
+        },
+        {
+            "GUID": "{2B25B896-8920-60c8-927E-EC47C46440BC}",
+            "DataType": "U32",
+            "ParamName": "Log_8",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "2-3"
+        },
+        {
+            "GUID": "{2B25BEBB-A355-62d8-C78E-07352373F225}",
+            "DataType": "U32",
+            "ParamName": "Log_4",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "4-5"
+        },
+        {
+            "GUID": "{2B25B8A3-8957-82a6-C95C-244B9BD95B22}",
+            "DataType": "U32",
+            "ParamName": "Log_9",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "6-7"
+        },
+        {
+            "GUID": "{2B25BEC8-A38D-84b7-FF6C-3E39F9E80D8C}",
+            "DataType": "U32",
+            "ParamName": "Log_3",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "8-9"
+        },
+        {
+            "GUID": "{2B25B5CB-7D36-9a07-A8BC-0F67B15D7ABA}",
+            "DataType": "U32",
+            "ParamName": "Log_13",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "10-11"
+        },
+        {
+            "GUID": "{2B25B2F3-7114-b167-861D-FA83C6E29A52}",
+            "DataType": "U32",
+            "ParamName": "Log_17",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "12-13"
+        },
+        {
+            "GUID": "{2B25B889-88E8-beea-5AA0-B543EEF02555}",
+            "DataType": "U32",
+            "ParamName": "Log_7",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "14-15"
+        },
+        {
+            "GUID": "{2B25BEAE-A31E-c0fa-90B0-D0314CFFD7BF}",
+            "DataType": "U32",
+            "ParamName": "Log_5",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "16-17"
+        },
+        {
+            "GUID": "{2B25B5E5-7DA5-5dc3-1779-7D6F5E46B087}",
+            "DataType": "U32",
+            "ParamName": "Log_15",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "18-19"
+        },
+        {
+            "GUID": "{2B25B30D-7183-7523-F5D9-688B73CBD01F}",
+            "DataType": "U32",
+            "ParamName": "Log_19",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "20-21"
+        },
+        {
+            "GUID": "{2B25B31A-71BB-9702-2DB7-A08F4A3FEB86}",
+            "DataType": "U32",
+            "ParamName": "Log_20",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "22-23"
+        },
+        {
+            "GUID": "{2B25B5D8-7D6D-bbe5-DF9B-466B87D29521}",
+            "DataType": "U32",
+            "ParamName": "Log_14",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "24-25"
+        },
+        {
+            "GUID": "{2B25B035-6562-8c83-D439-54A68950EFB7}",
+            "DataType": "U32",
+            "ParamName": "Log_23",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "26-27"
+        },
+        {
+            "GUID": "{2B25B028-652A-6aa5-9D5B-1CA2B3DBD551}",
+            "DataType": "U32",
+            "ParamName": "Log_22",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "28-29"
+        },
+        {
+            "GUID": "{2B25B042-6599-ae62-0B18-8BAA60C40A1E}",
+            "DataType": "U32",
+            "ParamName": "Log_24",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "30-31"
+        },
+        {
+            "GUID": "{2B25B05C-6608-721e-7AD4-F9B30DAD40EB}",
+            "DataType": "U32",
+            "ParamName": "Log_21",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "32-33"
+        },
+        {
+            "GUID": "{2B25B04F-65D1-d040-43F6-C2AE36392584}",
+            "DataType": "U32",
+            "ParamName": "Log_25",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "34-35"
+        },
+        {
+            "GUID": "{2B25B327-71F2-b8e0-6496-D79320B405EC}",
+            "DataType": "U32",
+            "ParamName": "Log_16",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "36-37"
+        },
+        {
+            "GUID": "{2B25BED5-A3C4-a695-364B-763DD05C28F2}",
+            "DataType": "U32",
+            "ParamName": "Log_2",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "38-39"
+        },
+        {
+            "GUID": "{2B25B300-714C-d345-BEFB-31879D56B5B9}",
+            "DataType": "U32",
+            "ParamName": "Log_18",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "40-41"
+        },
+        {
+            "GUID": "{2B25B5F2-7DDC-7fa1-4E57-B47334BBCBED}",
+            "DataType": "U32",
+            "ParamName": "Log_11",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "42-43"
+        },
+        {
+            "GUID": "{2B25B8B0-898E-a485-013B-5B4F714D7688}",
+            "DataType": "U32",
+            "ParamName": "Log_10",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "44-45"
+        },
+        {
+            "GUID": "{2B25B5BE-7CFE-7828-70DE-D863DAE95F54}",
+            "DataType": "U32",
+            "ParamName": "Log_12",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "46-47"
+        },
+        {
+            "GUID": "{2B25B8BD-89C6-c663-3819-925348C290EF}",
+            "DataType": "U32",
+            "ParamName": "Log_6",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "48-49"
+        },
+        {
+            "GUID": "{2B25BEA1-A2E6-9f1c-59D2-992D768ABC58}",
+            "DataType": "U32",
+            "ParamName": "Log_1",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "50-51"
+        },
+        {
+            "GUID": "{3FABF59B-3AB1-1016-23CC-09ADF111ABF1}",
+            "DataType": "U8",
+            "ParamName": "LogListLength",
+            "ReadAccess": "_",
+            "WriteAccess": "_",
+            "NvIndex": "52"
+        }
+    ]
+}

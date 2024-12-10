@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCLASSES>
+	<XClass Name="St_ORGANIZE_INTS_Ccp" IdlName="PLCopenXML_stg_">
+		<Method Name="St_ORGANIZE_INTS_Exec" InCnt="105" OutCnt="5" InternalCnt="0">
+			<InArg0 Name="st_FFD1_0_data" Type="U8"/>
+			<InArg1 Name="st_FFD1_0_update_data" Type="BOOL"/>
+			<InArg2 Name="st_FFD1_1_data" Type="U8"/>
+			<InArg3 Name="st_FFD1_1_update_data" Type="BOOL"/>
+			<InArg4 Name="st_FFD1_2_data" Type="U8"/>
+			<InArg5 Name="st_FFD1_2_update_data" Type="BOOL"/>
+			<InArg6 Name="st_FFD1_3_data" Type="U8"/>
+			<InArg7 Name="st_FFD1_3_update_data" Type="BOOL"/>
+			<InArg8 Name="st_FFD1_4_data" Type="U8"/>
+			<InArg9 Name="st_FFD1_4_update_data" Type="BOOL"/>
+			<InArg10 Name="st_FFD1_5_data" Type="U8"/>
+			<InArg11 Name="st_FFD1_5_update_data" Type="BOOL"/>
+			<InArg12 Name="st_FFD1_6_data" Type="U8"/>
+			<InArg13 Name="st_FFD1_6_update_data" Type="BOOL"/>
+			<InArg14 Name="st_FFD1_7_data" Type="U8"/>
+			<InArg15 Name="st_FFD1_7_update_data" Type="BOOL"/>
+			<InArg16 Name="st_FFD1_8_data" Type="U8"/>
+			<InArg17 Name="st_FFD1_8_update_data" Type="BOOL"/>
+			<InArg18 Name="st_FFD1_9_data" Type="U8"/>
+			<InArg19 Name="st_FFD1_9_update_data" Type="BOOL"/>
+			<InArg20 Name="st_FFD1_10_data" Type="U8"/>
+			<InArg21 Name="st_FFD1_10_update_data" Type="BOOL"/>
+			<InArg22 Name="st_FFD1_11_data" Type="U8"/>
+			<InArg23 Name="st_FFD1_11_update_data" Type="BOOL"/>
+			<InArg24 Name="st_FFD2_0_data" Type="U8"/>
+			<InArg25 Name="st_FFD2_0_update_data" Type="BOOL"/>
+			<InArg26 Name="st_FFD2_1_data" Type="U8"/>
+			<InArg27 Name="st_FFD2_1_update_data" Type="BOOL"/>
+			<InArg28 Name="st_FFD2_2_data" Type="U8"/>
+			<InArg29 Name="st_FFD2_2_update_data" Type="BOOL"/>
+			<InArg30 Name="st_FFD2_3_data" Type="U8"/>
+			<InArg31 Name="st_FFD2_3_update_data" Type="BOOL"/>
+			<InArg32 Name="st_FFD2_4_data" Type="U8"/>
+			<InArg33 Name="st_FFD2_4_update_data" Type="BOOL"/>
+			<InArg34 Name="st_FFD2_5_data" Type="U8"/>
+			<InArg35 Name="st_FFD2_5_update_data" Type="BOOL"/>
+			<InArg36 Name="st_FFD2_6_data" Type="U8"/>
+			<InArg37 Name="st_FFD2_6_update_data" Type="BOOL"/>
+			<InArg38 Name="st_FFD2_7_data" Type="U8"/>
+			<InArg39 Name="st_FFD2_7_update_data" Type="BOOL"/>
+			<InArg40 Name="st_FFD2_8_data" Type="U8"/>
+			<InArg41 Name="st_FFD2_8_update_data" Type="BOOL"/>
+			<InArg42 Name="st_FFD2_9_data" Type="U8"/>
+			<InArg43 Name="st_FFD2_9_update_data" Type="BOOL"/>
+			<InArg44 Name="st_FFD2_10_data" Type="U8"/>
+			<InArg45 Name="st_FFD2_10_update_data" Type="BOOL"/>
+			<InArg46 Name="st_FFD2_11_data" Type="U8"/>
+			<InArg47 Name="st_FFD2_11_update_data" Type="BOOL"/>
+			<InArg48 Name="st_FFD2_12_data" Type="U8"/>
+			<InArg49 Name="st_FFD2_12_update_data" Type="BOOL"/>
+			<InArg50 Name="st_FFD2_13_data" Type="U8"/>
+			<InArg51 Name="st_FFD2_13_update_data" Type="BOOL"/>
+			<InArg52 Name="st_FFD2_14_data" Type="U8"/>
+			<InArg53 Name="st_FFD2_14_update_data" Type="BOOL"/>
+			<InArg54 Name="st_FFD2_15_data" Type="U8"/>
+			<InArg55 Name="st_FFD2_15_update_data" Type="BOOL"/>
+			<InArg56 Name="st_FFD2_16_data" Type="U8"/>
+			<InArg57 Name="st_FFD2_16_update_data" Type="BOOL"/>
+			<InArg58 Name="st_FFD2_17_data" Type="U8"/>
+			<InArg59 Name="st_FFD2_17_update_data" Type="BOOL"/>
+			<InArg60 Name="st_FFD2_18_data" Type="U8"/>
+			<InArg61 Name="st_FFD2_18_update_data" Type="BOOL"/>
+			<InArg62 Name="st_FFD2_19_data" Type="U8"/>
+			<InArg63 Name="st_FFD2_19_update_data" Type="BOOL"/>
+			<InArg64 Name="st_FFD2_20_data" Type="U8"/>
+			<InArg65 Name="st_FFD2_20_update_data" Type="BOOL"/>
+			<InArg66 Name="st_FFD2_21_data" Type="U8"/>
+			<InArg67 Name="st_FFD2_21_update_data" Type="BOOL"/>
+			<InArg68 Name="st_FFD2_22_data" Type="U8"/>
+			<InArg69 Name="st_FFD2_22_update_data" Type="BOOL"/>
+			<InArg70 Name="st_FFD2_23_data" Type="U8"/>
+			<InArg71 Name="st_FFD2_23_update_data" Type="BOOL"/>
+			<InArg72 Name="st_FFD3_0_data" Type="U8" Default="255"/>
+			<InArg73 Name="st_FFD3_1_data" Type="U8" Default="255"/>
+			<InArg74 Name="st_FFD3_2_data" Type="U8" Default="255"/>
+			<InArg75 Name="st_FFD3_3_data" Type="U8" Default="255"/>
+			<InArg76 Name="st_FFD3_4_data" Type="U8" Default="255"/>
+			<InArg77 Name="st_FFD3_5_data" Type="U8" Default="255"/>
+			<InArg78 Name="st_FFD3_6_data" Type="U8" Default="255"/>
+			<InArg79 Name="st_FFD3_7_data" Type="U8" Default="255"/>
+			<InArg80 Name="st_FFD3_8_data" Type="U8" Default="255"/>
+			<InArg81 Name="st_FFD3_9_data" Type="U8" Default="255"/>
+			<InArg82 Name="st_FFD3_10_data" Type="U8" Default="255"/>
+			<InArg83 Name="st_FFD3_11_data" Type="U8" Default="255"/>
+			<InArg84 Name="st_FFD3_12_data" Type="U8" Default="255"/>
+			<InArg85 Name="st_FFD3_13_data" Type="U8" Default="255"/>
+			<InArg86 Name="st_FFD3_14_data" Type="U8" Default="255"/>
+			<InArg87 Name="st_FFD3_15_data" Type="U8" Default="255"/>
+			<InArg88 Name="st_FFD3_16_data" Type="U8" Default="255"/>
+			<InArg89 Name="st_FFD3_17_data" Type="U8" Default="255"/>
+			<InArg90 Name="st_FFD3_18_data" Type="U8" Default="255"/>
+			<InArg91 Name="st_FFD3_19_data" Type="U8" Default="255"/>
+			<InArg92 Name="st_FFD3_20_data" Type="U8" Default="255"/>
+			<InArg93 Name="st_FFD3_21_data" Type="U8" Default="255"/>
+			<InArg94 Name="st_FFD3_22_data" Type="U8" Default="255"/>
+			<InArg95 Name="st_FFD3_23_data" Type="U8" Default="255"/>
+			<InArg96 Name="st_FFD3_24_data" Type="U8" Default="255"/>
+			<InArg97 Name="st_FFD3_25_data" Type="U8" Default="255"/>
+			<InArg98 Name="st_FFD3_26_data" Type="U8" Default="255"/>
+			<InArg99 Name="st_FFD3_27_data" Type="U8" Default="255"/>
+			<InArg100 Name="st_FFD3_28_data" Type="U8" Default="255"/>
+			<InArg101 Name="st_FFD3_29_data" Type="U8" Default="255"/>
+			<InArg102 Name="st_FFD3_30_data" Type="U8" Default="255"/>
+			<InArg103 Name="st_BIT_Status_update_data" Type="BOOL"/>
+			<InArg104 Name="st_init_NV_log_data" Type="BOOL"/>
+			<OutArg0 Name="st_Return_ret" Type="S32"/>
+			<OutArg1 Name="st_RuntimeError_err" Type="U16"/>
+			<OutArg2 Name="st_Org_ints_data" Type="U8" ArrayLength="161" BufferNeed="UnSpecified"/>
+			<OutArg3 Name="st_Number_of_ints_data" Type="U8"/>
+			<OutArg4 Name="st_Update_memory_data" Type="BOOL"/>
+		</Method>
+	</XClass>
+	<XClass Name="St_LOG_STRING_Ccp" IdlName="PLCopenXML_stg_">
+		<Method Name="St_LOG_STRING_Exec" InCnt="6" OutCnt="5" InternalCnt="0">
+			<InArg0 Name="st_Log_head_data" Type="U8"/>
+			<InArg1 Name="st_Scroll_head_data" Type="U8"/>
+			<InArg2 Name="st_Log_array_data" Type="U8" ArrayLength="100" BufferNeed="UnSpecified"/>
+			<InArg3 Name="st_Log_test_data" Type="BOOL"/>
+			<InArg4 Name="st_Log_noMemStore_data" Type="BOOL"/>
+			<InArg5 Name="st_List_length_data" Type="U8"/>
+			<OutArg0 Name="st_Return_ret" Type="S16"/>
+			<OutArg1 Name="st_RuntimeError_err" Type="U16"/>
+			<OutArg2 Name="st_Log_outString_data" Type="STRING[5000]"/>
+			<OutArg3 Name="st_adjusted_log_data" Type="U8" ArrayLength="100" BufferNeed="UnSpecified"/>
+			<OutArg4 Name="st_Made_it_here_data" Type="BOOL"/>
+		</Method>
+	</XClass>
+	<XClass Name="St_BLACKOUTTXT_Ccp" IdlName="PLCopenXML_stg_">
+		<Method Name="St_BLACKOUTTXT_Exec" InCnt="1" OutCnt="3" InternalCnt="0">
+			<InArg0 Name="st_BlkOutSet_data" Type="BOOL"/>
+			<OutArg0 Name="st_Return_ret" Type="STRING[5000]"/>
+			<OutArg1 Name="st_RuntimeError_err" Type="U16"/>
+			<OutArg2 Name="st_BlkOutText_data" Type="STRING[5000]"/>
+		</Method>
+	</XClass>
+	<XClass Name="St_FAULTBITTEXT_Ccp" IdlName="PLCopenXML_stg_">
+		<Method Name="St_FAULTBITTEXT_Exec" InCnt="2" OutCnt="4" InternalCnt="0">
+			<InArg0 Name="st_Fault_Status_Bool_data" Type="BOOL"/>
+			<InArg1 Name="st_BIT_Status_Bool_data" Type="BOOL"/>
+			<OutArg0 Name="st_Return_ret" Type="S32"/>
+			<OutArg1 Name="st_RuntimeError_err" Type="U16"/>
+			<OutArg2 Name="st_Fault_Status_String_data" Type="STRING[5000]"/>
+			<OutArg3 Name="st_BIT_Status_String_data" Type="STRING[5000]"/>
+		</Method>
+	</XClass>
+	<XClass Name="St_MEM_SORT_Ccp" IdlName="PLCopenXML_stg_">
+		<Method Name="St_MEM_SORT_Exec" InCnt="108" OutCnt="134" InternalCnt="0">
+			<InArg0 Name="st_noMemStore_data" Type="BOOL"/>
+			<InArg1 Name="st_firstRunDone_data" Type="BOOL"/>
+			<InArg2 Name="st_Log_Val_0_data" Type="U8"/>
+			<InArg3 Name="st_Log_Val_1_data" Type="U8"/>
+			<InArg4 Name="st_Log_Val_2_data" Type="U8"/>
+			<InArg5 Name="st_Log_Val_3_data" Type="U8"/>
+			<InArg6 Name="st_Log_Val_4_data" Type="U8"/>
+			<InArg7 Name="st_Log_Val_5_data" Type="U8"/>
+			<InArg8 Name="st_Log_Val_6_data" Type="U8"/>
+			<InArg9 Name="st_Log_Val_7_data" Type="U8"/>
+			<InArg10 Name="st_Log_Val_8_data" Type="U8"/>
+			<InArg11 Name="st_Log_Val_9_data" Type="U8"/>
+			<InArg12 Name="st_Log_Val_10_data" Type="U8"/>
+			<InArg13 Name="st_Log_Val_11_data" Type="U8"/>
+			<InArg14 Name="st_Log_Val_12_data" Type="U8"/>
+			<InArg15 Name="st_Log_Val_13_data" Type="U8"/>
+			<InArg16 Name="st_Log_Val_14_data" Type="U8"/>
+			<InArg17 Name="st_Log_Val_15_data" Type="U8"/>
+			<InArg18 Name="st_Log_Val_16_data" Type="U8"/>
+			<InArg19 Name="st_Log_Val_17_data" Type="U8"/>
+			<InArg20 Name="st_Log_Val_18_data" Type="U8"/>
+			<InArg21 Name="st_Log_Val_19_data" Type="U8"/>
+			<InArg22 Name="st_Log_Val_20_data" Type="U8"/>
+			<InArg23 Name="st_Log_Val_21_data" Type="U8"/>
+			<InArg24 Name="st_Log_Val_22_data" Type="U8"/>
+			<InArg25 Name="st_Log_Val_23_data" Type="U8"/>
+			<InArg26 Name="st_Log_Val_24_data" Type="U8"/>
+			<InArg27 Name="st_Log_Val_25_data" Type="U8"/>
+			<InArg28 Name="st_Log_Val_26_data" Type="U8"/>
+			<InArg29 Name="st_Log_Val_27_data" Type="U8"/>
+			<InArg30 Name="st_Log_Val_28_data" Type="U8"/>
+			<InArg31 Name="st_Log_Val_29_data" Type="U8"/>
+			<InArg32 Name="st_Log_Val_30_data" Type="U8"/>
+			<InArg33 Name="st_Log_Val_31_data" Type="U8"/>
+			<InArg34 Name="st_Log_Val_32_data" Type="U8"/>
+			<InArg35 Name="st_Log_Val_33_data" Type="U8"/>
+			<InArg36 Name="st_Log_Val_34_data" Type="U8"/>
+			<InArg37 Name="st_Log_Val_35_data" Type="U8"/>
+			<InArg38 Name="st_Log_Val_36_data" Type="U8"/>
+			<InArg39 Name="st_Log_Val_37_data" Type="U8"/>
+			<InArg40 Name="st_Log_Val_38_data" Type="U8"/>
+			<InArg41 Name="st_Log_Val_39_data" Type="U8"/>
+			<InArg42 Name="st_Log_Val_40_data" Type="U8"/>
+			<InArg43 Name="st_Log_Val_41_data" Type="U8"/>
+			<InArg44 Name="st_Log_Val_42_data" Type="U8"/>
+			<InArg45 Name="st_Log_Val_43_data" Type="U8"/>
+			<InArg46 Name="st_Log_Val_44_data" Type="U8"/>
+			<InArg47 Name="st_Log_Val_45_data" Type="U8"/>
+			<InArg48 Name="st_Log_Val_46_data" Type="U8"/>
+			<InArg49 Name="st_Log_Val_47_data" Type="U8"/>
+			<InArg50 Name="st_Log_Val_48_data" Type="U8"/>
+			<InArg51 Name="st_Log_Val_49_data" Type="U8"/>
+			<InArg52 Name="st_Log_Val_50_data" Type="U8"/>
+			<InArg53 Name="st_Log_Val_51_data" Type="U8"/>
+			<InArg54 Name="st_Log_Val_52_data" Type="U8"/>
+			<InArg55 Name="st_Log_Val_53_data" Type="U8"/>
+			<InArg56 Name="st_Log_Val_54_data" Type="U8"/>
+			<InArg57 Name="st_Log_Val_55_data" Type="U8"/>
+			<InArg58 Name="st_Log_Val_56_data" Type="U8"/>
+			<InArg59 Name="st_Log_Val_57_data" Type="U8"/>
+			<InArg60 Name="st_Log_Val_58_data" Type="U8"/>
+			<InArg61 Name="st_Log_Val_59_data" Type="U8"/>
+			<InArg62 Name="st_Log_Val_60_data" Type="U8"/>
+			<InArg63 Name="st_Log_Val_61_data" Type="U8"/>
+			<InArg64 Name="st_Log_Val_62_data" Type="U8"/>
+			<InArg65 Name="st_Log_Val_63_data" Type="U8"/>
+			<InArg66 Name="st_Log_Val_64_data" Type="U8"/>
+			<InArg67 Name="st_Log_Val_65_data" Type="U8"/>
+			<InArg68 Name="st_Log_Val_66_data" Type="U8"/>
+			<InArg69 Name="st_Log_Val_67_data" Type="U8"/>
+			<InArg70 Name="st_Log_Val_68_data" Type="U8"/>
+			<InArg71 Name="st_Log_Val_69_data" Type="U8"/>
+			<InArg72 Name="st_Log_Val_70_data" Type="U8"/>
+			<InArg73 Name="st_Log_Val_71_data" Type="U8"/>
+			<InArg74 Name="st_Log_Val_72_data" Type="U8"/>
+			<InArg75 Name="st_Log_Val_73_data" Type="U8"/>
+			<InArg76 Name="st_Log_Val_74_data" Type="U8"/>
+			<InArg77 Name="st_Log_Val_75_data" Type="U8"/>
+			<InArg78 Name="st_Log_Val_76_data" Type="U8"/>
+			<InArg79 Name="st_Log_Val_77_data" Type="U8"/>
+			<InArg80 Name="st_Log_Val_78_data" Type="U8"/>
+			<InArg81 Name="st_Log_Val_79_data" Type="U8"/>
+			<InArg82 Name="st_Log_Val_80_data" Type="U8"/>
+			<InArg83 Name="st_Log_Val_81_data" Type="U8"/>
+			<InArg84 Name="st_Log_Val_82_data" Type="U8"/>
+			<InArg85 Name="st_Log_Val_83_data" Type="U8"/>
+			<InArg86 Name="st_Log_Val_84_data" Type="U8"/>
+			<InArg87 Name="st_Log_Val_85_data" Type="U8"/>
+			<InArg88 Name="st_Log_Val_86_data" Type="U8"/>
+			<InArg89 Name="st_Log_Val_87_data" Type="U8"/>
+			<InArg90 Name="st_Log_Val_88_data" Type="U8"/>
+			<InArg91 Name="st_Log_Val_89_data" Type="U8"/>
+			<InArg92 Name="st_Log_Val_90_data" Type="U8"/>
+			<InArg93 Name="st_Log_Val_91_data" Type="U8"/>
+			<InArg94 Name="st_Log_Val_92_data" Type="U8"/>
+			<InArg95 Name="st_Log_Val_93_data" Type="U8"/>
+			<InArg96 Name="st_Log_Val_94_data" Type="U8"/>
+			<InArg97 Name="st_Log_Val_95_data" Type="U8"/>
+			<InArg98 Name="st_Log_Val_96_data" Type="U8"/>
+			<InArg99 Name="st_Log_Val_97_data" Type="U8"/>
+			<InArg100 Name="st_Log_Val_98_data" Type="U8"/>
+			<InArg101 Name="st_Log_Val_99_data" Type="U8"/>
+			<InArg102 Name="st_List_head_data" Type="U8"/>
+			<InArg103 Name="st_List_length_data" Type="U8"/>
+			<InArg104 Name="st_Number_of_ints_data" Type="U8"/>
+			<InArg105 Name="st_Org_ints_data" Type="U8" ArrayLength="161" BufferNeed="UnSpecified"/>
+			<InArg106 Name="st_Cur_log_data" Type="U8" ArrayLength="100" BufferNeed="UnSpecified"/>
+			<InArg107 Name="st_Res_List_data" Type="BOOL"/>
+			<OutArg0 Name="st_Return_ret" Type="S16"/>
+			<OutArg1 Name="st_RuntimeError_err" Type="U16"/>
+			<OutArg2 Name="st_firstRunDoneOut_data" Type="BOOL"/>
+			<OutArg3 Name="st_Log_head_data" Type="U8"/>
+			<OutArg4 Name="st_Log_count_data" Type="U8"/>
+			<OutArg5 Name="st_Log_array_data" Type="U8" ArrayLength="100" BufferNeed="UnSpecified"/>
+			<OutArg6 Name="st_MemSlotOut_1_data" Type="U8"/>
+			<OutArg7 Name="st_MemSlotOut_2_data" Type="U8"/>
+			<OutArg8 Name="st_MemSlotOut_3_data" Type="U8"/>
+			<OutArg9 Name="st_MemSlotOut_4_data" Type="U8"/>
+			<OutArg10 Name="st_MemSlotOut_5_data" Type="U8"/>
+			<OutArg11 Name="st_MemSlotOut_6_data" Type="U8"/>
+			<OutArg12 Name="st_MemSlotOut_7_data" Type="U8"/>
+			<OutArg13 Name="st_MemSlotOut_8_data" Type="U8"/>
+			<OutArg14 Name="st_MemSlotOut_9_data" Type="U8"/>
+			<OutArg15 Name="st_MemSlotOut_10_data" Type="U8"/>
+			<OutArg16 Name="st_MemSlotOut_11_data" Type="U8"/>
+			<OutArg17 Name="st_MemSlotOut_12_data" Type="U8"/>
+			<OutArg18 Name="st_MemSlotOut_13_data" Type="U8"/>
+			<OutArg19 Name="st_MemSlotOut_14_data" Type="U8"/>
+			<OutArg20 Name="st_MemSlotOut_15_data" Type="U8"/>
+			<OutArg21 Name="st_MemSlotOut_16_data" Type="U8"/>
+			<OutArg22 Name="st_MemSlotOut_17_data" Type="U8"/>
+			<OutArg23 Name="st_MemSlotOut_18_data" Type="U8"/>
+			<OutArg24 Name="st_MemSlotOut_19_data" Type="U8"/>
+			<OutArg25 Name="st_MemSlotOut_20_data" Type="U8"/>
+			<OutArg26 Name="st_MemSlotOut_21_data" Type="U8"/>
+			<OutArg27 Name="st_MemSlotOut_22_data" Type="U8"/>
+			<OutArg28 Name="st_MemSlotOut_23_data" Type="U8"/>
+			<OutArg29 Name="st_MemSlotOut_24_data" Type="U8"/>
+			<OutArg30 Name="st_MemSlotOut_25_data" Type="U8"/>
+			<OutArg31 Name="st_MemSlotOut_26_data" Type="U8"/>
+			<OutArg32 Name="st_MemSlotOut_27_data" Type="U8"/>
+			<OutArg33 Name="st_MemSlotOut_28_data" Type="U8"/>
+			<OutArg34 Name="st_MemSlotOut_29_data" Type="U8"/>
+			<OutArg35 Name="st_MemSlotOut_30_data" Type="U8"/>
+			<OutArg36 Name="st_MemSlotOut_31_data" Type="U8"/>
+			<OutArg37 Name="st_MemSlotOut_32_data" Type="U8"/>
+			<OutArg38 Name="st_MemSlotOut_33_data" Type="U8"/>
+			<OutArg39 Name="st_MemSlotOut_34_data" Type="U8"/>
+			<OutArg40 Name="st_MemSlotOut_35_data" Type="U8"/>
+			<OutArg41 Name="st_MemSlotOut_36_data" Type="U8"/>
+			<OutArg42 Name="st_MemSlotOut_37_data" Type="U8"/>
+			<OutArg43 Name="st_MemSlotOut_38_data" Type="U8"/>
+			<OutArg44 Name="st_MemSlotOut_39_data" Type="U8"/>
+			<OutArg45 Name="st_MemSlotOut_40_data" Type="U8"/>
+			<OutArg46 Name="st_MemSlotOut_41_data" Type="U8"/>
+			<OutArg47 Name="st_MemSlotOut_42_data" Type="U8"/>
+			<OutArg48 Name="st_MemSlotOut_43_data" Type="U8"/>
+			<OutArg49 Name="st_MemSlotOut_44_data" Type="U8"/>
+			<OutArg50 Name="st_MemSlotOut_45_data" Type="U8"/>
+			<OutArg51 Name="st_MemSlotOut_46_data" Type="U8"/>
+			<OutArg52 Name="st_MemSlotOut_47_data" Type="U8"/>
+			<OutArg53 Name="st_MemSlotOut_48_data" Type="U8"/>
+			<OutArg54 Name="st_MemSlotOut_49_data" Type="U8"/>
+			<OutArg55 Name="st_MemSlotOut_50_data" Type="U8"/>
+			<OutArg56 Name="st_MemSlotOut_51_data" Type="U8"/>
+			<OutArg57 Name="st_MemSlotOut_52_data" Type="U8"/>
+			<OutArg58 Name="st_MemSlotOut_53_data" Type="U8"/>
+			<OutArg59 Name="st_MemSlotOut_54_data" Type="U8"/>
+			<OutArg60 Name="st_MemSlotOut_55_data" Type="U8"/>
+			<OutArg61 Name="st_MemSlotOut_56_data" Type="U8"/>
+			<OutArg62 Name="st_MemSlotOut_57_data" Type="U8"/>
+			<OutArg63 Name="st_MemSlotOut_58_data" Type="U8"/>
+			<OutArg64 Name="st_MemSlotOut_59_data" Type="U8"/>
+			<OutArg65 Name="st_MemSlotOut_60_data" Type="U8"/>
+			<OutArg66 Name="st_MemSlotOut_61_data" Type="U8"/>
+			<OutArg67 Name="st_MemSlotOut_62_data" Type="U8"/>
+			<OutArg68 Name="st_MemSlotOut_63_data" Type="U8"/>
+			<OutArg69 Name="st_MemSlotOut_64_data" Type="U8"/>
+			<OutArg70 Name="st_MemSlotOut_65_data" Type="U8"/>
+			<OutArg71 Name="st_MemSlotOut_66_data" Type="U8"/>
+			<OutArg72 Name="st_MemSlotOut_67_data" Type="U8"/>
+			<OutArg73 Name="st_MemSlotOut_68_data" Type="U8"/>
+			<OutArg74 Name="st_MemSlotOut_69_data" Type="U8"/>
+			<OutArg75 Name="st_MemSlotOut_70_data" Type="U8"/>
+			<OutArg76 Name="st_MemSlotOut_71_data" Type="U8"/>
+			<OutArg77 Name="st_MemSlotOut_72_data" Type="U8"/>
+			<OutArg78 Name="st_MemSlotOut_73_data" Type="U8"/>
+			<OutArg79 Name="st_MemSlotOut_74_data" Type="U8"/>
+			<OutArg80 Name="st_MemSlotOut_75_data" Type="U8"/>
+			<OutArg81 Name="st_MemSlotOut_76_data" Type="U8"/>
+			<OutArg82 Name="st_MemSlotOut_77_data" Type="U8"/>
+			<OutArg83 Name="st_MemSlotOut_78_data" Type="U8"/>
+			<OutArg84 Name="st_MemSlotOut_79_data" Type="U8"/>
+			<OutArg85 Name="st_MemSlotOut_80_data" Type="U8"/>
+			<OutArg86 Name="st_MemSlotOut_81_data" Type="U8"/>
+			<OutArg87 Name="st_MemSlotOut_82_data" Type="U8"/>
+			<OutArg88 Name="st_MemSlotOut_83_data" Type="U8"/>
+			<OutArg89 Name="st_MemSlotOut_84_data" Type="U8"/>
+			<OutArg90 Name="st_MemSlotOut_85_data" Type="U8"/>
+			<OutArg91 Name="st_MemSlotOut_86_data" Type="U8"/>
+			<OutArg92 Name="st_MemSlotOut_87_data" Type="U8"/>
+			<OutArg93 Name="st_MemSlotOut_88_data" Type="U8"/>
+			<OutArg94 Name="st_MemSlotOut_89_data" Type="U8"/>
+			<OutArg95 Name="st_MemSlotOut_90_data" Type="U8"/>
+			<OutArg96 Name="st_MemSlotOut_91_data" Type="U8"/>
+			<OutArg97 Name="st_MemSlotOut_92_data" Type="U8"/>
+			<OutArg98 Name="st_MemSlotOut_93_data" Type="U8"/>
+			<OutArg99 Name="st_MemSlotOut_94_data" Type="U8"/>
+			<OutArg100 Name="st_MemSlotOut_95_data" Type="U8"/>
+			<OutArg101 Name="st_MemSlotOut_96_data" Type="U8"/>
+			<OutArg102 Name="st_MemSlotOut_97_data" Type="U8"/>
+			<OutArg103 Name="st_MemSlotOut_98_data" Type="U8"/>
+			<OutArg104 Name="st_MemSlotOut_99_data" Type="U8"/>
+			<OutArg105 Name="st_MemSlotOut_100_data" Type="U8"/>
+			<OutArg106 Name="st_Log_Val_1_update_data" Type="BOOL"/>
+			<OutArg107 Name="st_Log_Val_2_update_data" Type="BOOL"/>
+			<OutArg108 Name="st_Log_Val_3_update_data" Type="BOOL"/>
+			<OutArg109 Name="st_Log_Val_4_update_data" Type="BOOL"/>
+			<OutArg110 Name="st_Log_Val_5_update_data" Type="BOOL"/>
+			<OutArg111 Name="st_Log_Val_6_update_data" Type="BOOL"/>
+			<OutArg112 Name="st_Log_Val_7_update_data" Type="BOOL"/>
+			<OutArg113 Name="st_Log_Val_8_update_data" Type="BOOL"/>
+			<OutArg114 Name="st_Log_Val_9_update_data" Type="BOOL"/>
+			<OutArg115 Name="st_Log_Val_10_update_data" Type="BOOL"/>
+			<OutArg116 Name="st_Log_Val_11_update_data" Type="BOOL"/>
+			<OutArg117 Name="st_Log_Val_12_update_data" Type="BOOL"/>
+			<OutArg118 Name="st_Log_Val_13_update_data" Type="BOOL"/>
+			<OutArg119 Name="st_Log_Val_14_update_data" Type="BOOL"/>
+			<OutArg120 Name="st_Log_Val_15_update_data" Type="BOOL"/>
+			<OutArg121 Name="st_Log_Val_16_update_data" Type="BOOL"/>
+			<OutArg122 Name="st_Log_Val_17_update_data" Type="BOOL"/>
+			<OutArg123 Name="st_Log_Val_18_update_data" Type="BOOL"/>
+			<OutArg124 Name="st_Log_Val_19_update_data" Type="BOOL"/>
+			<OutArg125 Name="st_Log_Val_20_update_data" Type="BOOL"/>
+			<OutArg126 Name="st_Log_Val_21_update_data" Type="BOOL"/>
+			<OutArg127 Name="st_Log_Val_22_update_data" Type="BOOL"/>
+			<OutArg128 Name="st_Log_Val_23_update_data" Type="BOOL"/>
+			<OutArg129 Name="st_Log_Val_24_update_data" Type="BOOL"/>
+			<OutArg130 Name="st_Log_Val_25_update_data" Type="BOOL"/>
+			<OutArg131 Name="st_Log_Val_init_update_data" Type="BOOL"/>
+			<OutArg132 Name="st_Update_log_data" Type="BOOL"/>
+			<OutArg133 Name="st_Update_length_data" Type="BOOL"/>
+		</Method>
+	</XClass>
+</XCLASSES>

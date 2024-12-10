@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<Image>
+  <ID>6</ID>
+  <Description>LEDgry_Amb</Description>
+  <SourceFileName>LEDgry_Amb.png</SourceFileName>
+  <Width>20</Width>
+  <Height>20</Height>
+  <FlipH>false</FlipH>
+  <FlipV>false</FlipV>
+  <MonoColor>00000000</MonoColor>
+  <PortName>Display.Port</PortName>
+  <ImageFormatName>16777216 Colors (24 bit) with Alpha Layer</ImageFormatName>
+  <OutputFormat>RLE_RGBA</OutputFormat>
+  <ColorDepth>32</ColorDepth>
+  <OutputFormatData>
+    <RLE_RGBA>
+      <MaxRunLength>32767</MaxRunLength>
+      <RunLengthSize>16</RunLengthSize>
+      <R Width="8" Pos="16"/>
+      <G Width="8" Pos="8"/>
+      <B Width="8" Pos="0"/>
+      <A Width="8" Pos="24"/>
+    </RLE_RGBA>
+  </OutputFormatData>
+  <NoTransparentColor>0xFFFFFFFF</NoTransparentColor>
+  <PixelOrigo>0</PixelOrigo>
+  <InsertionPoint X="0" Y="0"/>
+</Image>

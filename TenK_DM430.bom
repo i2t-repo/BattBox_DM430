@@ -1,0 +1,33 @@
+{
+"format":"001B",
+"actionId":"9563f279-15ad-4429-894a-6974fb8a390b",
+"startTimeUTC":"2024-12-01 04:50:01",
+"licenceId":"28120",
+"licenceType":"Express",
+"projectId":"{2086388F-D9DE-4716-939B-203508C077E2}",
+"toolVersion":"2023.1.4",
+"releaseStatus":"Released",
+"compileType":"CompileAll",
+"moduleCount":1,
+"userPouCount":5,
+"usingToolkey":true,
+"sysParams":{"cols":["name","description","value"],"rows":[
+["W1","ReadOnlyParameters","DISABLE"]]},
+"comps":{"cols":["name","count"],"rows":[
+["C__CONST-T1",257],["IF_MERGE1",96],["C__CONST-FALSE1",88],["LT_POS-TRANS",79],["IF_EXTRACT1",79],["GF_CONNECT1",71],["IC_BIOS-IN1",69],["T__LOOP-DELAY",57],["C__CONST3-T1",50],["LG_OR2",47],["GF_SWITCH2",46],["LT_TRANSITION",45],["LG_AND2",45],["IC_BIOS-OUT",44],["AF_ADD",42],["LG_NOT",39],["C__CONST-TRUE1",38],["IF_ENCODE4",36],["C__CONST-0",32],["IC_NV-A1",27],["IC_INIT-OUT",27],["IC_CHECKPOINT-A",27],["IF_DECODE8",20],["C__CONST-TIME1",18],["LC_EQUATE",17],["IF_DECODE8_U8",16],["IC_CAN-RX-M",16],["C__CONST6-T1",15],["AF_SUB",15],["LG_AND3",13],["LF_SR-LATCH1",13],["LC_COMPARE-NE",13],["AF_MUL",12],["AF_DIV",10],["AR_SET",9],["LG_OR3",8],["IC_BIOS-BI-U1",8],["AG_OR2",8],["T__OFF-DELAY",7],["LG_OR8",7],["LG_OR5",7],["T__ON-DELAY",6],["LG_AND7",6],["IF_ENCODE8",6],["AF_RDIV",6],["O__POU-CALL",5],["GF_SWITCHA4",5],["T__OSCILLATOR",4],["O__SCREEN-CALL",4],["IF_RETYPE",4],["AC_UD-COUNTER",4],["LF_D-FLIPFLOP",3],["LG_XOR",2],["LC_COMPARE-L",2],["LC_COMPARE-G",2],["IC_CAN-TX",2],["AR_COPY",2],["T__PULSE",1],["LT_NEG-TRANS",1],["LG_OR7",1],["LG_OR4",1],["IF_DECODE4",1],["IC_NV-C1",1],["IC_BIOS-IN-U1",1],["GF_SWITCHA8",1],["GF_SWITCHA6",1],["GF_SWITCHA5",1],["GF_INIT-CONNECT",1],["AF_ABS",1]]},
+"vbseComps":{"cols":["name","count"],"rows":[
+["Widget",67],["Line",27],["Text",14],["Image",3],["ImageList",2],["TextList",1]]},
+"pages":[
+115
+],
+"memoryUsage": {
+"pctROM":1,
+"pctRAM":0,
+"pctNV":3
+},
+"compileTime":"2024-11-30 22:50:22 06",
+"issues":{"cols":["code","subCode","count"],"rows":[
+[4000,0,71],[447,1105,1],[447,3066,5],[484,1156,2],[4004,0,2]]},
+"endTimeUTC":"2024-12-01 04:50:23",
+"duration":"22"
+}

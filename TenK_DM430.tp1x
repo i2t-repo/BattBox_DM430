@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<P1xtData>
+  <Image ImageId="___Image10" RawImageName="LEDgry_Amb.png"/>
+  <Image ImageId="___Image4" RawImageName="LEDgry_Gry.png"/>
+  <Image ImageId="___Image6" RawImageName="LEDgry_Amb.png"/>
+  <Image ImageId="___Image9" RawImageName="LEDgry_Grn.png"/>
+  <Image ImageId="___Image11" RawImageName="LEDgry_Red.png"/>
+  <Image ImageId="___Image2" RawImageName="CarBattLtGry.png"/>
+  <Image ImageId="___Image5" RawImageName="LEDgry_Grn.png"/>
+  <Image ImageId="___Image7" RawImageName="LEDgry_Red.png"/>
+  <Image ImageId="___Image1" RawImageName="logo_trans_footer.png"/>
+  <Image ImageId="___Image8" RawImageName="LEDgry_Gry.png"/>
+  <Image ImageId="___Image3" RawImageName="RightArrowWht.png"/>
+  <Font FontId="Bahnschrift_14__UNI"/>
+  <Font FontId="Bahnschrift_20__UNI"/>
+  <Font FontId="Bahnschrift_24__UNI"/>
+  <Font FontId="BahnschriftLightSemiCondensed_12__UNI"/>
+  <Font FontId="BahnschriftSemiLight_13__UNI"/>
+  <Font FontId="BahnschriftSemiLight_14__UNI"/>
+  <Font FontId="BahnschriftSemiLight_15__UNI"/>
+  <Font FontId="BahnschriftSemiLight_23__UNI"/>
+  <Ssd SsdId="CD6937D80_DAB3_46BF_BD14_2475965968A1" SsdName="BootScrn"/>
+  <Ssd SsdId="CCB2E4559_AEC3_4437_8FE1_48A07FDAA617" SsdName="HomeScrn"/>
+  <Ssd SsdId="C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0" SsdName="ActiveScrn"/>
+  <Ssd SsdId="C27B4991C_F926_43DC_8BF2_62959109410F" SsdName="LogScrn"/>
+  <TextDefinition Name="_TextDefinitions.tds"/>
+  <BuilderType Value="2"/>
+  <SysName SysName="C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\70298408v170"/>
+  <DebugBuild DebugBuild="false"/>
+  <ExtRep>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48RXh0ZXJuYWxSZXBvc2l0b3J5PjwvRXh0ZXJuYWxSZXBvc2l0b3J5Pg==</ExtRep>
+</P1xtData>

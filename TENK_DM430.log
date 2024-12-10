@@ -1,0 +1,565 @@
+$BEGIN$$
+$COMMENT$Danfoss PLUS+1 GUIDE Software: [Glink] Version: 2023.1.4$
+$COMMENT$ Type: Express    $
+$COMMENT$ Id: 28120    $
+$COMMENT$ Sub ID: 0    $
+$COMMENT$ Maintenance until:  1-Jul-2024    $
+$COMMENT$ Time limit: 30-Jun-2025    $
+$COMMENT$     $
+$COMMENT$     $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  /** PC_Set_MasterPassword PC_INSTANCE_NAME_ServiceTool. PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U32 Write; $
+$TYPEDEFC$  /** PC_Get_MasterPassword PC_INSTANCE_NAME_ServiceTool. PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U32 Read; $
+$TYPEDEFC$  } S_MASTERPASSWORD_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  S_MASTERPASSWORD_t MasterPassword; $
+$TYPEDEFC$  /** PC_DiagCon_Set_DisableRead PC_NO_INSTANCE*/ $
+$TYPEDEFC$  BOOL DisableRead; $
+$TYPEDEFC$  /** PC_DiagCon_Set_DisableWrite PC_NO_INSTANCE*/ $
+$TYPEDEFC$  BOOL DisableWrite; $
+$TYPEDEFC$  /** PC_DiagCon_Set_DisableDownload PC_NO_INSTANCE*/ $
+$TYPEDEFC$  BOOL DisableDownload; $
+$TYPEDEFC$  /** PC_DiagCon_Get_Connect PC_NO_INSTANCE*/ $
+$TYPEDEFC$  BOOL Connect; $
+$TYPEDEFC$  } S_DIAGNOSTIC_CONTROL_t; $
+$TYPEDEFC$  /** On the C Open interface this should be tested in demo_PC.h */ $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U16 Status; $
+$TYPEDEFC$  U16 Intern; $
+$TYPEDEFC$  U16 PendingCount; $
+$TYPEDEFC$  } S_NV_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  /** PC_CAN_SET_ServerAddr PC_INSTANCE_NAME_ID. PC_NO_INSTANCE */ $
+$TYPEDEFC$  U8 ServerAddr; $
+$TYPEDEFC$  /** PC_CAN_GET_ClientAddr PC_INSTANCE_NAME_ID. PC_NO_INSTANCE */ $
+$TYPEDEFC$  U8 ClientAddr; $
+$TYPEDEFC$  } S_NODETYPE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U8 Addr; $
+$TYPEDEFC$  } S_NETTYPE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  S_NODETYPE_STRUCT_t Node; $
+$TYPEDEFC$  S_NETTYPE_STRUCT_t Net[3]; $
+$TYPEDEFC$  } S_IDTYPE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  /** PC_OS_GET_ETime PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U32 ETime; /** Time since power on [10ms] (visible in the API, read) */ $
+$TYPEDEFC$  /** PC_OS_GET_LoopCnt PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U32 LoopCnt; /** Already processed loops after the last power cycle (visible in the API, read) */ $
+$TYPEDEFC$  /** PC_OS_GET_ExecTime PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U16 ExecTime; /** Real Processing time [ms] (visible in the API, read) */ $
+$TYPEDEFC$  U16 ExecTimeSave; /** temp buffer for the actual used loop-time */ $
+$TYPEDEFC$  /** PC_OS_SET_ExecTimeOut PC_NO_INSTANCE PC_PRIMARY */ $
+$TYPEDEFC$  U16 ExecTimeOut; /** Requested processing time [ms] (visible in the API, write in primary, read in secondary) */ $
+$TYPEDEFC$  /** PC_OS_GET_ExecTimeWork PC_NO_INSTANCE */ $
+$TYPEDEFC$  U16 ExecTimeWork; /** Actual work time during processing time [ms] (visible in the API, read)*/ $
+$TYPEDEFC$  U16 ExecTimeGraph; $
+$TYPEDEFC$  /** PC_OS_GET_CrcStatus PC_NO_INSTANCE */ $
+$TYPEDEFC$  U16 CrcStatus; /** CRC calculation has failed */ $
+$TYPEDEFC$  U16 CrcDownloaded; /** CRC has been downloaded */ $
+$TYPEDEFC$  U16 CrcCalculated; /** CRC has been calculated */ $
+$TYPEDEFC$  /** PC_OS_GET_CrcCalcTime PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U16 CrcCalcTime; /** CRC background calculation time */ $
+$TYPEDEFC$  /** PC_OS_GET_ChecksumFailure PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U16 ChecksumFailure; /** BIT0 = ProgramCode; BIT1 = RAM ; BIT2 = Bootloader*/ $
+$TYPEDEFC$  /** BIT0 = ProgramCode; BIT1 = RAM ; BIT2 = Bootloader ; if zero system will stop ASAP */ $
+$TYPEDEFC$  /** if one of the above is BITS set to 1 = application stops */ $
+$TYPEDEFC$  /** PC_OS_SET_ChecksumFailureTreatment PC_NO_INSTANCE */ $
+$TYPEDEFC$  U16 ChecksumFailureTreatment; $
+$TYPEDEFC$  /** if 1 = ExecTime will be set to ExecTimeWork again */ $
+$TYPEDEFC$  /** PC_OS_SET_ResetExecTime PC_NO_INSTANCE */ $
+$TYPEDEFC$  BOOL ResetExecTime; $
+$TYPEDEFC$  BOOL ResetExecTimeOld; /** temp buffer for the request to reset the timing */ $
+$TYPEDEFC$  /** PC_OS_GET_Start PC_NO_INSTANCE */ $
+$TYPEDEFC$  BOOL Start; /** Set during the first processing time after a power cycle (visible in the API, read) */ $
+$TYPEDEFC$  BOOL ResetExecTimeSafetyLayer; /** temp buffer for the request to reset the timing */ $
+$TYPEDEFC$  /** PC_OS_GET_RAMTestTimeInterval PC_NO_INSTANCE*/ $
+$TYPEDEFC$  U16 RAMTestTimeInterval; /** Time interval of RAM diagnostic self-check [s] (visible in the API, read) */ $
+$TYPEDEFC$  } S_OSTYPE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U32 Ident_No; $
+$TYPEDEFC$  U32 SW_Vers; $
+$TYPEDEFC$  U32 Param_Vers; $
+$TYPEDEFC$  BOOL Release; $
+$TYPEDEFC$  } S_UNITVERSION_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U16 Status; $
+$TYPEDEFC$  U16 Year; $
+$TYPEDEFC$  U8 Second; $
+$TYPEDEFC$  U8 Minute; $
+$TYPEDEFC$  U8 Hour; $
+$TYPEDEFC$  U8 Day; $
+$TYPEDEFC$  U8 DayOfWeek; $
+$TYPEDEFC$  U8 Month; $
+$TYPEDEFC$  BOOL Set; $
+$TYPEDEFC$  BOOL SetOld; $
+$TYPEDEFC$  BOOL Stop; $
+$TYPEDEFC$  } S_RTC_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U8 Backlight; $
+$TYPEDEFC$  BOOL STBY_Mode; $
+$TYPEDEFC$  U16 Status; $
+$TYPEDEFC$  PORT Port; $
+$TYPEDEFC$  U16 Freq; $
+$TYPEDEFC$  U16 FreqOld; $
+$TYPEDEFC$  } S_LCD1_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  COLOR Transparent; $
+$TYPEDEFC$  } COLORSTYPE; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U16 AnIn; $
+$TYPEDEFC$  } S_LIGHT1_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  BOOL EraseOnDownload; $
+$TYPEDEFC$  } S_APPLOG_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U16 Type; $
+$TYPEDEFC$  BOOL Backlight; $
+$TYPEDEFC$  BOOL One; $
+$TYPEDEFC$  BOOL Two; $
+$TYPEDEFC$  BOOL Three; $
+$TYPEDEFC$  BOOL Four; $
+$TYPEDEFC$  BOOL Up; $
+$TYPEDEFC$  BOOL Left; $
+$TYPEDEFC$  BOOL Center; $
+$TYPEDEFC$  BOOL Down; $
+$TYPEDEFC$  BOOL Right; $
+$TYPEDEFC$  BOOL Home; $
+$TYPEDEFC$  BOOL Esc; $
+$TYPEDEFC$  } S_BUTTON_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  BOOL GreenRight; $
+$TYPEDEFC$  BOOL RedRight; $
+$TYPEDEFC$  BOOL AmberRight; $
+$TYPEDEFC$  BOOL GreenLeft; $
+$TYPEDEFC$  BOOL RedLeft; $
+$TYPEDEFC$  BOOL AmberLeft; $
+$TYPEDEFC$  } S_DISPLAY_LED_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  /** PC_DA1_Set_Input_Config */ $
+$TYPEDEFC$  /** PC_DA1_Get_Analog_RawCounts */ $
+$TYPEDEFC$  U16 AnIn; $
+$TYPEDEFC$  /** PC_DA1_Get_Analog_mVolts */ $
+$TYPEDEFC$  U16 Voltage; $
+$TYPEDEFC$  /** 0 -> NO Pulldown, NO Pullup */ $
+$TYPEDEFC$  /** 1 -> NO Pulldown, Pullup */ $
+$TYPEDEFC$  /** 2 -> Pulldown, NO Pullup */ $
+$TYPEDEFC$  /** 3 -> Pulldown, Pullup */ $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U8 Bias; $
+$TYPEDEFC$  /** 0 -> AD 5 V range */ $
+$TYPEDEFC$  /** 1 -> AD sup V range */ $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U8 Range; $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U16 DigThresLow; $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U16 DigThresHigh; $
+$TYPEDEFC$  /** PC_DA1_Get_Status */ $
+$TYPEDEFC$  U16 Status; $
+$TYPEDEFC$  /** PC_DA1_Get_Digital */ $
+$TYPEDEFC$  BOOL DigIn; $
+$TYPEDEFC$  } S_DA1_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  /** PC_DA3_Set_Input_Config*/ $
+$TYPEDEFC$  /** PC_DA3_Get_Analog_RawCounts */ $
+$TYPEDEFC$  U16 AnIn; $
+$TYPEDEFC$  /** PC_DA3_Get_Analog_mVolts */ $
+$TYPEDEFC$  U16 Voltage; $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U16 DigThresLow; $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U16 DigThresHigh; $
+$TYPEDEFC$  /** PC_DA3_Get_Digital */ $
+$TYPEDEFC$  BOOL DigIn; $
+$TYPEDEFC$  } S_DA3_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  S32 Phase; $
+$TYPEDEFC$  U32 Per; $
+$TYPEDEFC$  U16 Freq; $
+$TYPEDEFC$  U16 Count; $
+$TYPEDEFC$  U16 Duty; $
+$TYPEDEFC$  S16 QuadCount; $
+$TYPEDEFC$  /** PC_DARC1_Set_Input_Config */ $
+$TYPEDEFC$  /** PC_DARC1_Get_Analog_Current */ $
+$TYPEDEFC$  U32 Current; $
+$TYPEDEFC$  /** PC_DARC1_Get_Analog_RawCounts */ $
+$TYPEDEFC$  U16 AnIn; $
+$TYPEDEFC$  /** PC_DARC1_Get_Analog_mVolts */ $
+$TYPEDEFC$  U16 Voltage; $
+$TYPEDEFC$  /** PC_DARC1_Get_Analog_Resistance */ $
+$TYPEDEFC$  U16 Resistance; $
+$TYPEDEFC$  /** 0 -> NO Pulldown, NO Pullup */ $
+$TYPEDEFC$  /** 1 -> NO Pulldown, Pullup */ $
+$TYPEDEFC$  /** 2 -> Pulldown, NO Pullup */ $
+$TYPEDEFC$  /** 3 -> Pulldown, Pullup */ $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U8 Bias; $
+$TYPEDEFC$  /** 0 -> AD 5 V range */ $
+$TYPEDEFC$  /** 1 -> AD sup V range */ $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U8 Range; $
+$TYPEDEFC$  /** 0 -> normal AD input */ $
+$TYPEDEFC$  /** 1 -> temperature/rheostat */ $
+$TYPEDEFC$  /** 2 -> current */ $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U16 InputMode; $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U16 DigThresLow; $
+$TYPEDEFC$  /** PC_CONFIG_PARAMETER */ $
+$TYPEDEFC$  U16 DigThresHigh; $
+$TYPEDEFC$  U16 uiCurrentInResetCounter; $
+$TYPEDEFC$  U16 uiStartCounter; $
+$TYPEDEFC$  /** PC_DARC1_Get_Status */ $
+$TYPEDEFC$  U16 Status; $
+$TYPEDEFC$  /** PC_DARC1_Get_Digital */ $
+$TYPEDEFC$  BOOL DigIn; $
+$TYPEDEFC$  } S_DAFRC3_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U32 Id; $
+$TYPEDEFC$  U32 Mask; $
+$TYPEDEFC$  U8 Data[8]; $
+$TYPEDEFC$  U8 Length; $
+$TYPEDEFC$  BOOL Tx; $
+$TYPEDEFC$  BOOL Rx; $
+$TYPEDEFC$  BOOL Overrun; $
+$TYPEDEFC$  BOOL TransmitMode; $
+$TYPEDEFC$  BOOL ReceiveMode; $
+$TYPEDEFC$  BOOL ExtendedMode; $
+$TYPEDEFC$  BOOL OverwriteProtect; $
+$TYPEDEFC$  } CAN_INTERFACE_MSG_STRUCT; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U32 Baudrate; $
+$TYPEDEFC$  BOOL BusOff; $
+$TYPEDEFC$  BOOL Reset; $
+$TYPEDEFC$  BOOL DriverError; $
+$TYPEDEFC$  BOOL DriverReset; $
+$TYPEDEFC$  BOOL Overflow; $
+$TYPEDEFC$  BOOL ErrorPassive; $
+$TYPEDEFC$  PORT Port; $
+$TYPEDEFC$  } S_CAN_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  /** PC_VLDP1_Get_Raw_Analog */ $
+$TYPEDEFC$  U16 AnIn; $
+$TYPEDEFC$  /** PC_VLDP1_Get_Analog_mVolts */ $
+$TYPEDEFC$  U16 Voltage; $
+$TYPEDEFC$  } S_VLDP_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  /** PC_DOUT14_Get_Output_FeedBack */ $
+$TYPEDEFC$  BOOL DigFeedBack; $
+$TYPEDEFC$  /** PC_DOUT14_Set_Output */ $
+$TYPEDEFC$  BOOL DigOut; $
+$TYPEDEFC$  } S_DOUT14_INTERFACE_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U16 Len; $
+$TYPEDEFC$  BOOL Tx; $
+$TYPEDEFC$  BOOL Rdy; $
+$TYPEDEFC$  U8 Data[241]; $
+$TYPEDEFC$  } S_UART_TX_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U16 Len; $
+$TYPEDEFC$  BOOL Rx; $
+$TYPEDEFC$  BOOL Clear; $
+$TYPEDEFC$  BOOL Overflow; $
+$TYPEDEFC$  U8 Data[128]; $
+$TYPEDEFC$  } S_UART_RX_STRUCT_t; $
+$TYPEDEFC$  typedef struct { $
+$TYPEDEFC$  U32 BaudrateOld; $
+$TYPEDEFC$  U32 Baudrate; $
+$TYPEDEFC$  BOOL TwoStopBitsOld; $
+$TYPEDEFC$  BOOL TwoStopBits; $
+$TYPEDEFC$  S_UART_TX_STRUCT_t TxMsg; $
+$TYPEDEFC$  S_UART_RX_STRUCT_t RxMsg; $
+$TYPEDEFC$  } S_UART4_INTERFACE_STRUCT_t; $
+$NONE$  ID.Net[2].Addr$
+$NONE$  ID.Net[2].Addr$
+$NONE$  UART[1].TxMsg.Data$
+$NONE$  UART[1].RxMsg.Data$
+$SET$  DYNAMICNV=1$
+$SET$  ADDRESSMODE=LSBFIRST$
+$SET$  ADDRESS_SIZE=16$
+$SET$  MIN_DATASIZE=8$
+$NONE$  CAN[2].Baudrate$
+$NONE$  CAN[2].BusOff$
+$NONE$  CAN[2].Reset$
+$NONE$  CAN[2].DriverError$
+$NONE$  CAN[2].DriverReset$
+$NONE$  CAN[2].Overflow$
+$NONE$  CAN[2].ErrorPassive$
+$NONE$  CAN[2].Port$
+$NONE$  UART[1].Baudrate$
+$NONE$  UART[1].TwoStopBits$
+$NONE$  UART[1].TxMsg.Len$
+$NONE$  UART[1].TxMsg.Tx$
+$NONE$  UART[1].TxMsg.Rdy$
+$NONE$  UART[1].RxMsg.Len$
+$NONE$  UART[1].RxMsg.Rx$
+$NONE$  UART[1].RxMsg.Clear$
+$NONE$  UART[1].RxMsg.Overflow$
+$ALIAS$  _NVINT[0] LogListHead$
+$ALIAS$  _NVINT[52] LogListLength$
+$ALIAS$  _NVINT[50] Log_1$
+$ALIAS$  _NVINT[38] Log_2$
+$ALIAS$  _NVINT[8] Log_3$
+$ALIAS$  _NVINT[4] Log_4$
+$ALIAS$  _NVINT[16] Log_5$
+$ALIAS$  _NVINT[48] Log_6$
+$ALIAS$  _NVINT[14] Log_7$
+$ALIAS$  _NVINT[2] Log_8$
+$ALIAS$  _NVINT[6] Log_9$
+$ALIAS$  _NVINT[44] Log_10$
+$ALIAS$  _NVINT[42] Log_11$
+$ALIAS$  _NVINT[46] Log_12$
+$ALIAS$  _NVINT[10] Log_13$
+$ALIAS$  _NVINT[24] Log_14$
+$ALIAS$  _NVINT[18] Log_15$
+$ALIAS$  _NVINT[36] Log_16$
+$ALIAS$  _NVINT[12] Log_17$
+$ALIAS$  _NVINT[40] Log_18$
+$ALIAS$  _NVINT[20] Log_19$
+$ALIAS$  _NVINT[22] Log_20$
+$ALIAS$  _NVINT[32] Log_21$
+$ALIAS$  _NVINT[28] Log_22$
+$ALIAS$  _NVINT[26] Log_23$
+$ALIAS$  _NVINT[30] Log_24$
+$ALIAS$  _NVINT[34] Log_25$
+$ALIAS$  _NVINT[1] Batt_SN$
+$DIM1$  Log_array_Ints1[161]$
+$DIM1$  Log_array_Ints2[100]$
+$DIM1$  Log_outArray[100]$
+$ADR10$  _NVINT[0] U8 BI SYS AUN647 NV$
+$ADR10$  _NVINT[52] U8 BI SYS AUN821 NV$
+$ADR10$  _NVINT[50] U32 BI SYS AUN1114 NV$
+$ADR10$  _NVINT[38] U32 BI SYS AUN1096 NV$
+$ADR10$  _NVINT[8] U32 BI SYS AUN1091 NV$
+$ADR10$  _NVINT[4] U32 BI SYS AUN1086 NV$
+$ADR10$  _NVINT[16] U32 BI SYS AUN1081 NV$
+$ADR10$  _NVINT[48] U32 BI SYS AUN875 NV$
+$ADR10$  _NVINT[14] U32 BI SYS AUN893 NV$
+$ADR10$  _NVINT[2] U32 BI SYS AUN898 NV$
+$ADR10$  _NVINT[6] U32 BI SYS AUN903 NV$
+$ADR10$  _NVINT[44] U32 BI SYS AUN908 NV$
+$ADR10$  _NVINT[42] U32 BI SYS AUN659 NV$
+$ADR10$  _NVINT[46] U32 BI SYS AUN832 NV$
+$ADR10$  _NVINT[10] U32 BI SYS AUN837 NV$
+$ADR10$  _NVINT[24] U32 BI SYS AUN842 NV$
+$ADR10$  _NVINT[18] U32 BI SYS AUN847 NV$
+$ADR10$  _NVINT[36] U32 BI SYS AUN997 NV$
+$ADR10$  _NVINT[12] U32 BI SYS AUN1015 NV$
+$ADR10$  _NVINT[40] U32 BI SYS AUN1020 NV$
+$ADR10$  _NVINT[20] U32 BI SYS AUN1025 NV$
+$ADR10$  _NVINT[22] U32 BI SYS AUN1030 NV$
+$ADR10$  _NVINT[32] U32 BI SYS AUN936 NV$
+$ADR10$  _NVINT[28] U32 BI SYS AUN954 NV$
+$ADR10$  _NVINT[26] U32 BI SYS AUN959 NV$
+$ADR10$  _NVINT[30] U32 BI SYS AUN964 NV$
+$ADR10$  _NVINT[34] U32 BI SYS AUN969 NV$
+$ADR10$  _NVINT[1] U16 BI SYS AUN590 NV$
+$TRANS-APPLICATION$  TENK_DM430$
+$ADR5$  ServiceTool.MasterPassword.Read S_DIAGNOSTIC_CONTROL_t SYS U SF$
+$ADR5$  ServiceTool.DisableRead S_DIAGNOSTIC_CONTROL_t SYS U SF$
+$ADR5$  ServiceTool.DisableWrite S_DIAGNOSTIC_CONTROL_t SYS U SF$
+$ADR5$  ServiceTool.DisableDownload S_DIAGNOSTIC_CONTROL_t SYS U SF$
+$ADR5$  ID.Node.ServerAddr S_IDTYPE_STRUCT_t SYSI U SF$
+$ADR5$  OS.ExecTimeOut S_OSTYPE_STRUCT_t SYSI U SF$
+$ADR5$  OS.ChecksumFailureTreatment S_OSTYPE_STRUCT_t SYSI U S$
+$ADR5$  OS.ResetExecTime S_OSTYPE_STRUCT_t SYS U SF$
+$ADR5$  UnitVersion.Ident_No S_UNITVERSION_STRUCT_t SYS U S$
+$ADR5$  UnitVersion.SW_Vers S_UNITVERSION_STRUCT_t SYS U S$
+$ADR5$  UnitVersion.Param_Vers S_UNITVERSION_STRUCT_t SYS U S$
+$ADR5$  UnitVersion.Release S_UNITVERSION_STRUCT_t SYS U S$
+$ADR5$  RTC.Set S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  RTC.Stop S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  Display.Backlight S_LCD1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  AppLog.EraseOnDownload S_APPLOG_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  Button.Backlight S_BUTTON_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  Led.GreenRight S_DISPLAY_LED_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  Led.RedRight S_DISPLAY_LED_INTERFACE_STRUCT_t SYSI U S$
+$ADR5$  Led.AmberRight S_DISPLAY_LED_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  Led.GreenLeft S_DISPLAY_LED_INTERFACE_STRUCT_t SYSI U S$
+$ADR5$  Led.RedLeft S_DISPLAY_LED_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  Led.AmberLeft S_DISPLAY_LED_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p06.Bias S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p06.Range S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p06.DigThresLow S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p06.DigThresHigh S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p07.Bias S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p07.Range S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p07.DigThresLow S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p07.DigThresHigh S_DA1_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p05.DigThresLow S_DA3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p05.DigThresHigh S_DA3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p10.Bias S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p10.Range S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p10.InputMode S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p10.DigThresLow S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p10.DigThresHigh S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p11.Bias S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p11.Range S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p11.InputMode S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p11.DigThresLow S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p11.DigThresHigh S_DAFRC3_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  C1p12.DigOut S_DOUT14_INTERFACE_STRUCT_t SYSI U SF$
+$ADR5$  CAN[0].BusOff BOOL SYS U F$
+$ADR5$  CAN[0].DriverError BOOL SYS U F$
+$ADR5$  CAN[0].Overflow BOOL SYS U F$
+$ADR5$  CAN[0].ErrorPassive BOOL SYS U F$
+$ADR5$  CAN[1].BusOff BOOL SYS U F$
+$ADR5$  CAN[1].DriverError BOOL SYS U F$
+$ADR5$  CAN[1].Overflow BOOL SYS U F$
+$ADR5$  CAN[1].ErrorPassive BOOL SYS U F$
+$ADR5$  OS.Start S_OSTYPE_STRUCT_t SYS U FS$
+$ADR5$  OS.LoopCnt S_OSTYPE_STRUCT_t SYS U FS$
+$ADR5$  OS.ExecTime S_OSTYPE_STRUCT_t SYS U FS$
+$ADR5$  OS.ExecTimeWork S_OSTYPE_STRUCT_t SYS U FS$
+$ADR5$  OS.ETime S_OSTYPE_STRUCT_t SYS U FS$
+$ADR5$  OS.ExecTimeGraph S_OSTYPE_STRUCT_t SYS U FS$
+$ADR5$  NVMem.Status S_NV_STRUCT_t SYS U FS$
+$ADR5$  NVMem.PendingCount S_NV_STRUCT_t SYS U FS$
+$ADR5$  ServiceTool.MasterPassword.Write S_DIAGNOSTIC_CONTROL_t SYS U FS$
+$ADR5$  ServiceTool.Connect S_DIAGNOSTIC_CONTROL_t SYS U FS$
+$ADR5$  Ambient.AnIn S_LIGHT1_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  RTC.DayOfWeek S_RTC_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  RTC.Status S_RTC_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p02.Voltage S_VLDP_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.One S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Two S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Three S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Four S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Right S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Up S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Left S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Down S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Center S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Esc S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Home S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  Button.Type S_BUTTON_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p05.DigIn S_DA3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p05.Voltage S_DA3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p06.DigIn S_DA1_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p06.Voltage S_DA1_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p06.Status S_DA1_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p07.DigIn S_DA1_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p07.Voltage S_DA1_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p07.Status S_DA1_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.DigIn S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Voltage S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Current S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Resistance S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Freq S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Per S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Count S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Duty S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.QuadCount S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Phase S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p10.Status S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.DigIn S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Voltage S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Current S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Resistance S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Freq S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Per S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Count S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Duty S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  C1p11.Status S_DAFRC3_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  UART[0].RxMsg.Len U16 SYS U F$
+$ADR5$  UART[0].RxMsg.Rx BOOL SYS U F$
+$ADR5$  UART[0].RxMsg.Overflow BOOL SYS U F$
+$ADR5$  UART[0].RxMsg.Data ARRAY[128]U8 SYS U F$
+$ADR5$  UART[0].TxMsg.Rdy BOOL SYS U F$
+$ADR5$  C1p12.DigFeedBack S_DOUT14_INTERFACE_STRUCT_t SYS U FS$
+$ADR5$  ECUInfoPacked.BootVer0 U16 SYS U S$
+$ADR5$  ECUInfoPacked.AppCmplTime ARRAY[4]U16 SYS U S$
+$ADR5$  ECUInfoPacked.SerNr0 ARRAY[3]U16 SYS U S$
+$ADR5$  ECUInfoPacked.BDate ARRAY[4]U16 SYS U S$
+$ADR5$  ECUInfoPacked.PNr0 ARRAY[6]U16 SYS U S$
+$ADR5$  ECUInfoPacked.PRev0 ARRAY[2]U16 SYS U S$
+$ADR5$  ECUInfoPacked.PNr1 ARRAY[6]U16 SYS U S$
+$ADR5$  ECUInfoPacked.PRev1 ARRAY[2]U16 SYS U S$
+$ADR5$  ECUInfoPacked.PNr2 ARRAY[3]U16 SYS U S$
+$ADR5$  ECUInfoPacked.AppId ARRAY[26]U16 SYS U S$
+$ADR5$  ECUInfoPacked.AppType ARRAY[16]U16 SYS U S$
+$ADR5$  ECUInfoPacked.AppVer ARRAY[11]U16 SYS U S$
+$ADR5$  NVMem.Intern S_NV_STRUCT_t SYS U S$
+$ADR5$  ID.Node.ClientAddr S_IDTYPE_STRUCT_t SYS U S$
+$ADR5$  OS.CrcStatus S_OSTYPE_STRUCT_t SYS U S$
+$ADR5$  OS.CrcCalcTime S_OSTYPE_STRUCT_t SYS U S$
+$ADR5$  OS.ChecksumFailure S_OSTYPE_STRUCT_t SYS U S$
+$ADR5$  OS.RAMTestTimeInterval S_OSTYPE_STRUCT_t SYS U S$
+$ADR5$  Display.Status S_LCD1_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p06.AnIn S_DA1_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p07.AnIn S_DA1_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p05.AnIn S_DA3_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p10.AnIn S_DAFRC3_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p11.Phase S_DAFRC3_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p11.QuadCount S_DAFRC3_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p11.AnIn S_DAFRC3_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  C1p02.AnIn S_VLDP_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  CAN[0].Baudrate U32 SYSI U F$
+$ADR5$  ID.Net[0].Addr U8 SYSI U F$
+$ADR5$  CAN[0].Reset BOOL SYS U F$
+$ADR5$  CAN[0].DriverReset BOOL SYS U F$
+$ADR5$  CAN[1].Baudrate U32 SYSI U F$
+$ADR5$  ID.Net[1].Addr U8 SYSI U F$
+$ADR5$  CAN[1].Reset BOOL SYS U F$
+$ADR5$  CAN[1].DriverReset BOOL SYS U F$
+$ADR3$  Log_Num_Ints U8 TEST CHECK F$
+$ADR3$  Log_Val_7_U8 U8 TEST CHECK F$
+$ADR3$  Update_Mem_1_Bool BOOL TEST CHECK F$
+$ADR3$  Init_pulses U16 TEST CHECK F$
+$ADR3$  Update_Log2_bool BOOL TEST CHECK F$
+$ADR3$  Update_Mem_1_Cnt U16 TEST CHECK F$
+$ADR3$  Batt_SN_rxAddVal U16 TEST CHECK F$
+$ADR3$  Batt_SN_pendVal U16 TEST CHECK F$
+$ADR3$  Batt_SN_setVal U16 TEST CHECK F$
+$ADR3$  Batt_SN_matchVal_nonZero BOOL TEST CHECK F$
+$ADR3$  Addr_243_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_244_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_245_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_246_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_247_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_248_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_249_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_0_setBool BOOL TEST CHECK F$
+$ADR3$  Addr_pend U8 TEST CHECK F$
+$ADR3$  Addr_set U8 TEST CHECK F$
+$ADR3$  Log_head_inString U8 TEST CHECK F$
+$ADR3$  LO_1 STRING TEST CHECK F$
+$ADR3$  LO_2 STRING TEST CHECK F$
+$ADR3$  INIT_NV_CK BOOL TEST CHECK F$
+$ADR5$  UART[0].RxMsg.Clear BOOL SYS U F$
+$ADR5$  UART[0].TxMsg.Len U16 SYS U F$
+$ADR5$  UART[0].Baudrate U32 SYS U F$
+$ADR5$  UART[0].TxMsg.Data ARRAY[241]U8 SYS U F$
+$ADR5$  RTC.Year S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  RTC.Second S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  RTC.Minute S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  RTC.Hour S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  RTC.Day S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  RTC.Month S_RTC_INTERFACE_STRUCT_t SYS U SF$
+$ADR5$  UART[0].TxMsg.Tx BOOL SYS U F$
+$ADR5$  ID.Net[].Addr S_IDTYPE_STRUCT_t SYS U S$
+$ADR5$  UART[].TxMsg.Data ARRAY[241]U8 SYS U S$
+$ADR5$  CAN[].Baudrate S_CAN_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  CAN[].Reset S_CAN_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  CAN[].DriverReset S_CAN_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  UART[].Baudrate S_UART4_INTERFACE_STRUCT_t SYSI U S$
+$ADR5$  UART[].TwoStopBits S_UART4_INTERFACE_STRUCT_t SYSI U S$
+$ADR5$  UART[].TxMsg.Len S_UART4_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  UART[].RxMsg.Clear S_UART4_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  UART[].RxMsg.Data ARRAY[128]U8 SYS U S$
+$ADR5$  CAN[].BusOff S_CAN_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  CAN[].DriverError S_CAN_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  CAN[].Overflow S_CAN_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  CAN[].ErrorPassive S_CAN_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  UART[].TxMsg.Rdy S_UART4_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  UART[].RxMsg.Len S_UART4_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  UART[].RxMsg.Rx S_UART4_INTERFACE_STRUCT_t SYS U S$
+$ADR5$  UART[].RxMsg.Overflow S_UART4_INTERFACE_STRUCT_t SYS U S$
+$ADR4$  Log_array_Ints1[] ARRAY[161]U8 TEST CHECK F$
+$ADR4$  Log_array_Ints2[] ARRAY[100]U8 TEST CHECK F$
+$ADR4$  Log_outArray[] ARRAY[100]U8 TEST CHECK F$
+$ADR5$  UART[].TxMsg.Tx S_UART4_INTERFACE_STRUCT_t SYS U S$
+$END$$

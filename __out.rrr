@@ -1,0 +1,12 @@
+﻿Compilation Warning: 3066: Assignment to INPUT variable is an extension to the IEC 61131-3 standard.
+          PLCFile1.xml!Log_String (5,5)
+Compilation Warning: 3066: Assignment to INPUT variable is an extension to the IEC 61131-3 standard.
+          PLCFile1.xml!Log_String (8,3)
+Compilation Warning: 3066: Assignment to INPUT variable is an extension to the IEC 61131-3 standard.
+          PLCFile1.xml!Log_String (33,1)
+Compilation Warning: 1105: String of default length will be returned, which may be less than expected length. Save expression into temporary variable to avoid uncertainty.
+          PLCFile1.xml!Log_String (364,20)
+Compilation Warning: 3066: Assignment to INPUT variable is an extension to the IEC 61131-3 standard.
+          PLCFile1.xml!Mem_Sort (26,3)
+Compilation Warning: 3066: Assignment to INPUT variable is an extension to the IEC 61131-3 standard.
+          PLCFile1.xml!Mem_Sort (28,3)

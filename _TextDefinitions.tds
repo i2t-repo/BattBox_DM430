@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<TextDataSource DefLang="0">
+	<FileFormat>002A</FileFormat>
+	<Text>
+		<ID>12</ID>
+		<Description>SingleInputString</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData="">
+			<Input InputIndex="0" TextIndex="0"/>
+		</String>
+		<Inputs Count="1">
+			<FC Type="String" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Text>
+		<ID>13</ID>
+		<Description>TextValU8</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData=": ">
+			<Input InputIndex="0" TextIndex="0"/>
+			<Input InputIndex="1" TextIndex="3"/>
+		</String>
+		<Inputs Count="2">
+			<FC Type="String" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+			<FC Type="Unsigned" Digits="3" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Text>
+		<ID>14</ID>
+		<Description>Version</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData=": .">
+			<Input InputIndex="0" TextIndex="0"/>
+			<Input InputIndex="1" TextIndex="3"/>
+			<Input InputIndex="2" TextIndex="5"/>
+		</String>
+		<Inputs Count="3">
+			<FC Type="String" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+			<FC Type="Unsigned" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+			<FC Type="Unsigned" Digits="2" Value="0" Prefix="0" Padding="3" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Text>
+		<ID>15</ID>
+		<Description>U8dotU8</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData=".">
+			<Input InputIndex="0" TextIndex="0"/>
+			<Input InputIndex="1" TextIndex="2"/>
+		</String>
+		<Inputs Count="2">
+			<FC Type="Unsigned" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+			<FC Type="Unsigned" Digits="2" Value="0" Prefix="0" Padding="3" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Text>
+		<ID>16</ID>
+		<Description>Text_Text</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData=": ">
+			<Input InputIndex="0" TextIndex="0"/>
+			<Input InputIndex="1" TextIndex="3"/>
+		</String>
+		<Inputs Count="2">
+			<FC Type="String" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+			<FC Type="String" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Text>
+		<ID>17</ID>
+		<Description>TextValS16</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData="">
+			<Input InputIndex="0" TextIndex="0"/>
+		</String>
+		<Inputs Count="1">
+			<FC Type="Signed" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Text>
+		<ID>18</ID>
+		<Description>S32dotU8</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData=".">
+			<Input InputIndex="0" TextIndex="0"/>
+			<Input InputIndex="1" TextIndex="2"/>
+		</String>
+		<Inputs Count="2">
+			<FC Type="Signed" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+			<FC Type="Unsigned" Digits="2" Value="0" Prefix="0" Padding="3" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Text>
+		<ID>19</ID>
+		<Description>DegreeVal_S16</Description>
+		<Used_by/>
+		<String LanguageIndex="1" TextData="°">
+			<Input InputIndex="0" TextIndex="0"/>
+		</String>
+		<Inputs Count="1">
+			<FC Type="Signed" Digits="2" Value="0" Prefix="0" Padding="0" Base="1" Alt="false"/>
+		</Inputs>
+	</Text>
+	<Language>
+		<Name>English</Name>
+		<Index>1</Index>
+		<Hidden>0</Hidden>
+	</Language>
+</TextDataSource>

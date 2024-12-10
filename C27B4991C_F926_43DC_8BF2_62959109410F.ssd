@@ -1,0 +1,680 @@
+﻿<?xml version="1.0"?>
+<Scr PT="false">
+  <FF>003A</FF>
+  <ULC X="0" EX="" Y="0" EY=""/>
+  <W E="" V="480"/>
+  <H E="" V="272"/>
+  <D>LogScrn</D>
+  <GUID>C27B4991C_F926_43DC_8BF2_62959109410F</GUID>
+  <C V="01010100" E=""/>
+  <Interface>
+    <Input>
+      <Bus Name="Btn_Util">
+        <Net Name="Log_Scroll_Val" Uid="16" DataType="S16"/>
+      </Bus>
+      <Bus Name="CAN_Input">
+        <Net Name="Log_update_Cnt" Uid="20" DataType="U16"/>
+      </Bus>
+      <Net Name="Batt_SN" Uid="7" DataType="U16"/>
+      <Net Name="Batt_Addr" Uid="14" DataType="U8"/>
+      <Net Name="Log_outString" Uid="24" DataType="STRING"/>
+    </Input>
+    <Output/>
+  </Interface>
+  <PW>480</PW>
+  <PH>272</PH>
+  <PN>Display.Port</PN>
+  <F>
+    <Txt N="Text" W="450" H="200" Type="TDS">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F V="BahnschriftLightSemiCondensed_12__UNI" E=""/>
+      <GUID>CAF76EB04_E8E4_484F_A5F6_787210A58D71</GUID>
+      <J V="0" E=""/>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <SP X="15" EX="" Y="30" EY=""/>
+      <O>18</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+      <ID V="12" E=""/>
+      <D>
+        <DV V="'12345$N12345'" E="24" FC="0"/>
+      </D>
+    </Txt>
+    <Wdg N="TextBlocker_Top" W="900" H="200">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F/>
+      <PouCalls/>
+      <C V="00000000" E=""/>
+      <IP X="0" EX="" Y="-170" EY=""/>
+    </Wdg>
+    <Wdg N="LogTitle" W="240" H="30">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F>
+        <Txt N="Text" W="235" H="25" Type="TDS">
+          <LMO>
+            <X/>
+            <Y/>
+            <W/>
+            <H/>
+          </LMO>
+          <En V="True" E=""/>
+          <F V="BahnschriftSemiLight_14__UNI" E=""/>
+          <GUID></GUID>
+          <J V="2" E=""/>
+          <T>
+            <IsSink V="False" E=""/>
+            <Output E=""/>
+            <LocalX E=""/>
+            <LocalY E=""/>
+            <GType E=""/>
+            <GX E=""/>
+            <GY E=""/>
+            <ZoomFactor E=""/>
+            <DeltaX E=""/>
+            <DeltaY E=""/>
+            <Velocity E=""/>
+            <RotAng E=""/>
+            <LocalDeltaX E=""/>
+            <LocalDeltaY E=""/>
+          </T>
+          <C V="00FFFFFF" E=""/>
+          <SP X="0" EX="" Y="0" EY=""/>
+          <O>1</O>
+          <Pr V="0" E=""/>
+          <Vis E=""/>
+          <ID V="12" E=""/>
+          <D>
+            <DV V="'Data Log'" E="" FC="0"/>
+          </D>
+        </Txt>
+      </F>
+      <PouCalls/>
+      <C V="T" E=""/>
+      <IP X="42" EX="" Y="0" EY=""/>
+    </Wdg>
+    <Wdg N="TextBlocker_Bottom" W="900" H="600">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F/>
+      <PouCalls/>
+      <C V="00000000" E=""/>
+      <IP X="0" EX="" Y="225" EY=""/>
+    </Wdg>
+    <Wdg N="MainBtn_Text" W="260" H="30">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F>
+        <Txt N="Text" W="255" H="25" Type="TDS">
+          <LMO>
+            <X/>
+            <Y/>
+            <W/>
+            <H/>
+          </LMO>
+          <En V="True" E=""/>
+          <F V="BahnschriftSemiLight_15__UNI" E=""/>
+          <GUID></GUID>
+          <J V="2" E=""/>
+          <T>
+            <IsSink V="False" E=""/>
+            <Output E=""/>
+            <LocalX E=""/>
+            <LocalY E=""/>
+            <GType E=""/>
+            <GX E=""/>
+            <GY E=""/>
+            <ZoomFactor E=""/>
+            <DeltaX E=""/>
+            <DeltaY E=""/>
+            <Velocity E=""/>
+            <RotAng E=""/>
+            <LocalDeltaX E=""/>
+            <LocalDeltaY E=""/>
+          </T>
+          <C V="00FFFFFF" E=""/>
+          <SP X="0" EX="" Y="0" EY=""/>
+          <O>1</O>
+          <Pr V="0" E=""/>
+          <Vis E=""/>
+          <ID V="12" E=""/>
+          <D>
+            <DV V="'Main'" E="" FC="0"/>
+          </D>
+        </Txt>
+      </F>
+      <PouCalls/>
+      <C V="T" E=""/>
+      <IP X="-197" EX="" Y="235" EY=""/>
+    </Wdg>
+    <Wdg N="DetailsBtn_Text" W="260" H="30">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F>
+        <Txt N="Text" W="255" H="25" Type="TDS">
+          <LMO>
+            <X/>
+            <Y/>
+            <W/>
+            <H/>
+          </LMO>
+          <En V="True" E=""/>
+          <F V="BahnschriftSemiLight_15__UNI" E=""/>
+          <GUID></GUID>
+          <J V="2" E=""/>
+          <T>
+            <IsSink V="False" E=""/>
+            <Output E=""/>
+            <LocalX E=""/>
+            <LocalY E=""/>
+            <GType E=""/>
+            <GX E=""/>
+            <GY E=""/>
+            <ZoomFactor E=""/>
+            <DeltaX E=""/>
+            <DeltaY E=""/>
+            <Velocity E=""/>
+            <RotAng E=""/>
+            <LocalDeltaX E=""/>
+            <LocalDeltaY E=""/>
+          </T>
+          <C V="00FFFFFF" E=""/>
+          <SP X="0" EX="" Y="0" EY=""/>
+          <O>1</O>
+          <Pr V="0" E=""/>
+          <Vis E=""/>
+          <ID V="12" E=""/>
+          <D>
+            <DV V="'Details'" E="" FC="0"/>
+          </D>
+        </Txt>
+      </F>
+      <PouCalls/>
+      <C V="T" E=""/>
+      <IP X="220" EX="" Y="235" EY=""/>
+    </Wdg>
+    <L N="Line_1">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>CBF4BC667_6F6E_4E91_90D3_C8201C3DDC71</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="0" EX="" Y="270" EY=""/>
+      <EP X="5" EX="" Y="260" EY=""/>
+      <O>12</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_2">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>C325E23D2_495A_42C4_9F2A_74801B41CB4C</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="65" EX="" Y="260" EY=""/>
+      <EP X="75" EX="" Y="280" EY=""/>
+      <O>11</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_3">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>C5E8A0399_C10B_4468_B696_707F2DDCAE0C</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="5" EX="" Y="260" EY=""/>
+      <EP X="65" EX="" Y="260" EY=""/>
+      <O>10</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_4">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>CF3C2D39B_9925_490F_B3FF_3C248B84B0B4</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="405" EX="" Y="280" EY=""/>
+      <EP X="415" EX="" Y="260" EY=""/>
+      <O>9</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_7">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>CCD1A20C3_AC78_43B8_BE01_94F14BFAC2FB</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="415" EX="" Y="260" EY=""/>
+      <EP X="475" EX="" Y="260" EY=""/>
+      <O>8</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_9">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>CF36E8318_555E_4DA3_822E_1C5B3692B668</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="475" EX="" Y="260" EY=""/>
+      <EP X="480" EX="" Y="270" EY=""/>
+      <O>7</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <Wdg N="SerialNumber_Gauge" W="240" H="30">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F>
+        <Txt N="Text" W="235" H="25" Type="TDS">
+          <LMO>
+            <X/>
+            <Y/>
+            <W/>
+            <H/>
+          </LMO>
+          <En V="True" E=""/>
+          <F V="BahnschriftSemiLight_14__UNI" E=""/>
+          <GUID></GUID>
+          <J V="0" E=""/>
+          <T>
+            <IsSink V="False" E=""/>
+            <Output E=""/>
+            <LocalX E=""/>
+            <LocalY E=""/>
+            <GType E=""/>
+            <GX E=""/>
+            <GY E=""/>
+            <ZoomFactor E=""/>
+            <DeltaX E=""/>
+            <DeltaY E=""/>
+            <Velocity E=""/>
+            <RotAng E=""/>
+            <LocalDeltaX E=""/>
+            <LocalDeltaY E=""/>
+          </T>
+          <C V="00FFFFFF" E=""/>
+          <SP X="0" EX="" Y="0" EY=""/>
+          <O>1</O>
+          <Pr V="0" E=""/>
+          <Vis E=""/>
+          <ID V="13" E=""/>
+          <D>
+            <DV V="'SN'" E="" FC="0"/>
+            <DV V="" E="7" FC="1"/>
+          </D>
+        </Txt>
+      </F>
+      <PouCalls/>
+      <C V="T" E=""/>
+      <IP X="115" EX="" Y="245" EY=""/>
+    </Wdg>
+    <Wdg N="Batt_Addr_TxtVal" W="240" H="30">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F>
+        <Txt N="Text" W="235" H="25" Type="TDS">
+          <LMO>
+            <X/>
+            <Y/>
+            <W/>
+            <H/>
+          </LMO>
+          <En V="True" E=""/>
+          <F V="BahnschriftSemiLight_14__UNI" E=""/>
+          <GUID></GUID>
+          <J V="0" E=""/>
+          <T>
+            <IsSink V="False" E=""/>
+            <Output E=""/>
+            <LocalX E=""/>
+            <LocalY E=""/>
+            <GType E=""/>
+            <GX E=""/>
+            <GY E=""/>
+            <ZoomFactor E=""/>
+            <DeltaX E=""/>
+            <DeltaY E=""/>
+            <Velocity E=""/>
+            <RotAng E=""/>
+            <LocalDeltaX E=""/>
+            <LocalDeltaY E=""/>
+          </T>
+          <C V="00FFFFFF" E=""/>
+          <SP X="0" EX="" Y="0" EY=""/>
+          <O>1</O>
+          <Pr V="0" E=""/>
+          <Vis E=""/>
+          <ID V="13" E=""/>
+          <D>
+            <DV V="'Address'" E="" FC="0"/>
+            <DV V="" E="14" FC="1"/>
+          </D>
+        </Txt>
+      </F>
+      <PouCalls/>
+      <C V="T" E=""/>
+      <IP X="275" EX="" Y="245" EY=""/>
+    </Wdg>
+    <L N="Line_5">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>C65ECE05D_B240_4018_B518_F0A573C8514C</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="10" EX="" Y="30" EY=""/>
+      <EP X="470" EX="" Y="30" EY=""/>
+      <O>4</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_6">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>C18B9D0B4_B682_4669_AAC3_711AFECAA80A</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="10" EX="" Y="225" EY=""/>
+      <EP X="470" EX="" Y="225" EY=""/>
+      <O>3</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_8">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>C980EFFF3_470E_4199_8FA3_332E4907E88A</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="10" EX="" Y="30" EY=""/>
+      <EP X="10" EX="" Y="225" EY=""/>
+      <O>2</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+    <L N="Line_10">
+      <LMO>
+        <X0/>
+        <Y0/>
+        <X1/>
+        <Y1/>
+      </LMO>
+      <En V="True" E=""/>
+      <GUID>C5441810F_2985_4968_95D0_F0F8DCCD5C63</GUID>
+      <T>
+        <IsSink V="False" E=""/>
+        <Output E=""/>
+        <LocalX E=""/>
+        <LocalY E=""/>
+        <GType E=""/>
+        <GX E=""/>
+        <GY E=""/>
+        <ZoomFactor E=""/>
+        <DeltaX E=""/>
+        <DeltaY E=""/>
+        <Velocity E=""/>
+        <RotAng E=""/>
+        <LocalDeltaX E=""/>
+        <LocalDeltaY E=""/>
+      </T>
+      <C V="00FFFFFF" E=""/>
+      <W V="2" E=""/>
+      <SP X="470" EX="" Y="30" EY=""/>
+      <EP X="470" EX="" Y="225" EY=""/>
+      <O>1</O>
+      <Pr V="0" E=""/>
+      <Vis E=""/>
+    </L>
+  </F>
+  <PouCalls/>
+</Scr>

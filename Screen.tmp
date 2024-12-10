@@ -1,0 +1,454 @@
+.Net version 2.0 found.
+.Net version 3.0 found.
+.Net version 3.5 found.
+.Net version 4 (Client) found.
+Required .Net version 4 (Full) found.
+Verifying st2c
+
+Generate: _PLCmain.c
+C:\ProgramData\Danfoss\PLUS1\2023.1\Data\ExtCompiler\PLC2C\plc2c.exe --default-string-length 5000  -i "PLCFILE1.XML;" -t 9 --unique-prefix p1Plc_  -n "_PLCmain"  -u "_Usage.xml" 
+Directory: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\
++++
+(No output to stdout)
++++
+(No output to stderr)
++++
+(SUCCESS)
+---
+
+Generate: _PLCmain.o
+"C:\ProgramData\Danfoss\PLUS1\2023.1\Data\ExtCompiler\ARM\v5.4-2016q3\bin\arm-none-eabi-gcc.exe" -c -fno-inline-small-functions -mthumb -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -fsingle-precision-constant -O1 -fwrapv -fsigned-char -mlittle-endian -D__GCC  -D CCP_STM32F7XX541  -w  -o  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\_PLCmain.o"  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\_PLCmain.c" 
+Directory: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\
+Will compile _PLCmain.c, because compile is for All (_PLCmain.o)
+Compilation performed for: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\_PLCmain.c
++++
+(No output to stdout)
++++
+(No output to stderr)
++++
+(SUCCESS)
+---
+
+Generate: PLCopenXML_stg_.o
+"C:\ProgramData\Danfoss\PLUS1\2023.1\Data\ExtCompiler\ARM\v5.4-2016q3\bin\arm-none-eabi-gcc.exe" -c -fno-inline-small-functions -mthumb -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -fsingle-precision-constant -O1 -fwrapv -fsigned-char -mlittle-endian -D__GCC  -D CCP_STM32F7XX541  -w  -o  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\PLCopenXML_stg_.o"  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\PLCopenXML_stg_.c" 
+Directory: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\
+Will compile PLCopenXML_stg_.c, because compile is for All (PLCopenXML_stg_.o)
+Compilation performed for: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\PLCopenXML_stg_.c
++++
+(No output to stdout)
++++
+(No output to stderr)
++++
+(SUCCESS)
+---
+
+Generate: __stdlib_plc_func.o
+"C:\ProgramData\Danfoss\PLUS1\2023.1\Data\ExtCompiler\ARM\v5.4-2016q3\bin\arm-none-eabi-gcc.exe" -c -fno-inline-small-functions -mthumb -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -fsingle-precision-constant -O1 -fwrapv -fsigned-char -mlittle-endian -D__GCC  -D CCP_STM32F7XX541  -w  -o  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\__stdlib_plc_func.o"  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\__stdlib_plc_func.c" 
+Directory: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\
+Will compile __stdlib_plc_func.c, because compile is for All (__stdlib_plc_func.o)
+Compilation performed for: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\__stdlib_plc_func.c
++++
+(No output to stdout)
++++
+(No output to stderr)
++++
+(SUCCESS)
+---
+
+Generate: __stdlib_plc_func_common.o
+"C:\ProgramData\Danfoss\PLUS1\2023.1\Data\ExtCompiler\ARM\v5.4-2016q3\bin\arm-none-eabi-gcc.exe" -c -fno-inline-small-functions -mthumb -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -fsingle-precision-constant -O1 -fwrapv -fsigned-char -mlittle-endian -D__GCC  -D CCP_STM32F7XX541  -w  -o  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\__stdlib_plc_func_common.o"  "C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\__stdlib_plc_func_common.c" 
+Directory: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\
+Will compile __stdlib_plc_func_common.c, because compile is for All (__stdlib_plc_func_common.o)
+Compilation performed for: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\__stdlib_plc_func_common.c
++++
+(No output to stdout)
++++
+(No output to stderr)
++++
+(SUCCESS)
+---
+Time consumed for compile: 1168 {_PLCmain.c,PLCopenXML_stg_.c,__stdlib_plc_func.c,__stdlib_plc_func_common.c,}
+
+Generate: _CommonCcpPlcC.lib
+"C:\ProgramData\Danfoss\PLUS1\2023.1\Data\ExtCompiler\ARM\v5.4-2016q3\bin\arm-none-eabi-ar.exe"  -r "_CommonCcpPlcC.lib" "_PLCmain.o" "PLCopenXML_stg_.o" "__stdlib_plc_func.o" "__stdlib_plc_func_common.o"
+Directory: C:\Users\Jimmy\Documents\Danfoss\PLUS1\GUIDE\I2T\tenK_DM430\
++++
+(No output to stdout)
++++
+stderr:
+C:\ProgramData\Danfoss\PLUS1\2023.1\Data\ExtCompiler\ARM\v5.4-2016q3\bin\arm-none-eabi-ar.exe: creating _CommonCcpPlcC.lib
++++
+(SUCCESS)
+---
+Batch job BEGIN
+***
+Danfoss PLUS+1 GUIDE Software: [Make] Version: 2023.1.4
+***
+
+Expanding MKFILE11.TXT to MKFILE11.MAK
+Using host section ARM-GCC 5.4 2016Q3-20160926 -BEGIN
+Expanding MKFILE12.TXT to MKFILE12.MAK
+Using host section ARM-GCC 5.4 2016Q3-20160926 -BEGIN
+Expanding MKFILE2.TXT to MKFILE2.MAK
+Using host section ARM-GCC 5.4 2016Q3-20160926 -BEGIN
+Expanding MKFILE31.TXT to MKFILE31.MAK
+Using host section ARM-GCC 5.4 2016Q3-20160926 -BEGIN
+Expanding MKFILE32.TXT to MKFILE32.MAK
+Using host section ARM-GCC 5.4 2016Q3-20160926 -BEGIN
+***
+NO ERRORS FOUND BY Make
+***
+
+MAKEJOB11 BEGIN
+***
+Danfoss PLUS+1 GUIDE Software: [SsdToNob] Version: 2023.1.4
+***
+
+Screen source definition converter, C27B4991C_F926_43DC_8BF2_62959109410F.ssd
+***
+NO ERRORS FOUND BY SsdToNob
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [SsdToNob] Version: 2023.1.4
+***
+
+Screen source definition converter, CCB2E4559_AEC3_4437_8FE1_48A07FDAA617.ssd
+***
+NO ERRORS FOUND BY SsdToNob
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [SsdToNob] Version: 2023.1.4
+***
+
+Screen source definition converter, CD6937D80_DAB3_46BF_BD14_2475965968A1.ssd
+***
+NO ERRORS FOUND BY SsdToNob
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [SsdToNob] Version: 2023.1.4
+***
+
+Screen source definition converter, C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0.ssd
+***
+NO ERRORS FOUND BY SsdToNob
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ScsToNob] Version: 2023.1.4
+***
+
+***
+NO ERRORS FOUND BY ScsToNob
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU1] Version: 2023.1.4
+***
+
+Code Generator part 1, DM430E_1_1_1_X_T
+
+Generating  DM430E_1_1_1_X_T.exr
+***
+NO ERRORS FOUND BY ChParGU1
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU1] Version: 2023.1.4
+***
+
+Code Generator part 1, CD6937D80_DAB3_46BF_BD14_2475965968A1
+
+Generating  CD6937D80_DAB3_46BF_BD14_2475965968A1.exr
+***
+NO ERRORS FOUND BY ChParGU1
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU1] Version: 2023.1.4
+***
+
+Code Generator part 1, C27B4991C_F926_43DC_8BF2_62959109410F
+
+Generating  C27B4991C_F926_43DC_8BF2_62959109410F.exr
+***
+NO ERRORS FOUND BY ChParGU1
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU1] Version: 2023.1.4
+***
+
+Code Generator part 1, CCB2E4559_AEC3_4437_8FE1_48A07FDAA617
+
+Generating  CCB2E4559_AEC3_4437_8FE1_48A07FDAA617.exr
+***
+NO ERRORS FOUND BY ChParGU1
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [P1xtToExr] Version: 2023.1.4
+***
+
+Create file: TENK_DM430_P1XT.exr
+Open file: TENK_DM430.tp1x
+Closing files
+***
+NO ERRORS FOUND BY P1xtToExr
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [TDSToC] Version: 2023.1.4
+***
+
+Creating External Reference File: _TEXTDEFINITIONS.exr
+Writing: _TEXTDEFINITIONS.c
+Writing: _TEXTDEFINITIONS.h
+***
+NO ERRORS FOUND BY TDSToC
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ProjectToC] Version: 2023.1.4
+***
+
+***
+NO ERRORS FOUND BY ProjectToC
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU1] Version: 2023.1.4
+***
+
+Code Generator part 1, C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0
+
+Generating  C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0.exr
+***
+NO ERRORS FOUND BY ChParGU1
+***
+
+Checking and linking application TENK_DM430
+***
+Danfoss PLUS+1 GUIDE Software: [Glink] Version: 2023.1.4
+***
+
+Reading Previous Module Outputs
+Reading Project External Reference Files
+Read:  C27B4991C_F926_43DC_8BF2_62959109410F.exr. Creating h-file
+Read:  CCB2E4559_AEC3_4437_8FE1_48A07FDAA617.exr. Creating h-file
+Read:  CD6937D80_DAB3_46BF_BD14_2475965968A1.exr. Creating h-file
+Read:  70298408V170.exr. Creating h-file
+Read:  DM430E_1_1_1_X_T.exr. Creating h-file
+Read:  _TEXTDEFINITIONS.exr. Creating h-file
+Read:  C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0.exr. Creating h-file
+Read:  TenK_DM430.exr. Creating h-file
+Seek File: C:\Users\Jimmy\AppData\Roaming\Danfoss\PLUS1\2023.1\SDPLUS1\Temp\TEMPH.TMP
+Removing File: C:\Users\Jimmy\AppData\Roaming\Danfoss\PLUS1\2023.1\SDPLUS1\Temp\TEMPH.TMP
+Read:  C27B4991C_F926_43DC_8BF2_62959109410F.exr
+Read:  CCB2E4559_AEC3_4437_8FE1_48A07FDAA617.exr
+Read:  CD6937D80_DAB3_46BF_BD14_2475965968A1.exr
+Read:  70298408V170.exr
+Read:  DM430E_1_1_1_X_T.exr
+Read:  _TEXTDEFINITIONS.exr
+Read:  C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0.exr
+Read:  TenK_DM430.exr
+Deleting Modules with changed indata
+Writing Module Outputs
+Writing NV Allocation
+Generating Object Reference
+Checking Project External References
+Checking "TMP" path: C:\Users\Jimmy\AppData\Local\Temp
+Directory: C:\Users\Jimmy\AppData\Local\Temp exists, and is an absolute path!
+Merging error files to: TENK_DM430.err
+Merge: DM430E_1_1_1_X_T.rrr
+Merge: TenK_DM430.rrr
+Writing Log-Information to: TENK_DM430.log
+Writing Application-Information to: TENK_DM430.pxr
+Writing Release-Information to: Status.tmp
+***
+NO ERRORS FOUND BY Glink
+***
+
+MAKEJOB11 END
+MAKEJOB12 BEGIN
+***
+Danfoss PLUS+1 GUIDE Software: [ProjectToC] Version: 2023.1.4
+***
+
+***
+NO ERRORS FOUND BY ProjectToC
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU2] Version: 2023.1.4
+***
+
+
+Generating  C27B4991C_F926_43DC_8BF2_62959109410F.c
+***
+NO ERRORS FOUND BY ChParGU2
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU2] Version: 2023.1.4
+***
+
+
+Generating  CCB2E4559_AEC3_4437_8FE1_48A07FDAA617.c
+***
+NO ERRORS FOUND BY ChParGU2
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU2] Version: 2023.1.4
+***
+
+
+Generating  CD6937D80_DAB3_46BF_BD14_2475965968A1.c
+***
+NO ERRORS FOUND BY ChParGU2
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU2] Version: 2023.1.4
+***
+
+
+Generating  DM430E_1_1_1_X_T.c
+***
+NO ERRORS FOUND BY ChParGU2
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [ChParGU2] Version: 2023.1.4
+***
+
+
+Generating  C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0.c
+***
+NO ERRORS FOUND BY ChParGU2
+***
+
+Check and Link application TENK_DM430
+***
+Danfoss PLUS+1 GUIDE Software: [MergeErrorPass2] Version: 2023.1.4
+***
+
+***
+NO ERRORS FOUND BY MergeErrorPass2
+***
+
+***
+Danfoss PLUS+1 GUIDE Software: [NobFnutt] Version: 2023.1.4
+***
+
+***
+NO ERRORS FOUND BY NobFnutt
+***
+
+MAKEJOB12 END
+
+MAKEJOB2 BEGIN
+***
+Danfoss PLUS+1 GUIDE Software: [FmdToC] Version: 2023.1.4
+***
+
+***
+NO ERRORS FOUND BY FmdToC
+***
+
+MAKEJOB2 END
+ORIGINAL MAKEJOB2 BEGIN
+Compiling _DynamicDiagnostic.c
+***
+Danfoss PLUS+1 GUIDE Software: [sdcc] Version: 2023.1.4
+***
+
+Compiling _DynamicDiagnostic.c
+***
+NO ERRORS FOUND BY sdcc
+***
+
+Compiling _nvdata.c _NVAllocation.h
+***
+Danfoss PLUS+1 GUIDE Software: [sdcc] Version: 2023.1.4
+***
+
+Compiling _NVDATA.c
+***
+NO ERRORS FOUND BY sdcc
+***
+
+MAKEJOB2 BEGIN
+Create timekey
+***
+Danfoss PLUS+1 GUIDE Software: [mtimekey] Version: 2023.1.4
+***
+
+_TIMEKEY.C created
+***
+NO ERRORS FOUND BY mtimekey
+***
+
+_____________________
+Extern C-compiler Begin
+Compiling _TIMEKEY.c
+***
+Danfoss PLUS+1 GUIDE Software: [sdcc] Version: 2023.1.4
+***
+
+Compiling _TIMEKEY.c
+***
+NO ERRORS FOUND BY sdcc
+***
+
+Build TENK_DM430.cmf
+***
+Danfoss PLUS+1 GUIDE Software: [MAKECMF] Version: 2023.1.4
+***
+
+***
+NO ERRORS FOUND BY MAKECMF
+***
+
+Linking/Locate to TENK_DM430.out
+Creating Intel Hex Records file TENK_DM430.hex
+Extern C-compiler End
+_____________________
+***
+Danfoss PLUS+1 GUIDE Software: [MEMCalc] Version: 2023.1.4
+***
+
+****** Memory Usage in bytes ******
+Type            Total           System          Application     Free            Used/Avail      
+------------------------------------------------------------------------------------------------
+ROM             35618816        124776          200996          35293044        1%              
+RAM             35455488        5572212         -123184         30006460        0%              
+NV              4000            0               106             3894            3%              
+***
+NO ERRORS FOUND BY MEMCalc
+***
+
+Creating diagnostic info for TENK_DM430
+Creating lhx TENK_DM430.lhx
+***
+Danfoss PLUS+1 GUIDE Software: [p1insdoit] Version: 2023.1.4
+***
+
+Dynamic Diagnostic Data Used
+Seek File: TENK_DM430.hex
+Removing File: TENK_DM430.hex
+Seek File: TENK_DM430.plg
+Removing File: TENK_DM430.plg
+***
+NO ERRORS FOUND BY p1insdoit
+***
+
+MAKEJOB2 END
+
+ORIGINAL MAKEJOB2 END
+
+Now: 11/30/2024 10:50:23 PM
+Batch job END

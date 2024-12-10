@@ -1,0 +1,121 @@
+﻿<?xml version="1.0"?>
+<Scr PT="false">
+  <FF>003A</FF>
+  <ULC X="0" EX="" Y="0" EY=""/>
+  <W E="" V="480"/>
+  <H E="" V="272"/>
+  <D>BootScrn</D>
+  <GUID>CD6937D80_DAB3_46BF_BD14_2475965968A1</GUID>
+  <C V="01010100" E=""/>
+  <Interface>
+    <Input>
+      <Net Name="Ver_Minor" Uid="5" DataType="U8"/>
+      <Net Name="Ver_Major" Uid="6" DataType="U8"/>
+    </Input>
+    <Output/>
+  </Interface>
+  <PN>Display.Port</PN>
+  <F>
+    <Wdg N="I2T_Logo_1" W="104" H="160">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F>
+        <I N="Image" W="102" H="158" Type="IDS" RefX="0" RefY="0">
+          <LMO>
+            <X/>
+            <Y/>
+            <W/>
+            <H/>
+          </LMO>
+          <En V="True" E=""/>
+          <GUID></GUID>
+          <T>
+            <IsSink V="False" E=""/>
+            <Output E=""/>
+            <LocalX E=""/>
+            <LocalY E=""/>
+            <GType E=""/>
+            <GX E=""/>
+            <GY E=""/>
+            <ZoomFactor E=""/>
+            <DeltaX E=""/>
+            <DeltaY E=""/>
+            <Velocity E=""/>
+            <RotAng E=""/>
+            <LocalDeltaX E=""/>
+            <LocalDeltaY E=""/>
+          </T>
+          <C V="01010100" E=""/>
+          <IP X="1" EX="" Y="1" EY=""/>
+          <R V="0" E=""/>
+          <O>1</O>
+          <Pr V="0" E=""/>
+          <Vis E=""/>
+          <ID V="1" E=""/>
+        </I>
+      </F>
+      <PouCalls/>
+      <C V="T" E=""/>
+      <IP X="188" EX="" Y="50" EY=""/>
+    </Wdg>
+    <Wdg N="Version_U8_U8_1" W="240" H="30">
+      <LMO>
+        <X/>
+        <Y/>
+        <W/>
+        <H/>
+      </LMO>
+      <En V="True" E=""/>
+      <F>
+        <Txt N="Text" W="235" H="25" Type="TDS">
+          <LMO>
+            <X/>
+            <Y/>
+            <W/>
+            <H/>
+          </LMO>
+          <En V="True" E=""/>
+          <F V="BahnschriftSemiLight_14__UNI" E=""/>
+          <GUID></GUID>
+          <J V="0" E=""/>
+          <T>
+            <IsSink V="False" E=""/>
+            <Output E=""/>
+            <LocalX E=""/>
+            <LocalY E=""/>
+            <GType E=""/>
+            <GX E=""/>
+            <GY E=""/>
+            <ZoomFactor E=""/>
+            <DeltaX E=""/>
+            <DeltaY E=""/>
+            <Velocity E=""/>
+            <RotAng E=""/>
+            <LocalDeltaX E=""/>
+            <LocalDeltaY E=""/>
+          </T>
+          <C V="00FFFFFF" E=""/>
+          <SP X="0" EX="" Y="0" EY=""/>
+          <O>1</O>
+          <Pr V="0" E=""/>
+          <Vis E=""/>
+          <ID V="14" E=""/>
+          <D>
+            <DV V="'Version'" E="" FC="0"/>
+            <DV V="0" E="6" FC="1"/>
+            <DV V="0" E="5" FC="2"/>
+          </D>
+        </Txt>
+      </F>
+      <PouCalls/>
+      <C V="T" E=""/>
+      <IP X="10" EX="" Y="240" EY=""/>
+    </Wdg>
+  </F>
+  <PouCalls/>
+</Scr>

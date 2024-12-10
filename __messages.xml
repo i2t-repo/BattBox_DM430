@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.st2c.org/dbg-xml/tc120314">
+	<message type="HINT" code="111" text="XML validation: Could not find schema information for the element 'http://www.w3.org/1999/xhtml:xhtml'.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+		</location>
+		<position>
+			<textual line_start="1189" column_start="18" line_stop="1189" column_stop="18" />
+		</position>
+	</message>
+	<message type="HINT" code="111" text="XML validation: Could not find schema information for the element 'http://www.w3.org/1999/xhtml:xhtml'.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+		</location>
+		<position>
+			<textual line_start="3657" column_start="18" line_stop="3657" column_stop="18" />
+		</position>
+	</message>
+	<message type="WARNING" code="3066" text="Assignment to INPUT variable is an extension to the IEC 61131-3 standard.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Log_String" />
+			<scope type="BODY" />
+		</location>
+		<position>
+			<textual line_start="5" column_start="5" line_stop="5" column_stop="13" />
+		</position>
+	</message>
+	<message type="WARNING" code="3066" text="Assignment to INPUT variable is an extension to the IEC 61131-3 standard.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Log_String" />
+			<scope type="BODY" />
+		</location>
+		<position>
+			<textual line_start="8" column_start="3" line_stop="8" column_stop="11" />
+		</position>
+	</message>
+	<message type="WARNING" code="3066" text="Assignment to INPUT variable is an extension to the IEC 61131-3 standard.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Log_String" />
+			<scope type="BODY" />
+		</location>
+		<position>
+			<textual line_start="33" column_start="1" line_stop="33" column_stop="12" />
+		</position>
+	</message>
+	<message type="WARNING" code="1105" text="String of default length will be returned, which may be less than expected length. Save expression into temporary variable to avoid uncertainty.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Log_String" />
+			<scope type="BODY" />
+		</location>
+		<position>
+			<textual line_start="364" column_start="20" line_stop="364" column_stop="53" />
+		</position>
+	</message>
+	<message type="HINT" code="1156" text="Variable 'MemBlockStart' is never used.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Mem_Sort" />
+			<scope type="INTERFACE" />
+			<scope type="VARIABLE" name="MemBlockStart" />
+		</location>
+		<position>
+			<textual line_start="254" column_start="3" line_stop="254" column_stop="25" />
+		</position>
+	</message>
+	<message type="HINT" code="1156" text="Variable 'MemSlotStart' is never used.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Mem_Sort" />
+			<scope type="INTERFACE" />
+			<scope type="VARIABLE" name="MemSlotStart" />
+		</location>
+		<position>
+			<textual line_start="255" column_start="3" line_stop="255" column_stop="24" />
+		</position>
+	</message>
+	<message type="WARNING" code="3066" text="Assignment to INPUT variable is an extension to the IEC 61131-3 standard.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Mem_Sort" />
+			<scope type="BODY" />
+		</location>
+		<position>
+			<textual line_start="26" column_start="3" line_stop="26" column_stop="17" />
+		</position>
+	</message>
+	<message type="WARNING" code="3066" text="Assignment to INPUT variable is an extension to the IEC 61131-3 standard.">
+		<location>
+			<scope type="FILE" name="PLCFile1.xml" />
+			<scope type="POU" name="Mem_Sort" />
+			<scope type="BODY" />
+		</location>
+		<position>
+			<textual line_start="28" column_start="3" line_stop="28" column_stop="17" />
+		</position>
+	</message>
+</messages>

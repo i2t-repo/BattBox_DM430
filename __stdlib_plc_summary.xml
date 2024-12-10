@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<summary>
+	<files>
+		<file name="__stdlib_plc_func_common.c" />
+		<file name="__stdlib_plc_func_common.h" />
+		<file name="__stdlib_plc_func.c" />
+		<file name="__stdlib_plc_func.h" />
+		<file name="__stdlib_plc_type_string.h" />
+		<file name="__stdlib_plc_type.h" />
+	</files>
+</summary>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure>
+	<Instance NS="" InstName="MAINTASKobjb" ClassName="CD6937D80_DAB3_46BF_BD14_2475965968A1" PagePath="DM430E_1_1_1_X_T!TOP!Application!Screen_Controller"><Constant Port="Input_N_Ver_Minor" DataType="UB" Value="98"/><Constant Port="Input_N_Ver_Major" DataType="UB" Value="0"/></Instance>
+	<Instance NS="" InstName="MAINTASKobjc" ClassName="CCB2E4559_AEC3_4437_8FE1_48A07FDAA617" PagePath="DM430E_1_1_1_X_T!TOP!Application!Screen_Controller"/>
+	<Instance NS="" InstName="MAINTASKobjd" ClassName="C49B02B97_88A0_4711_A8B6_DB8B71EA5BB0" PagePath="DM430E_1_1_1_X_T!TOP!Application!Screen_Controller"/>
+	<Instance NS="" InstName="MAINTASKobje" ClassName="C27B4991C_F926_43DC_8BF2_62959109410F" PagePath="DM430E_1_1_1_X_T!TOP!Application!Screen_Controller"/>
+</Structure>
