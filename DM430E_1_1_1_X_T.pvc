@@ -1,39 +1,12 @@
-<?xml version="1.0" encoding="ISO-8859-1"?><PAGE Name="TOP" NS="" Handle="60536656" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="1" isEmpty="0" pageNo="1" X="0" Y="0">
-<PAGE Name="Outputs" NS="" LinkID="{2921F254-3184-00ec-F6A2-782C70C2F0BF}" Handle="61425328" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="98" X="2850000" Y="1650000">
-<PAGE Name="UART" NS="" LinkID="{8C307AA0-6F9B-acc8-0D7E-E73B93CDD84C}" Handle="61430608" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="114" X="2425000" Y="1450000">
+<?xml version="1.0" encoding="ISO-8859-1"?><PAGE Name="TOP" NS="" Handle="66697040" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="1" isEmpty="0" pageNo="1" X="0" Y="0">
+<PAGE Name="Outputs" NS="" LinkID="{2921F254-3184-00ec-F6A2-782C70C2F0BF}" Handle="67585976" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="98" X="2850000" Y="1650000">
+<PAGE Name="UART" NS="" LinkID="{8C307AA0-6F9B-acc8-0D7E-E73B93CDD84C}" Handle="67588880" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="114" X="2425000" Y="1450000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
 <A Key="FuncVer" Value=""/>
 <A Key="TraceProps" Value=""/>
-<PAGE Name="UART" NS="" LinkID="{056C6A43-8147-0b82-BA37-EC4227492BAA}" Handle="61453304" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="115" X="2075000" Y="1050000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-</PAGE>
-</PAGE>
-<PAGE Name="Applog" NS="" LinkID="{01D7C1AF-247D-7017-EFCC-FC19000E5A14}" Handle="96310200" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="110" X="1875000" Y="650000">
-<A Key="pageId" Value=""/>
-<PAGE Name="Applog" NS="" Handle="96310992" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="111" X="1900000" Y="1250000">
-<A Key="pageId" Value=""/>
-</PAGE>
-</PAGE>
-<PAGE Name="LED" NS="" LinkID="{2921F261-31BC-22cb-2E80-AF3047370A26}" Handle="96310464" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="101" X="1875000" Y="1450000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-<PAGE Name="CAN_Fault" NS="" LinkID="{00C8B5D5-BDAF-6de0-2195-F235232ED026}" Handle="96303336" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="102" X="1250000" Y="1650000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-</PAGE>
-<PAGE Name="LED" NS="" LinkID="{01E380F3-8468-6498-DA4E-32C68947B864}" Handle="96327008" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="103" X="2975000" Y="125000">
+<PAGE Name="UART" NS="" LinkID="{056C6A43-8147-0b82-BA37-EC4227492BAA}" Handle="67609728" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="115" X="2075000" Y="1050000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
@@ -41,36 +14,26 @@
 <A Key="TraceProps" Value=""/>
 </PAGE>
 </PAGE>
-<PAGE Name="Buttons" NS="" LinkID="{020574AE-D8EE-04de-6094-97F042F3EF0D}" Handle="96427136" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="108" X="1875000" Y="850000">
+<PAGE Name="Applog" NS="" LinkID="{01D7C1AF-247D-7017-EFCC-FC19000E5A14}" Handle="103582848" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="110" X="1875000" Y="650000">
+<A Key="pageId" Value=""/>
+<PAGE Name="Applog" NS="" Handle="103586016" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="111" X="1900000" Y="1250000">
+<A Key="pageId" Value=""/>
+</PAGE>
+</PAGE>
+<PAGE Name="LED" NS="" LinkID="{2921F261-31BC-22cb-2E80-AF3047370A26}" Handle="103585752" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="101" X="1875000" Y="1450000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
 <A Key="FuncVer" Value=""/>
 <A Key="TraceProps" Value=""/>
-<PAGE Name="Buttons" NS="" Handle="96426872" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="109" X="2125000" Y="1250000">
+<PAGE Name="CAN_Fault" NS="" LinkID="{00C8B5D5-BDAF-6de0-2195-F235232ED026}" Handle="103577832" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="102" X="1250000" Y="1650000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
 <A Key="FuncVer" Value=""/>
 <A Key="TraceProps" Value=""/>
 </PAGE>
-</PAGE>
-<PAGE Name="Display" NS="" LinkID="{70D5F325-AA02-6a40-74F6-D77F6514290A}" Handle="96421064" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="106" X="1875000" Y="1050000">
-<PAGE Name="Display" NS="" LinkID="{019BC305-7B5E-66fe-D0B3-8A0265E0C880}" Handle="96420272" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="107" X="2325000" Y="1225000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-</PAGE>
-</PAGE>
-<PAGE Name="ServiceTool" NS="" LinkID="{01ED956D-A7D4-6808-46BE-A38EBE5B42D3}" Handle="96468632" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="104" X="1875000" Y="1250000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-<PAGE Name="Tool" NS="" Handle="96464144" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="105" X="1900000" Y="1050000">
+<PAGE Name="LED" NS="" LinkID="{01E380F3-8468-6498-DA4E-32C68947B864}" Handle="103603616" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="103" X="2975000" Y="125000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
@@ -78,24 +41,13 @@
 <A Key="TraceProps" Value=""/>
 </PAGE>
 </PAGE>
-<PAGE Name="OS" NS="" LinkID="{0031EDBB-1808-41b9-7A6F-2D1B1948FC21}" Handle="96457808" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="99" X="1875000" Y="1650000">
-<PAGE Name="OS_Out" NS="" Handle="96457016" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="100" X="1825000" Y="1300000"/>
-</PAGE>
-<PAGE Name="C1p12_DigOut" NS="" LinkID="{010D11A4-6C5B-b000-CDB6-E461D3074D96}" Handle="96460712" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="112" X="2425000" Y="1650000">
-<PAGE Name="C1p12" NS="" Handle="96456488" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="113" X="2150000" Y="1200000"/>
-</PAGE>
-</PAGE>
-<PAGE Name="Unit_Config" NS="" LinkID="{01992044-5E07-b3ea-79A0-2F3022AC6ECA}" Handle="96459128" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="2" X="1125000" Y="1275000">
-<PAGE Name="CAN1_Settings" NS="" Handle="96549440" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="5" X="1400000" Y="1125000">
-<PAGE Name="CAN_Fault_Reset" NS="" Handle="96536768" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="6" X="1575000" Y="1700000"/>
-</PAGE>
-<PAGE Name="CAN0_Settings" NS="" Handle="96539936" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="3" X="1400000" Y="1650000">
-<PAGE Name="CAN_Fault_Reset" NS="" Handle="96601752" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="4" X="1550000" Y="1650000"/>
-</PAGE>
-</PAGE>
-<PAGE Name="Inputs" NS="" LinkID="{504C5B80-F420-e81b-92D1-19F05B8E17D3}" Handle="96613104" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="7" X="1150000" Y="1650000">
-<PAGE Name="UART" NS="" LinkID="{017C31B6-2256-1f34-C8EA-4C0BA31FDC53}" Handle="96610464" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="30" X="2450000" Y="1025000">
-<PAGE Name="UART" NS="" Handle="96614688" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="31" X="1825000" Y="1675000">
+<PAGE Name="Buttons" NS="" LinkID="{020574AE-D8EE-04de-6094-97F042F3EF0D}" Handle="103698728" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="108" X="1875000" Y="850000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+<PAGE Name="Buttons" NS="" Handle="103696616" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="109" X="2125000" Y="1250000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
@@ -103,23 +55,8 @@
 <A Key="TraceProps" Value=""/>
 </PAGE>
 </PAGE>
-<PAGE Name="Buttons" NS="" LinkID="{504C5B8D-F457-09f9-C9AF-51F43103323A}" Handle="96595416" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="18" X="1375000" Y="1000000">
-<A Key="pageId" Value=""/>
-<PAGE Name="Buttons" NS="" LinkID="{01AD83A8-36F2-1c09-64BE-D4E5BC599C45}" Handle="96764312" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="19" X="900000" Y="2475000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-</PAGE>
-</PAGE>
-<PAGE Name="ServiceTool" NS="" LinkID="{01EAFB68-A69B-6d2a-0DE0-3F567047D1C9}" Handle="96775928" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="10" X="1350000" Y="1625000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-<PAGE Name="Tool" NS="" LinkID="{00A64E97-3E99-3d5a-0B10-0DF6D9D6AFB1}" Handle="96776192" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="11" X="1700000" Y="1625000">
+<PAGE Name="Display" NS="" LinkID="{70D5F325-AA02-6a40-74F6-D77F6514290A}" Handle="103699520" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="106" X="1875000" Y="1050000">
+<PAGE Name="Display" NS="" LinkID="{019BC305-7B5E-66fe-D0B3-8A0265E0C880}" Handle="103697672" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="107" X="2325000" Y="1225000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
@@ -127,33 +64,13 @@
 <A Key="TraceProps" Value=""/>
 </PAGE>
 </PAGE>
-<PAGE Name="Ambient" NS="" LinkID="{01B67D28-B72D-8d45-9FFB-54C405CC5AC8}" Handle="96768536" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="12" X="1350000" Y="1425000">
-<PAGE Name="Ambient" NS="" LinkID="{01B67D1B-B6F6-6b67-681D-1DC02F573F61}" Handle="96770120" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="13" X="1550000" Y="1550000"/>
-</PAGE>
-<PAGE Name="OS" NS="" LinkID="{0126F25A-3C1C-5b97-8E4D-3550049ABEDC}" Handle="96781736" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="8" X="1350000" Y="1825000">
-<PAGE Name="OS" NS="" LinkID="{0122ECFB-0F7F-2da1-F157-5E9C254287E4}" Handle="96778832" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="9" X="1975000" Y="1900000"/>
-</PAGE>
-<PAGE Name="Time" NS="" LinkID="{0037C3A7-209C-7b34-0EEA-C3F083FFAE33}" Handle="96789656" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="14" X="1350000" Y="1225000">
-<PAGE Name="RTC" NS="" Handle="96769856" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="15" X="1775000" Y="1725000"/>
-</PAGE>
-<PAGE Name="C1p02_Pwr" NS="" LinkID="{003821A4-540B-2bf4-7DAA-0BF224181C2C}" Handle="96942864" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="16" X="1350000" Y="825000">
-<PAGE Name="C1p02" NS="" Handle="96947616" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="17" X="1475000" Y="1625000"/>
-</PAGE>
-<PAGE Name="C1p10_MFIn" NS="" LinkID="{01B13B39-5C16-8c33-88E9-FF99F94F278E}" Handle="96949200" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="26" X="1900000" Y="975000">
+<PAGE Name="ServiceTool" NS="" LinkID="{01ED956D-A7D4-6808-46BE-A38EBE5B42D3}" Handle="103741016" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="104" X="1875000" Y="1250000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
 <A Key="FuncVer" Value=""/>
 <A Key="TraceProps" Value=""/>
-<PAGE Name="C1p10" NS="" LinkID="{004A0559-48FC-1dcf-6F85-3F9AAB0E6756}" Handle="96948408" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="27" X="2600000" Y="1725000"/>
-</PAGE>
-<PAGE Name="C1p11_MFIn" NS="" LinkID="{003CF03D-894C-824e-BE04-3712E251A932}" Handle="63866512" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="28" X="1900000" Y="825000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-<PAGE Name="C1p11" NS="" Handle="63871264" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="29" X="2600000" Y="1725000">
+<PAGE Name="Tool" NS="" Handle="103739168" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="105" X="1900000" Y="1050000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
@@ -161,40 +78,24 @@
 <A Key="TraceProps" Value=""/>
 </PAGE>
 </PAGE>
-<PAGE Name="C1p12_DigOut" NS="" LinkID="{008A7420-3F72-456d-E423-6A4A88772A4E}" Handle="63884728" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="32" X="2450000" Y="825000">
-<PAGE Name="C1p12" NS="" Handle="63887104" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="33" X="1775000" Y="1700000"/>
+<PAGE Name="OS" NS="" LinkID="{0031EDBB-1808-41b9-7A6F-2D1B1948FC21}" Handle="103731776" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="99" X="1875000" Y="1650000">
+<PAGE Name="OS_Out" NS="" Handle="103731512" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="100" X="1825000" Y="1300000"/>
 </PAGE>
-<PAGE Name="C1p06_DigAn" NS="" LinkID="{0038994D-5B36-3859-A80F-FF3C229DE468}" Handle="63889216" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="22" X="1900000" Y="1350000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-<PAGE Name="C1p06" NS="" LinkID="{00AA7E22-6B47-821d-BAD3-D91303182557}" Handle="63884464" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="23" X="2575000" Y="1400000">
-<A Key="pageId" Value=""/>
+<PAGE Name="C1p12_DigOut" NS="" LinkID="{010D11A4-6C5B-b000-CDB6-E461D3074D96}" Handle="103736000" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="112" X="2425000" Y="1650000">
+<PAGE Name="C1p12" NS="" Handle="103734152" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="113" X="2150000" Y="1200000"/>
 </PAGE>
 </PAGE>
-<PAGE Name="C1p07_DigAn" NS="" Handle="64031688" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="24" X="1900000" Y="1175000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-<PAGE Name="C1p07" NS="" Handle="64032480" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="25" X="2575000" Y="1400000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
+<PAGE Name="Unit_Config" NS="" LinkID="{01992044-5E07-b3ea-79A0-2F3022AC6ECA}" Handle="103730456" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="2" X="1125000" Y="1275000">
+<PAGE Name="CAN1_Settings" NS="" Handle="103812584" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="5" X="1400000" Y="1125000">
+<PAGE Name="CAN_Fault_Reset" NS="" Handle="103826312" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="6" X="1575000" Y="1700000"/>
+</PAGE>
+<PAGE Name="CAN0_Settings" NS="" Handle="103826840" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="3" X="1400000" Y="1650000">
+<PAGE Name="CAN_Fault_Reset" NS="" Handle="103867800" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="4" X="1550000" Y="1650000"/>
 </PAGE>
 </PAGE>
-<PAGE Name="C1p05_DigAn" NS="" Handle="64041192" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="20" X="1900000" Y="1550000">
-<A Key="pageId" Value=""/>
-<A Key="testDef" Value=""/>
-<A Key="FuncName" Value=""/>
-<A Key="FuncVer" Value=""/>
-<A Key="TraceProps" Value=""/>
-<PAGE Name="C1p05" NS="" Handle="64040664" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="21" X="2575000" Y="1400000">
+<PAGE Name="Inputs" NS="" LinkID="{504C5B80-F420-e81b-92D1-19F05B8E17D3}" Handle="103879152" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="7" X="1150000" Y="1650000">
+<PAGE Name="UART" NS="" LinkID="{017C31B6-2256-1f34-C8EA-4C0BA31FDC53}" Handle="103874928" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="30" X="2450000" Y="1025000">
+<PAGE Name="UART" NS="" Handle="103879416" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="31" X="1825000" Y="1675000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
 <A Key="FuncName" Value=""/>
@@ -202,81 +103,180 @@
 <A Key="TraceProps" Value=""/>
 </PAGE>
 </PAGE>
-</PAGE>
-<PAGE Name="Application" NS="" LinkID="{330E66C0-7A63-8a4b-D501-5D65F782A0C9}" Handle="64047528" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="34" X="1950000" Y="1625000">
+<PAGE Name="Buttons" NS="" LinkID="{504C5B8D-F457-09f9-C9AF-51F43103323A}" Handle="103884696" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="18" X="1375000" Y="1000000">
+<A Key="pageId" Value=""/>
+<PAGE Name="Buttons" NS="" LinkID="{01AD83A8-36F2-1c09-64BE-D4E5BC599C45}" Handle="104047256" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="19" X="900000" Y="2475000">
 <A Key="pageId" Value=""/>
 <A Key="testDef" Value=""/>
-<PAGE Name="Buttons" NS="" LinkID="{2931F7EA-0F8E-1565-001B-E963CEC63038}" Handle="64057560" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="35" X="375000" Y="2325000">
-<PAGE Name="Entr_Code_Mode" NS="" LinkID="{4B92E206-02EA-f774-5C2A-C8143B680115}" Handle="64072872" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="36" X="1225000" Y="2100000"/>
-<PAGE Name="Batt_Perc_Man" NS="" LinkID="{84A798D1-5429-2dd3-9B89-2A857B86DCF2}" Handle="64079208" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="38" X="2375000" Y="2400000"/>
-<PAGE Name="Cheat_Code" NS="" LinkID="{04242504-2C7F-0c53-F208-EE80030EB13D}" Handle="64022448" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="37" X="1950000" Y="2525000"/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
 </PAGE>
-<PAGE Name="Comm_Out_Data" NS="" LinkID="{28EFDBA4-ABA0-ac4e-1204-F6889A4DF676}" Handle="64325272" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="92" X="2700000" Y="1825000">
-<PAGE Name="Get_Addr" NS="" LinkID="{28E856BA-8E2D-be36-9FEC-9C0BC542C491}" Handle="64330816" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="94" X="2150000" Y="1725000"/>
-<PAGE Name="Get_SN" NS="" LinkID="{28EFDBB1-ABD7-ce2c-49E2-2D8C71C111DC}" Handle="64359064" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="93" X="1600000" Y="2000000"/>
 </PAGE>
-<PAGE Name="CAN_In_Data" NS="" LinkID="{330E66CD-7A9A-2c2a-0CDF-946ACEF7BB30}" Handle="64791856" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="39" X="2275000" Y="2000000">
-<PAGE Name="Org_Ints" NS="" LinkID="{330E66DA-7AD2-4e08-44BE-CC6EA46BD696}" Handle="64798192" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="85" X="3350000" Y="1475000">
-<PAGE Name="Housekeepin" NS="" Handle="64810864" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="86" X="1625000" Y="1950000"/>
-<PAGE Name="NVmem_21to25" NS="" Handle="64823536" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="91" X="1625000" Y="1325000"/>
-<PAGE Name="NVmem_16to20" NS="" Handle="65007232" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="90" X="1625000" Y="1450000"/>
-<PAGE Name="NVmem_11to15" NS="" Handle="65028352" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="89" X="1625000" Y="1575000"/>
-<PAGE Name="NVmem_6to10" NS="" Handle="65380016" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="88" X="1625000" Y="1700000"/>
-<PAGE Name="NVmem_1to5" NS="" LinkID="{0D4BDF97-6752-4f3a-C4F0-A8CFAAAEA3C0}" Handle="65400872" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="87" X="1625000" Y="1825000"/>
+<PAGE Name="ServiceTool" NS="" LinkID="{01EAFB68-A69B-6d2a-0DE0-3F567047D1C9}" Handle="104057024" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="10" X="1350000" Y="1625000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+<PAGE Name="Tool" NS="" LinkID="{00A64E97-3E99-3d5a-0B10-0DF6D9D6AFB1}" Handle="104054384" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="11" X="1700000" Y="1625000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
 </PAGE>
-<PAGE Name="ECU_Int" NS="" Handle="65440472" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="56" X="2450000" Y="1575000">
-<PAGE Name="ECU_Int_pt3" NS="" Handle="65439680" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="59" X="350000" Y="2225000"/>
-<PAGE Name="ECU_Int_pt2" NS="" LinkID="{535BB584-2818-9b58-8A0E-451A2C815CF9}" Handle="65448656" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="58" X="350000" Y="2350000"/>
-<PAGE Name="ECU_Int_pt1" NS="" LinkID="{535B732A-46AF-3d0d-21C3-D8E74F1CA480}" Handle="65466608" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="57" X="350000" Y="2475000"/>
 </PAGE>
-<PAGE Name="FLT_Int" NS="" LinkID="{87975C30-B1E2-a4a9-545F-3396D32692E2}" Handle="65490896" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="60" X="2450000" Y="1375000"/>
-<PAGE Name="Elec_Temp3" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="66396552" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="48" X="1575000" Y="150000"/>
-<PAGE Name="Cell_Temp2" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="66402096" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="54" X="2250000" Y="275000"/>
-<PAGE Name="Cell_Temp1" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="66403680" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="53" X="2250000" Y="400000"/>
-<PAGE Name="Elec_Temp2" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="66411864" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="47" X="1575000" Y="400000"/>
-<PAGE Name="Elec_Temp1" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="66412920" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="46" X="1575000" Y="525000"/>
-<PAGE Name="MCU_Temp" NS="" LinkID="{4E180C1A-C416-b23d-88F3-EA9B41E536CF}" Handle="66418200" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="45" X="1575000" Y="650000"/>
-<PAGE Name="Batt_Current" NS="" Handle="66420312" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="52" X="2150000" Y="850000"/>
-<PAGE Name="LED_set" NS="" LinkID="{27218242-C2F9-8717-6BCD-9F834A5802CA}" Handle="66416088" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="64" X="3062500" Y="1625000">
-<PAGE Name="Gry2Grn19" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66436680" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="84" X="1250000" Y="1300000"/>
-<PAGE Name="Gry2Grn18" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66437472" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="83" X="1250000" Y="1350000"/>
-<PAGE Name="Gry2Grn17" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66439320" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="82" X="1250000" Y="1400000"/>
-<PAGE Name="Gry2Grn16" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66447240" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="81" X="1250000" Y="1500000"/>
-<PAGE Name="Gry2Grn15" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66441696" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="80" X="1250000" Y="1550000"/>
-<PAGE Name="Gry2Grn14" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66443544" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="79" X="1250000" Y="1600000"/>
-<PAGE Name="Gry2Grn13" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66446448" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="78" X="1250000" Y="1675000"/>
-<PAGE Name="Gry2Grn12" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66453312" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="77" X="1250000" Y="1725000"/>
-<PAGE Name="Gry2Grn11" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66453576" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="76" X="1250000" Y="1800000"/>
-<PAGE Name="Gry2Grn10" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66453840" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="75" X="1250000" Y="1850000"/>
-<PAGE Name="Gry2Grn9" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66456480" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="74" X="1250000" Y="1900000"/>
-<PAGE Name="Gry2Grn8" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66462552" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="73" X="1250000" Y="1950000"/>
-<PAGE Name="Gry2Grn7" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66457272" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="72" X="1250000" Y="2000000"/>
-<PAGE Name="Gry2Grn6" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66462288" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="71" X="1250000" Y="2050000"/>
-<PAGE Name="Gry2Grn5" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66463080" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="70" X="1250000" Y="2100000"/>
-<PAGE Name="Gry2Grn4" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66471528" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="69" X="1250000" Y="2150000"/>
-<PAGE Name="Gry2Grn3" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66473640" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="68" X="1250000" Y="2200000"/>
-<PAGE Name="Gry2Grn2" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66465984" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="67" X="1250000" Y="2250000"/>
-<PAGE Name="Gry2Grn1" NS="" Handle="66470208" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="66" X="1250000" Y="2300000"/>
-<PAGE Name="Gry2Grn" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="66475488" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="65" X="1250000" Y="2350000"/>
+<PAGE Name="Ambient" NS="" LinkID="{01B67D28-B72D-8d45-9FFB-54C405CC5AC8}" Handle="104053328" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="12" X="1350000" Y="1425000">
+<PAGE Name="Ambient" NS="" LinkID="{01B67D1B-B6F6-6b67-681D-1DC02F573F61}" Handle="104054912" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="13" X="1550000" Y="1550000"/>
 </PAGE>
-<PAGE Name="Fault_States" NS="" LinkID="{7596C4C2-7ED6-1c4d-4803-C2F881218CAA}" Handle="66477072" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="43" X="1550000" Y="1350000"/>
-<PAGE Name="ECU_Status" NS="" LinkID="{632694EA-54FC-2d5f-6E15-B170F9C91B1C}" Handle="66486840" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="49" X="1950000" Y="1600000">
-<PAGE Name="Split_10" NS="" Handle="66364080" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="50" X="1600000" Y="575000"/>
+<PAGE Name="OS" NS="" LinkID="{0126F25A-3C1C-5b97-8E4D-3550049ABEDC}" Handle="104064944" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="8" X="1350000" Y="1825000">
+<PAGE Name="OS" NS="" LinkID="{0122ECFB-0F7F-2da1-F157-5E9C254287E4}" Handle="104064152" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="9" X="1975000" Y="1900000"/>
 </PAGE>
-<PAGE Name="Split_neg" NS="" Handle="66373056" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="63" X="2925000" Y="850000"/>
-<PAGE Name="Split2" NS="" LinkID="{22C00775-E356-f738-C8EE-E156CFDE81AB}" Handle="67074456" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="62" X="2925000" Y="1025000"/>
-<PAGE Name="Split1" NS="" LinkID="{22C00775-E356-f738-C8EE-E156CFDE81AB}" Handle="67072080" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="55" X="2325000" Y="1250000"/>
-<PAGE Name="Bus_Volt" NS="" Handle="67081320" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="51" X="2150000" Y="1075000"/>
-<PAGE Name="Batt_Volt" NS="" LinkID="{41968D8B-49AC-ebde-1E94-7701098032D6}" Handle="67081056" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="44" X="1550000" Y="1225000"/>
-<PAGE Name="BIT_Status" NS="" Handle="67092672" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="40" X="1550000" Y="1500000">
-<PAGE Name="D4_to_D7" NS="" LinkID="{52EBEA69-6389-38b9-FB6E-74C376813519}" Handle="67102968" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="42" X="1525000" Y="1175000"/>
-<PAGE Name="D0_to_D3" NS="" LinkID="{52D5B9EB-BE75-9b3b-E7F1-0B1916279E3F}" Handle="67125408" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="41" X="1525000" Y="1475000"/>
+<PAGE Name="Time" NS="" LinkID="{0037C3A7-209C-7b34-0EEA-C3F083FFAE33}" Handle="104042240" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="14" X="1350000" Y="1225000">
+<PAGE Name="RTC" NS="" Handle="104057816" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="15" X="1775000" Y="1725000"/>
 </PAGE>
-<PAGE Name="Split" NS="" LinkID="{22C00775-E356-f738-C8EE-E156CFDE81AB}" Handle="67151808" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="61" X="2850000" Y="2050000"/>
+<PAGE Name="C1p02_Pwr" NS="" LinkID="{003821A4-540B-2bf4-7DAA-0BF224181C2C}" Handle="104242704" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="16" X="1350000" Y="825000">
+<PAGE Name="C1p02" NS="" Handle="104244024" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="17" X="1475000" Y="1625000"/>
 </PAGE>
-<PAGE Name="Screen_Controller" NS="" LinkID="{2934447D-3668-151b-DAD1-7D49338F6C82}" Handle="67160520" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="95" X="2950000" Y="2525000">
-<PAGE Name="Batt_Perc" NS="" Handle="67171080" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="97" X="750000" Y="2500000"/>
-<PAGE Name="Scrn_Ctrl" NS="" LinkID="{2934448A-36A0-36f9-12AF-B54D0A0387E8}" Handle="67174512" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="96" X="625000" Y="1950000"/>
+<PAGE Name="C1p10_MFIn" NS="" LinkID="{01B13B39-5C16-8c33-88E9-FF99F94F278E}" Handle="104245080" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="26" X="1900000" Y="975000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+<PAGE Name="C1p10" NS="" LinkID="{004A0559-48FC-1dcf-6F85-3F9AAB0E6756}" Handle="104244552" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="27" X="2600000" Y="1725000"/>
+</PAGE>
+<PAGE Name="C1p11_MFIn" NS="" LinkID="{003CF03D-894C-824e-BE04-3712E251A932}" Handle="104450720" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="28" X="1900000" Y="825000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+<PAGE Name="C1p11" NS="" Handle="104424056" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="29" X="2600000" Y="1725000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+</PAGE>
+</PAGE>
+<PAGE Name="C1p12_DigOut" NS="" LinkID="{008A7420-3F72-456d-E423-6A4A88772A4E}" Handle="104438576" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="32" X="2450000" Y="825000">
+<PAGE Name="C1p12" NS="" Handle="104438840" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="33" X="1775000" Y="1700000"/>
+</PAGE>
+<PAGE Name="C1p06_DigAn" NS="" LinkID="{0038994D-5B36-3859-A80F-FF3C229DE468}" Handle="104439896" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="22" X="1900000" Y="1350000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+<PAGE Name="C1p06" NS="" LinkID="{00AA7E22-6B47-821d-BAD3-D91303182557}" Handle="104438048" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="23" X="2575000" Y="1400000">
+<A Key="pageId" Value=""/>
+</PAGE>
+</PAGE>
+<PAGE Name="C1p07_DigAn" NS="" Handle="104617744" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="24" X="1900000" Y="1175000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+<PAGE Name="C1p07" NS="" Handle="104621176" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="25" X="2575000" Y="1400000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+</PAGE>
+</PAGE>
+<PAGE Name="C1p05_DigAn" NS="" Handle="104627248" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="20" X="1900000" Y="1550000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+<PAGE Name="C1p05" NS="" Handle="104623024" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="21" X="2575000" Y="1400000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<A Key="FuncName" Value=""/>
+<A Key="FuncVer" Value=""/>
+<A Key="TraceProps" Value=""/>
+</PAGE>
+</PAGE>
+</PAGE>
+<PAGE Name="Application" NS="" LinkID="{43C1A232-900B-b099-7D4F-60DFCA8EB139}" Handle="104635960" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="34" X="1950000" Y="1625000">
+<A Key="pageId" Value=""/>
+<A Key="testDef" Value=""/>
+<PAGE Name="Buttons" NS="" LinkID="{2931F7EA-0F8E-1565-001B-E963CEC63038}" Handle="104642032" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="35" X="375000" Y="2325000">
+<PAGE Name="Entr_Code_Mode" NS="" LinkID="{4B92E206-02EA-f774-5C2A-C8143B680115}" Handle="104594776" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="36" X="1225000" Y="2100000"/>
+<PAGE Name="Batt_Perc_Man" NS="" LinkID="{84A798D1-5429-2dd3-9B89-2A857B86DCF2}" Handle="104593720" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="38" X="2375000" Y="2400000"/>
+<PAGE Name="Cheat_Code" NS="" LinkID="{04242504-2C7F-0c53-F208-EE80030EB13D}" Handle="104609296" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="37" X="1950000" Y="2525000"/>
+</PAGE>
+<PAGE Name="Comm_Out_Data" NS="" LinkID="{43C1A23F-9043-d277-B52D-97E3A003CBA0}" Handle="104908688" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="92" X="2700000" Y="1825000">
+<PAGE Name="Get_Addr" NS="" LinkID="{43C1A24C-907A-f455-EC0B-CEE77777E606}" Handle="104914760" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="94" X="2150000" Y="1725000"/>
+<PAGE Name="Get_SN" NS="" LinkID="{28EFDBB1-ABD7-ce2c-49E2-2D8C71C111DC}" Handle="104880176" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="93" X="1600000" Y="2000000"/>
+</PAGE>
+<PAGE Name="CAN_In_Data" NS="" LinkID="{330E66CD-7A9A-2c2a-0CDF-946ACEF7BB30}" Handle="105382928" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="39" X="2275000" Y="2000000">
+<PAGE Name="Org_Ints" NS="" LinkID="{330E66DA-7AD2-4e08-44BE-CC6EA46BD696}" Handle="105385040" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="85" X="3350000" Y="1475000">
+<PAGE Name="Housekeepin" NS="" Handle="105406952" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="86" X="1625000" Y="1950000"/>
+<PAGE Name="NVmem_21to25" NS="" Handle="105343592" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="91" X="1625000" Y="1325000"/>
+<PAGE Name="NVmem_16to20" NS="" Handle="105587744" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="90" X="1625000" Y="1450000"/>
+<PAGE Name="NVmem_11to15" NS="" Handle="105610976" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="89" X="1625000" Y="1575000"/>
+<PAGE Name="NVmem_6to10" NS="" Handle="105938840" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="88" X="1625000" Y="1700000"/>
+<PAGE Name="NVmem_1to5" NS="" LinkID="{0D4BDF97-6752-4f3a-C4F0-A8CFAAAEA3C0}" Handle="105959432" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="87" X="1625000" Y="1825000"/>
+</PAGE>
+<PAGE Name="ECU_Int" NS="" Handle="105996392" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="56" X="2450000" Y="1575000">
+<PAGE Name="ECU_Int_pt3" NS="" Handle="105998240" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="59" X="350000" Y="2225000"/>
+<PAGE Name="ECU_Int_pt2" NS="" LinkID="{535BB584-2818-9b58-8A0E-451A2C815CF9}" Handle="106005104" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="58" X="350000" Y="2350000"/>
+<PAGE Name="ECU_Int_pt1" NS="" LinkID="{535B732A-46AF-3d0d-21C3-D8E74F1CA480}" Handle="106019624" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="57" X="350000" Y="2475000"/>
+</PAGE>
+<PAGE Name="FLT_Int" NS="" LinkID="{87975C30-B1E2-a4a9-545F-3396D32692E2}" Handle="106050248" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="60" X="2450000" Y="1375000"/>
+<PAGE Name="Elec_Temp3" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="106931560" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="48" X="1575000" Y="150000"/>
+<PAGE Name="Cell_Temp2" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="106943440" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="54" X="2250000" Y="275000"/>
+<PAGE Name="Cell_Temp1" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="106941856" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="53" X="2250000" Y="400000"/>
+<PAGE Name="Elec_Temp2" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="106945816" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="47" X="1575000" Y="400000"/>
+<PAGE Name="Elec_Temp1" NS="" LinkID="{4E16D6EC-AE54-d934-C6EA-DCAE41AC7AA3}" Handle="106947928" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="46" X="1575000" Y="525000"/>
+<PAGE Name="MCU_Temp" NS="" LinkID="{4E180C1A-C416-b23d-88F3-EA9B41E536CF}" Handle="106956376" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="45" X="1575000" Y="650000"/>
+<PAGE Name="Batt_Current" NS="" Handle="106953472" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="52" X="2150000" Y="850000"/>
+<PAGE Name="LED_set" NS="" LinkID="{27218242-C2F9-8717-6BCD-9F834A5802CA}" Handle="106959016" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="64" X="3062500" Y="1625000">
+<PAGE Name="Gry2Grn19" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106970104" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="84" X="1250000" Y="1300000"/>
+<PAGE Name="Gry2Grn18" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106977232" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="83" X="1250000" Y="1350000"/>
+<PAGE Name="Gry2Grn17" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106973536" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="82" X="1250000" Y="1400000"/>
+<PAGE Name="Gry2Grn16" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106985152" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="81" X="1250000" Y="1500000"/>
+<PAGE Name="Gry2Grn15" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106980928" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="80" X="1250000" Y="1550000"/>
+<PAGE Name="Gry2Grn14" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106984096" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="79" X="1250000" Y="1600000"/>
+<PAGE Name="Gry2Grn13" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106983832" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="78" X="1250000" Y="1675000"/>
+<PAGE Name="Gry2Grn12" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106986736" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="77" X="1250000" Y="1725000"/>
+<PAGE Name="Gry2Grn11" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106989376" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="76" X="1250000" Y="1800000"/>
+<PAGE Name="Gry2Grn10" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106990960" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="75" X="1250000" Y="1850000"/>
+<PAGE Name="Gry2Grn9" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106994656" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="74" X="1250000" Y="1900000"/>
+<PAGE Name="Gry2Grn8" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106999408" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="73" X="1250000" Y="1950000"/>
+<PAGE Name="Gry2Grn7" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="107000992" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="72" X="1250000" Y="2000000"/>
+<PAGE Name="Gry2Grn6" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="107000728" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="71" X="1250000" Y="2050000"/>
+<PAGE Name="Gry2Grn5" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="106999672" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="70" X="1250000" Y="2100000"/>
+<PAGE Name="Gry2Grn4" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="107003368" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="69" X="1250000" Y="2150000"/>
+<PAGE Name="Gry2Grn3" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="107006008" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="68" X="1250000" Y="2200000"/>
+<PAGE Name="Gry2Grn2" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="107010496" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="67" X="1250000" Y="2250000"/>
+<PAGE Name="Gry2Grn1" NS="" Handle="107008120" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="66" X="1250000" Y="2300000"/>
+<PAGE Name="Gry2Grn" NS="" LinkID="{271252CF-F6E3-05c4-557A-E904B80D79F3}" Handle="107012344" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="65" X="1250000" Y="2350000"/>
+</PAGE>
+<PAGE Name="Fault_States" NS="" LinkID="{7596C4C2-7ED6-1c4d-4803-C2F881218CAA}" Handle="107014456" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="43" X="1550000" Y="1350000"/>
+<PAGE Name="ECU_Status" NS="" LinkID="{632694EA-54FC-2d5f-6E15-B170F9C91B1C}" Handle="107026336" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="49" X="1950000" Y="1600000">
+<PAGE Name="Split_10" NS="" Handle="107029504" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="50" X="1600000" Y="575000"/>
+</PAGE>
+<PAGE Name="Split_neg" NS="" Handle="107045608" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="63" X="2925000" Y="850000"/>
+<PAGE Name="Split2" NS="" LinkID="{22C00775-E356-f738-C8EE-E156CFDE81AB}" Handle="107636336" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="62" X="2925000" Y="1025000"/>
+<PAGE Name="Split1" NS="" LinkID="{22C00775-E356-f738-C8EE-E156CFDE81AB}" Handle="107637392" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="55" X="2325000" Y="1250000"/>
+<PAGE Name="Bus_Volt" NS="" Handle="107647688" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="51" X="2150000" Y="1075000"/>
+<PAGE Name="Batt_Volt" NS="" LinkID="{41968D8B-49AC-ebde-1E94-7701098032D6}" Handle="107647160" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="44" X="1550000" Y="1225000"/>
+<PAGE Name="BIT_Status" NS="" Handle="107651912" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="40" X="1550000" Y="1500000">
+<PAGE Name="D4_to_D7" NS="" LinkID="{52EBEA69-6389-38b9-FB6E-74C376813519}" Handle="107658248" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="42" X="1525000" Y="1175000"/>
+<PAGE Name="D0_to_D3" NS="" LinkID="{52D5B9EB-BE75-9b3b-E7F1-0B1916279E3F}" Handle="107690984" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="41" X="1525000" Y="1475000"/>
+</PAGE>
+<PAGE Name="Split" NS="" LinkID="{22C00775-E356-f738-C8EE-E156CFDE81AB}" Handle="107714744" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="61" X="2850000" Y="2050000"/>
+</PAGE>
+<PAGE Name="Screen_Controller" NS="" LinkID="{2934447D-3668-151b-DAD1-7D49338F6C82}" Handle="107723720" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="95" X="2950000" Y="2525000">
+<PAGE Name="Batt_Perc" NS="" Handle="107737976" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="97" X="750000" Y="2500000"/>
+<PAGE Name="Scrn_Ctrl" NS="" LinkID="{2934448A-36A0-36f9-12AF-B54D0A0387E8}" Handle="107736656" isObject="0" pageView="0" pageViewCur="0" isDisabled="0" isCurrent="0" isEmpty="0" pageNo="96" X="625000" Y="1950000"/>
 </PAGE>
 </PAGE>
 </PAGE>
